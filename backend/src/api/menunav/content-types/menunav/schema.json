@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "menunavs",
+  "info": {
+    "singularName": "menunav",
+    "pluralName": "menunavs",
+    "displayName": "MenuNav"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nav": {
+      "type": "dynamiczone",
+      "components": [
+        "menu.dropdown",
+        "menu.single"
+      ]
+    }
+  }
+}

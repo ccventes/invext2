@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "menuppals",
+  "info": {
+    "singularName": "menuppal",
+    "pluralName": "menuppals",
+    "displayName": "menuppal"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "boton": {
+      "displayName": "link",
+      "type": "component",
+      "repeatable": true,
+      "component": "menu.link"
+    }
+  }
+}

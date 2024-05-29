@@ -1,0 +1,312 @@
+.firstMenu{
+
+    background-color: rgb(102,102,102,0.85);
+    height: 30px;
+    margin-top: 0px;
+    padding-top: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+
+}
+
+
+body{
+
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.btn-custom-dropdown {
+    color: #ffffff !important; /* Color blanco para el texto del botón */
+}
+
+.MenuIdioma{ 
+    
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0% !important;
+    
+}
+
+.MenuIdioma .dropdown-item{
+    padding-top: 0px;
+    background: none repeat scroll 0 0 rgba(102, 102, 102, 0.85) !important;
+    color: #ffffff !important;
+    margin-top: 0px;
+
+}
+
+.btn-group{
+    display: flex;
+    align-items: flex-start;
+
+}
+.btn-custom-dropdown{
+
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
+    font-size: 14px !important;
+    height: 20px;
+    
+    
+}
+
+
+.btn-custom-dropdown.show,
+.btn-custom-dropdown:active {
+    outline: none; /* Elimina el contorno al hacer clic */
+    box-shadow: none; /* Elimina la sombra al hacer clic */
+    border: none; /* Elimina los bordes al hacer clic */
+}
+
+
+
+   /* Personaliza el color de la flecha en el botón dropdown */
+   .btn-custom-dropdown::after {
+    border-top-color: #94b43b !important; /* Cambia el color a verde (#00FF00) o tu preferencia */
+   
+}
+/* Nav-bar superior */
+.nav-superior{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    border-left: black solid 1px;
+    height: 30px;
+    padding-left: 0px;
+    margin-top: 0;
+    margin-bottom: 0;   
+
+}
+.item-nav{
+
+    list-style-type: none; 
+    color: #fff;
+    font-size: 14px;
+    padding-top: 4px;
+    
+    padding-right: 10px;
+    padding-left: 10px;
+    border-right: black solid 1px;
+    
+    
+}
+/* Establece colores diferentes para cada elemento en hover 
+
+        Como cada elemento del menu cambia de color diferente cuando hace hover (paginal Unal) debe accederse a todos los hijos por separado
+*/
+
+.nav-superior li:nth-child(1):hover {
+    background-color: #81f125; /* Cambia este color según tus preferencias */
+}
+.nav-superior li:nth-child(2):hover {
+    background-color: #5710ba; /* Cambia este color según tus preferencias */
+}
+.nav-superior li:nth-child(3):hover {
+    background-color: #257b57f4; /* Cambia este color según tus preferencias */
+}
+.nav-superior li:nth-child(4):hover {
+    background-color: #9a109c; /* Cambia este color según tus preferencias */
+}
+.nav-superior li:nth-child(5):hover {
+    background-color: #5710ba; /* Cambia este color según tus preferencias */
+}
+.nav-superior li:nth-child(6):hover {
+    background-color: #075377; /* Cambia este color según tus preferencias */
+}
+
+/*Redes Sociales */
+.socialLinks{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 0px;
+    
+    
+    
+
+}
+.socialLinks .Links{
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    list-style-type: none;
+    padding-left: 5px;
+}
+.firstMenu .twitter {
+    width: 20px; /* Ajusta el tamaño según tus necesidades */
+    height: 20px; /* Ajusta el tamaño según tus necesidades */
+    background-color: #3498db; /* Color de fondo del círculo */
+    background-image: url('../images/icn_social.png');
+    border-radius: 50%; /* Hace que el contenedor tenga forma de círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* Color del texto dentro del círculo */
+    background-position: 0% 0%; /* Ajusta la posición de la imagen */
+    
+    
+
+}
+.firstMenu .twitter:hover{
+
+    background-position: 0% 100%; /* Ajusta la posición de la imagen */
+
+}
+
+.firstMenu .facebook {
+    width: 20px; /* Ajusta el tamaño según tus necesidades */
+    height: 20px; /* Ajusta el tamaño según tus necesidades */
+    background-color: #3498db; /* Color de fondo del círculo */
+    background-image: url('../images/icn_social.png');
+    border-radius: 50%; /* Hace que el contenedor tenga forma de círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* Color del texto dentro del círculo */
+    background-position: 24.7% 0%; /* Ajusta la posición de la imagen */
+    
+    
+
+}
+.firstMenu .facebook:hover{
+
+    background-position: 24.7% 100%; /* Ajusta la posición de la imagen */
+
+}
+
+.firstMenu .youtube {
+    width: 20px; /* Ajusta el tamaño según tus necesidades */
+    height: 20px; /* Ajusta el tamaño según tus necesidades */
+    background-color: #3498db; /* Color de fondo del círculo */
+    background-image: url('../images/icn_social.png');
+    border-radius: 50%; /* Hace que el contenedor tenga forma de círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* Color del texto dentro del círculo */
+    background-position: 98.9% 0%; /* Ajusta la posición de la imagen */
+    
+    
+
+}
+.firstMenu .youtube:hover{
+
+    background-position: 98.9% 100%; /* Ajusta la posición de la imagen */
+
+}
+
+
+.MainMenu{
+
+    background-color: #141619b7;
+    height: 80px;
+    margin-top: 0px;
+    padding-top: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+
+}
+.logo{
+    background-color: #333333ee; /* background-color: #333; Este cambia cuando se construya el poligono */
+    height: 135px;
+    width: 234px;
+    clip-path: polygon(0% 0%, 
+                        0.5% 94%, 
+                        92% 85%,
+                        92% 0
+                        );
+    background-image: url('../images/unlogo_blanco.png');
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: 20px 20px;
+    margin-left: 1.5%;
+
+
+}
+.space{
+
+    width: 43.5%
+}
+.navigation{
+
+    margin-top : 7px;
+}
+.MainMenu .container{
+
+    display: flex;
+    flex-direction: row;
+    margin-left: 17%;
+    margin-top: 5px;
+    width: 95%;
+    
+}
+.MainMenu .fa-map-marker{
+
+    padding-top: 10px;
+    padding-right: 10px;
+    font-size:20px !important;
+    color:rgb(139, 131, 131)
+  }
+#link-site{
+
+    font-size: 24px;
+    color: white;
+}
+.mod-list{
+
+    margin-bottom: 0px;
+    margin-left: 5px;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: row;
+}
+.custom-navbar{
+    background-color: transparent !important;
+    height: 20px !important;
+}
+.carousel{
+
+    z-index: -2;
+}
+
+#bannersCarousel{
+  
+    z-index: -1;
+    
+  }
+  .carousel-inner{
+    
+    z-index: 0 !important;
+    height: 308px !important;
+
+  }
+  .carousel-item,
+  .carousel-item-active{
+    
+    z-index: 0 !important;
+    height: 100% !important;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    z-index: 1 !important; 
+    position: relative;
+    height: 40%;
+    top: 20% !important;
+    display: none !important;
+    
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon{
+    
+     position: relative;
+     top: -10%; 
+  }
