@@ -25,8 +25,8 @@ query GetBanner{
  
 }
 `
-const { protocol, hostname } = window.location;
-const baseUrl = `${protocol}//${hostname}`;
+//const { protocol, hostname } = window.location;
+//const baseUrl = `${protocol}//${hostname}`;
 
 
 
@@ -42,7 +42,7 @@ export default function Banner() {
          
 
                   <Carousel.Item >
-                  <img src={baseUrl + ':1337' + RutaImagen} className="d-block w-100 h-100" alt="..."/>
+                  <img src={config.apiUrl + RutaImagen} className="d-block w-100 h-100" alt="..."/>
                   <Carousel.Caption>
                     <h3></h3>
                     <p></p>
