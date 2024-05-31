@@ -82,7 +82,7 @@ var ApolloProvider = __webpack_require__(3768);
 var Carousel = __webpack_require__(7520);
 ;// CONCATENATED MODULE: ./src/config.js
 // src/config.js
-const config={apiUrl:"http://127.0.0.1:1337",otherVariable:({}).REACT_APP_OTHER_VARIABLE};/* harmony default export */ const src_config = (config);
+const config={apiUrl:"https://invext2.onrender.com",otherVariable:({}).REACT_APP_OTHER_VARIABLE};/* harmony default export */ const src_config = (config);
 ;// CONCATENATED MODULE: ./src/components/Banner.js
 const BANNER=(0,lib/* gql */.Ps)`
 query GetBanner{
