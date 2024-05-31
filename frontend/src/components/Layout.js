@@ -6,11 +6,12 @@ import "./unal.css";
 import Header from './Header';
 import { ApolloClient,InMemoryCache,ApolloProvider } from '@apollo/client';
 import Banner from './Banner';
+import config from '../config';
 
 
 
 const cliente = new ApolloClient({
-  uri: 'http://localhost:1337/graphql', 
+  uri: config.apiUrl + '/graphql', 
   cache: new InMemoryCache()
 })
 

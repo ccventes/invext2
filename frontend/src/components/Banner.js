@@ -1,6 +1,7 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
 import { useQuery, gql } from '@apollo/client';
+import config from '../config.js';
 
 const BANNER = gql`
 query GetBanner{
@@ -34,6 +35,7 @@ export default function Banner() {
   if (loading) return <p>Loading...</p>
   if(error) return <p>Error :</p>
   console.log("EL dato de banner es: " +  JSON.stringify(data, null, 2));
+  console.log('la enviroment vairable API URL:', config.apiUrl);
   const RutaImagen = data.bannerMain.data.attributes.ImageRoute.data.attributes.url;
   return (
     <Carousel>
