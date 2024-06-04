@@ -35,7 +35,7 @@ export default function Banner() {
   if (loading) return <p>Loading...</p>
   if(error) return <p>Error :</p>
   console.log("EL dato de banner es: " +  JSON.stringify(data, null, 2));
-  console.log('la enviroment vairable API URL:', config.apiUrl);
+  console.log('la enviromen-t vairable API URL:', config.apiUrl);
   const RutaImagen = data.bannerMain.data.attributes.ImageRoute.data.attributes.url;
   return (
     <Carousel>
