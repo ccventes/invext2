@@ -42,7 +42,7 @@ export default function Banner() {
          
 
                   <Carousel.Item >
-                  <img src={config.apiUrl + RutaImagen} className="d-block w-100 h-100" alt="..."/>
+                  <img src={ RutaImagen} className="d-block w-100 h-100" alt="..."/>
                   <Carousel.Caption>
                     <h3></h3>
                     <p></p>
