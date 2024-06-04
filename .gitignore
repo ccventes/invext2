@@ -9,7 +9,8 @@ node_modules/
 
 /frontend/.cache/
 
-/frontend/.wrangler 
+#/frontend/.wrangler 
+#Aparentemente necesito cargado wrangler
 
 # Otros elementos a ignorar (opcional y dependiendo de tus necesidades)
 # Logs
