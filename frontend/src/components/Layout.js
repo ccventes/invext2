@@ -7,6 +7,7 @@ import Header from './Header';
 import { ApolloClient,InMemoryCache,ApolloProvider } from '@apollo/client';
 import Banner from './Banner';
 import config from '../config';
+import Searchbar from './Searchbar';
 
 
 
@@ -17,11 +18,15 @@ const cliente = new ApolloClient({
 
 
 
-const Layout = ({ showBanner = false}) =>{
+const Layout = ({ showBanner }) =>{
   return (
       <ApolloProvider client = {cliente}>
       <Header />
-      {showBanner && <Banner />} {/* Banner condicional */}
+      {
+       showBanner ? <Banner /> : null
+       
+      } 
+      <Searchbar color="#0b0561" />
 
       </ApolloProvider>
       
