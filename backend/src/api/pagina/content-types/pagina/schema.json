@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "paginas",
+  "info": {
+    "singularName": "pagina",
+    "pluralName": "paginas",
+    "displayName": "Pagina",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "seccion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::seccion.seccion",
+      "mappedBy": "pagina"
+    },
+    "nombre": {
+      "type": "string"
+    }
+  }
+}

@@ -1,6 +1,9 @@
 import React from 'react'
 import PropTypes from "prop-types";
-import Form from 'react-bootstrap/Form';
+import { Form, InputGroup } from 'react-bootstrap';
+import logoNeoUnal from '../images/logo_unal_modern.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
 
 export default function Searchbar({color}) {
     const cuadroStyles = {
@@ -10,17 +13,31 @@ export default function Searchbar({color}) {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        boxShadow: '0 0 25px -11px rgba(0,0,0,0.5)',
       };
     const spacesStyles ={
 
-        width: "35%",
+        width: "42.5%",
+        display: "flex",
+        flexDirection: "row",
     };
     const formStyle = {
-        width: "30%",
+        width: "15%",
         marginBottom: "0px",
         marginTop: "0px",
-        paddingLeft: "2.75rem",
+        marginRight: "30px",
         
+        
+    };
+
+    const form_control_style ={
+        backgroundColor: "#dfdfdf",
+
+    };
+
+    const logoStyle ={
+
+        marginLeft: "40px",
     };
   
     return (
@@ -28,14 +45,23 @@ export default function Searchbar({color}) {
             
             
                 <div style={cuadroStyles}>
+                    <div style = {spacesStyles}>
+                    <img style = {logoStyle} alt="" src={logoNeoUnal} width="66" height="66" title="Espacio para logo"/>
+                    <h3>Espacio para logo</h3>
+                    </div>
                     <div style = {spacesStyles}></div>
-                    <Form.Control style = {formStyle}
-                        placeholder="          Busqueda en el sitio        "
-                        aria-label="Busqueda en el sitio"
-                        aria-describedby="basic-addon2"
-                    />
-                     <div style = {spacesStyles}></div>
-            </div>
+                    <InputGroup style={formStyle}>
+                            <Form.Control style = {form_control_style}
+                                type="text"
+                                placeholder="Busqueda en el sitio"
+                                aria-label="Busqueda en el sitio"
+                            />
+                            <InputGroup.Text id="basic-addon2">
+                                <FontAwesomeIcon icon={faMagnifyingGlass} style={{ color: "#090c42" }} />
+                            </InputGroup.Text>
+                    </InputGroup>
+                     
+                </div>
             
            
         </div>

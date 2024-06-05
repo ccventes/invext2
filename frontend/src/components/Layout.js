@@ -22,11 +22,12 @@ const Layout = ({ showBanner }) =>{
   return (
       <ApolloProvider client = {cliente}>
       <Header />
+      <Searchbar color="white" />
       {
        showBanner ? <Banner /> : null
        
       } 
-      <Searchbar color="#0b0561" />
+      
 
       </ApolloProvider>
       

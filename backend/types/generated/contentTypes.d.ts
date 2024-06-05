@@ -954,6 +954,43 @@ export interface ApiMenuppalMenuppal extends Schema.CollectionType {
   };
 }
 
+export interface ApiPaginaPagina extends Schema.CollectionType {
+  collectionName: 'paginas';
+  info: {
+    singularName: 'pagina';
+    pluralName: 'paginas';
+    displayName: 'Pagina';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    url: Attribute.String;
+    seccion: Attribute.Relation<
+      'api::pagina.pagina',
+      'oneToOne',
+      'api::seccion.seccion'
+    >;
+    nombre: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::pagina.pagina',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::pagina.pagina',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPostPost extends Schema.CollectionType {
   collectionName: 'posts';
   info: {
@@ -991,6 +1028,43 @@ export interface ApiPostPost extends Schema.CollectionType {
   };
 }
 
+export interface ApiSeccionSeccion extends Schema.CollectionType {
+  collectionName: 'seccions';
+  info: {
+    singularName: 'seccion';
+    pluralName: 'seccions';
+    displayName: 'seccion';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    titulo: Attribute.String;
+    Contenido: Attribute.RichText;
+    pagina: Attribute.Relation<
+      'api::seccion.seccion',
+      'oneToOne',
+      'api::pagina.pagina'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::seccion.seccion',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::seccion.seccion',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1014,7 +1088,9 @@ declare module '@strapi/types' {
       'api::category.category': ApiCategoryCategory;
       'api::menunav.menunav': ApiMenunavMenunav;
       'api::menuppal.menuppal': ApiMenuppalMenuppal;
+      'api::pagina.pagina': ApiPaginaPagina;
       'api::post.post': ApiPostPost;
+      'api::seccion.seccion': ApiSeccionSeccion;
     }
   }
 }
