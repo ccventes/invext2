@@ -3,6 +3,7 @@ import { useQuery, gql } from '@apollo/client';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import NoticiasMockup from '../images/noticias_unal_mockup.png';
 
 const SECCIONES = gql`
   query GetSection {
@@ -11,13 +12,30 @@ const SECCIONES = gql`
         id
         attributes {
           titulo
-          Contenido
           ContenidoHTML
         }
       }
     }
   }
 `;
+
+const divLink ={
+   width: "80%",
+   marginLeft: "48px",
+   borderStyle: "solid",
+   borderColor: "gray",
+   borderWidth: "Thick",
+   borderRadius: "15px",
+   
+   zIndex: 2, // Higher z-index for the div
+
+
+};
+const imgStyle = {
+  position: 'relative',
+  zIndex: -1, // Lower z-index for the image
+};
+
 
 export default function Contenido() {
   const { loading, error, data } = useQuery(SECCIONES);
@@ -43,7 +61,26 @@ export default function Contenido() {
                 }
 
             </Col>
-            <Col md={4}></Col>
+            <Col md={4}>
+              
+              
+            <h3 style={{ textAlign: 'center' }}>Boletin Diepal</h3>
+              <div style = {divLink}>
+                 
+                 <img alt="Esto es solo por mocukup" src={NoticiasMockup} width="100%" height="auto" title="mockup" style={imgStyle}/>
+  
+              </div>
+              <p></p>
+              <h3 style={{ textAlign: 'center' }}>Noticias y novedades</h3>
+              <div style = {divLink}>
+                 
+                 <img alt="Esto es solo por mocukup" src={NoticiasMockup} width="100%" height="auto" title="mockup" style={imgStyle}/>
+  
+              </div>
+              
+                                    
+            
+            </Col>
         </Row>
       </Container>
       
