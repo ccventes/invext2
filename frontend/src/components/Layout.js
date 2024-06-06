@@ -8,6 +8,7 @@ import { ApolloClient,InMemoryCache,ApolloProvider } from '@apollo/client';
 import Banner from './Banner';
 import config from '../config';
 import Searchbar from './Searchbar';
+import Contenido from './contenido';
 
 
 
@@ -27,6 +28,7 @@ const Layout = ({ showBanner }) =>{
        showBanner ? <Banner /> : null
        
       } 
+      <Contenido />
       
 
       </ApolloProvider>

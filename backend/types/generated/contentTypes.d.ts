@@ -1047,6 +1047,14 @@ export interface ApiSeccionSeccion extends Schema.CollectionType {
       'oneToOne',
       'api::pagina.pagina'
     >;
+    ContenidoHTML: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'rich';
+        }
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
