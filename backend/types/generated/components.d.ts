@@ -9,6 +9,11 @@ export interface MenuDropdown extends Schema.Component {
   attributes: {
     titulo: Attribute.String;
     otrocampo: Attribute.String;
+    paginas: Attribute.Relation<
+      'menu.dropdown',
+      'oneToMany',
+      'api::pagina.pagina'
+    >;
   };
 }
 

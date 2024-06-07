@@ -17,6 +17,19 @@ query GetMenunav {
             id
             titulo
             otrocampo
+            paginas{
+              data{
+                id
+                attributes
+                {
+                  nombre
+                  url
+                }
+              }
+            }
+            
+            
+            
             # Aquí puedes incluir más campos específicos de ComponentMenuDropdown
           }
           ... on ComponentMenuSingle {
@@ -28,7 +41,7 @@ query GetMenunav {
       }
     }
   }
-}
+}	
 `
 
 
@@ -36,7 +49,7 @@ export default function Navigation() {
   const{loading, error, data} = useQuery(MENUITEMS);
   if (loading) return <p>Loading...</p>
   if(error) return <p>Error :</p>
-  console.log("los datos son " +  JSON.stringify(data, null, 2));
+  console.log("los botones de menunav son " +  JSON.stringify(data, null, 2));
   return (
     
     <div>
@@ -47,16 +60,21 @@ export default function Navigation() {
           {data.menunav.data.attributes.nav.map(item => {
         if (item.__typename === 'ComponentMenuSingle') {
           return (
-            <div key={item.id}>
+            <div key={item.id + '-single'}>
               <Nav.Link>{item.titulo}</Nav.Link>
               {/* Renderiza otros campos específicos de ComponentMenuDropdown aquí */}
             </div>
           );
         } else if (item.__typename === 'ComponentMenuDropdown') {
+          console.log("Paginas de dropdown item: ", item.paginas.data); // Añadido para depuración
           return (
-            <div key={item.id}>
-              <NavDropdown title={item.titulo} id={"navbarScrollingDropdown" + item.id}></NavDropdown>
-            </div>
+            <NavDropdown key={item.id + '-dropdown'} title={item.titulo} id={"navbarScrollingDropdown" + item.id}>
+              {item.paginas.data.map(pag => (
+                <NavDropdown.Item key={pag.id} href={pag.attributes.url}>
+                  {pag.attributes.nombre}
+                </NavDropdown.Item>
+              ))}
+            </NavDropdown>
           );
         } else {
           return null;

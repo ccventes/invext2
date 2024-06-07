@@ -11,6 +11,11 @@
     },
     "otrocampo": {
       "type": "string"
+    },
+    "paginas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::pagina.pagina"
     }
   }
 }
