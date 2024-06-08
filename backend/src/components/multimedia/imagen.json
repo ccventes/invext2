@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_multimedia_imagens",
+  "info": {
+    "displayName": "Imagen",
+    "icon": "picture",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Archivo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Ancho": {
+      "type": "integer",
+      "max": 1000,
+      "min": 200,
+      "default": 300
+    },
+    "Alto": {
+      "type": "integer",
+      "default": 400,
+      "min": 300,
+      "max": 2000
+    },
+    "Descripcion": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string",
+      "default": "#"
+    }
+  }
+}

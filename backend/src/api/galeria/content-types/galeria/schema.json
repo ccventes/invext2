@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "galerias",
+  "info": {
+    "singularName": "galeria",
+    "pluralName": "galerias",
+    "displayName": "Galeria",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Elementos": {
+      "type": "dynamiczone",
+      "components": [
+        "multimedia.imagen"
+      ],
+      "required": true,
+      "min": 1
+    },
+    "Maximo_filas": {
+      "type": "integer",
+      "default": 4,
+      "max": 10,
+      "min": 1
+    },
+    "Maximo_columnas": {
+      "type": "integer",
+      "default": 4,
+      "max": 10,
+      "min": 1
+    },
+    "Orientacion": {
+      "type": "enumeration",
+      "enum": [
+        "Horizontal",
+        "Vertical"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "required": true
+    }
+  }
+}

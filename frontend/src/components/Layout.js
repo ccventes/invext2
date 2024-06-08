@@ -19,8 +19,13 @@ const cliente = new ApolloClient({
 
 
 
-const Layout = ({ showBanner }) =>{
-  return (
+const Layout = ({ page }) =>{
+  
+  console.log('PAGE is ', page);
+  if (page === 'index'){
+    const showBanner = true;
+    
+    return (
       <ApolloProvider client = {cliente}>
       <Header />
       <Searchbar color="white" />
@@ -28,13 +33,34 @@ const Layout = ({ showBanner }) =>{
        showBanner ? <Banner /> : null
        
       } 
-      <Contenido />
+      <Contenido page ="index" />
       
 
       </ApolloProvider>
       
    
   )
+  }
+  else{
+    const showBanner = false;
+    return (
+      <ApolloProvider client = {cliente}>
+      <Header />
+      <Searchbar color="blue" />
+      {
+       showBanner ? <Banner /> : null
+       
+      } 
+      <Contenido page ="developement"/>
+      
+
+      </ApolloProvider>
+      
+   
+  )
+    
+  }
+  
 }
 
 export default Layout

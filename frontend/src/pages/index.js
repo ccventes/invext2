@@ -11,7 +11,7 @@ const IndexPage = () => {
 
   //const [menuppals, setMenuppals] = useState([]);
     return (
-        <Layout showBanner = {true} ></Layout>
+        <Layout  page = "index" />
         )
 }
 

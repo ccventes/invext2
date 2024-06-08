@@ -40,12 +40,45 @@ export interface MenuSingle extends Schema.Component {
   };
 }
 
+export interface MultimediaImagen extends Schema.Component {
+  collectionName: 'components_multimedia_imagens';
+  info: {
+    displayName: 'Imagen';
+    icon: 'picture';
+    description: '';
+  };
+  attributes: {
+    Archivo: Attribute.Media;
+    Ancho: Attribute.Integer &
+      Attribute.SetMinMax<
+        {
+          min: 200;
+          max: 1000;
+        },
+        number
+      > &
+      Attribute.DefaultTo<300>;
+    Alto: Attribute.Integer &
+      Attribute.SetMinMax<
+        {
+          min: 300;
+          max: 2000;
+        },
+        number
+      > &
+      Attribute.DefaultTo<400>;
+    Descripcion: Attribute.String;
+    url: Attribute.String & Attribute.DefaultTo<'#'>;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'menu.dropdown': MenuDropdown;
       'menu.link': MenuLink;
       'menu.single': MenuSingle;
+      'multimedia.imagen': MultimediaImagen;
     }
   }
 }

@@ -31,6 +31,18 @@
         "preset": "rich"
       },
       "customField": "plugin::ckeditor.CKEditor"
+    },
+    "galeria": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::galeria.galeria"
+    },
+    "Orientacion": {
+      "type": "enumeration",
+      "enum": [
+        "Horizontal",
+        "Vertical"
+      ]
     }
   }
 }

@@ -37,14 +37,15 @@ const imgStyle = {
 };
 
 
-export default function Contenido() {
+export default function Contenido({page}) {
   const { loading, error, data } = useQuery(SECCIONES);
   
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
-
+  console.log("Estoy en contenido, la pagina es: ", {page})
   console.log("Los datos de secciones son: ", JSON.stringify(data, null, 2));
-
+  if(page === 'index'){
+  console.log("voy a renderizar index");
   return (
     <section>
       <Container>
@@ -86,4 +87,15 @@ export default function Contenido() {
       
     </section>
   );
+}else{
+  console.log("Aqui voy a renderizar diplomodos:", page )
+  return(
+    <section> 
+      <p></p>
+      <h1> aqui va diplomados </h1>
+    </section>
+  );
+  
+}
+  
 }

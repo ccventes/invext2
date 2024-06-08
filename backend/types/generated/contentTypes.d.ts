@@ -894,6 +894,64 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
   };
 }
 
+export interface ApiGaleriaGaleria extends Schema.CollectionType {
+  collectionName: 'galerias';
+  info: {
+    singularName: 'galeria';
+    pluralName: 'galerias';
+    displayName: 'Galeria';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Elementos: Attribute.DynamicZone<['multimedia.imagen']> &
+      Attribute.Required &
+      Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
+    Maximo_filas: Attribute.Integer &
+      Attribute.SetMinMax<
+        {
+          min: 1;
+          max: 10;
+        },
+        number
+      > &
+      Attribute.DefaultTo<4>;
+    Maximo_columnas: Attribute.Integer &
+      Attribute.SetMinMax<
+        {
+          min: 1;
+          max: 10;
+        },
+        number
+      > &
+      Attribute.DefaultTo<4>;
+    Orientacion: Attribute.Enumeration<['Horizontal', 'Vertical']>;
+    slug: Attribute.UID & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::galeria.galeria',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::galeria.galeria',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiMenunavMenunav extends Schema.SingleType {
   collectionName: 'menunavs';
   info: {
@@ -1055,6 +1113,12 @@ export interface ApiSeccionSeccion extends Schema.CollectionType {
           preset: 'rich';
         }
       >;
+    galeria: Attribute.Relation<
+      'api::seccion.seccion',
+      'oneToOne',
+      'api::galeria.galeria'
+    >;
+    Orientacion: Attribute.Enumeration<['Horizontal', 'Vertical']>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1094,6 +1158,7 @@ declare module '@strapi/types' {
       'api::author.author': ApiAuthorAuthor;
       'api::banner-main.banner-main': ApiBannerMainBannerMain;
       'api::category.category': ApiCategoryCategory;
+      'api::galeria.galeria': ApiGaleriaGaleria;
       'api::menunav.menunav': ApiMenunavMenunav;
       'api::menuppal.menuppal': ApiMenuppalMenuppal;
       'api::pagina.pagina': ApiPaginaPagina;
