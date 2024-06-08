@@ -18,6 +18,56 @@ const SECCIONES = gql`
     }
   }
 `;
+const SECCIONES2 = gql`
+query getInfoPagina($url: String = "/servicios") {
+  paginas(filters: {url:{contains: $url} } ){
+    data{
+      id
+      attributes{
+        url
+        nombre
+        seccion{
+          data{
+            id
+            attributes{
+              titulo
+              ContenidoHTML
+              Orientacion
+              galeria{
+                data
+                  {
+                    id
+                    attributes{
+                      Maximo_filas
+                      Maximo_columnas
+                      Orientacion
+                      slug
+                      Elementos{
+                        __typename
+                        ... on ComponentMultimediaImagen {
+                          Archivo{
+                            data{
+                              attributes{
+                                url
+                              }
+                            }
+                          }
+                        }
+                      }
+                      
+                      }
+                    }
+                  }
+              }
+              
+            }
+          }
+        }
+        
+      }
+    }
+  }
+`;
 
 const divLink ={
    width: "80%",
