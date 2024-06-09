@@ -19,7 +19,7 @@ const SECCIONES = gql`
   }
 `;
 const SECCIONES2 = gql`
-query getInfoPagina($url: String = "/servicios") {
+query getInfoPagina($url: String) {
   paginas(filters: {url:{contains: $url} } ){
     data{
       id
@@ -86,16 +86,34 @@ const imgStyle = {
   zIndex: -1, // Lower z-index for the image
 };
 
+const Sectionorganization = {
+  
+  display : 'flex',
+  flexDirection: 'column',
+
+}
+
+
+
 
 export default function Contenido({page}) {
   const { loading, error, data } = useQuery(SECCIONES);
-  
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
-  console.log("Estoy en contenido, la pagina es: ", {page})
+  console.log("Estoy en contenido, la pagina es: ", page)
   console.log("Los datos de secciones son: ", JSON.stringify(data, null, 2));
+
+  const { loading: loadingPagina, error: errorPagina, data: dataPagina } = useQuery(SECCIONES2, {
+    variables: { url: page },
+    
+   });
+   console.log("OOOOOOOOOO Los datos de secciones2 son: ", JSON.stringify(dataPagina, null, 2));
+   //console.log("DATAPAGINA TIENE UNA LONGITUD DE ", dataPagina.length, " DATOS");
+  
   if(page === 'index'){
-  console.log("voy a renderizar index");
+        
+  
+        if (loading) return <p>Loading...</p>;
+        if (error) return <p>Error: {error.message}</p>;
+        console.log("voy a renderizar index");
   return (
     <section>
       <Container>
@@ -139,10 +157,36 @@ export default function Contenido({page}) {
   );
 }else{
   console.log("Aqui voy a renderizar diplomodos:", page )
+  if (loadingPagina) return <p>Loading...</p>;
+  if (errorPagina) return <p>Error: {error.message}</p>;
+  if(dataPagina){
+    if (dataPagina.paginas && dataPagina.paginas.data.length > 0){
+      console.log("A PUNTO DE HACER RENDER: ", dataPagina.paginas.data[0].attributes.seccion.data.attributes.Orientacion );
+    }
+  }
+  
+  
+  
+  
   return(
-    <section> 
+    <section id = {dataPagina.paginas.data[0].attributes.seccion.data.id + "-" + dataPagina.paginas.data[0].attributes.seccion.data.attributes.titulo }> 
       <p></p>
-      <h1> aqui va diplomados </h1>
+      <h1> {dataPagina.paginas.data[0].attributes.seccion.data.attributes.titulo} </h1>
+      {dataPagina.paginas.data[0].attributes.seccion.data.attributes.Orientacion  === "Vertical" ? 
+      <div style = {{display :'flex',flexDirection: 'column', }}>
+         {
+          <div dangerouslySetInnerHTML={{ __html: dataPagina.paginas.data[0].attributes.seccion.data.attributes.ContenidoHTML }} />
+          
+         }
+         {
+          // Aqui va el componente que pone las imagenes
+         }
+         
+      </div> 
+      :
+      <div style = {{display :'flex',flexDirection: 'row', }} ><h3>Horizontal</h3>
+      </div> 
+      }
     </section>
   );
   

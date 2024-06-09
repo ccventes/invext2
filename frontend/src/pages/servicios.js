@@ -4,7 +4,7 @@ import Layout from '../components/Layout'
 export default function servicios() {
   return (
     
-       <Layout showBanner = {false} ></Layout>
+       <Layout  page = {'/servicios'} ></Layout>
     
   )
 }

@@ -51,7 +51,7 @@ const Layout = ({ page }) =>{
        showBanner ? <Banner /> : null
        
       } 
-      <Contenido page ="developement"/>
+      <Contenido page ="/servicios"/>
       
 
       </ApolloProvider>
