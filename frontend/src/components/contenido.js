@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import NoticiasMockup from '../images/noticias_unal_mockup.png';
+import Galeria from './Galeria'
 
 const SECCIONES = gql`
   query GetSection {
@@ -45,6 +46,7 @@ query getInfoPagina($url: String) {
                       Elementos{
                         __typename
                         ... on ComponentMultimediaImagen {
+                          Descripcion
                           Archivo{
                             data{
                               attributes{
@@ -179,7 +181,7 @@ export default function Contenido({page}) {
           
          }
          {
-          // Aqui va el componente que pone las imagenes
+          <Galeria data={dataPagina.paginas.data[0].attributes.seccion.data.attributes} />
          }
          
       </div> 

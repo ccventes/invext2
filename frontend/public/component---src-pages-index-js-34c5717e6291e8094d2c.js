@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkdiepal=self.webpackChunkdiepal||[]).push([[293],{9639:function(e,t,n){n.r(t),n.d(t,{Head:function(){return i}});var a=n(6540),l=n(9314);const i=()=>a.createElement("title",null,"Sitio Diepal");t.default=()=>a.createElement(l.A,{showBanner:!0})}}]);
-//# sourceMappingURL=component---src-pages-index-js-34c5717e6291e8094d2c.js.map
