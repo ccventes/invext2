@@ -35,6 +35,7 @@ query GetMenunav {
           ... on ComponentMenuSingle {
             id
             titulo
+            url
             # Aquí puedes incluir más campos específicos de ComponentMenuSingle
           }
         }
@@ -61,7 +62,7 @@ export default function Navigation() {
         if (item.__typename === 'ComponentMenuSingle') {
           return (
             <div key={item.id + '-single'}>
-              <Nav.Link>{item.titulo}</Nav.Link>
+              <Nav.Link href={item.url}>{item.titulo}</Nav.Link>
               {/* Renderiza otros campos específicos de ComponentMenuDropdown aquí */}
             </div>
           );

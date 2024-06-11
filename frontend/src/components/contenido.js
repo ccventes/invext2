@@ -104,13 +104,13 @@ export default function Contenido({page}) {
   const { loading, error, data } = useQuery(SECCIONES);
   console.log("Estoy en contenido, la pagina es: ", page)
   console.log("Los datos de secciones son: ", JSON.stringify(data, null, 2));
-
-  const { loading: loadingPagina, error: errorPagina, data: dataPagina } = useQuery(SECCIONES2, {
-    variables: { url: page },
-    
-   });
+  const { loading: loadingPagina, error: errorPagina, data: dataPagina } = useQuery(SECCIONES2); // hay que poner el query bien
    console.log("OOOOOOOOOO Los datos de secciones2 son: ", JSON.stringify(dataPagina, null, 2));
+  
+
+  
    //console.log("DATAPAGINA TIENE UNA LONGITUD DE ", dataPagina.length, " DATOS");
+  
   
   if(page === 'index'){
         
@@ -125,12 +125,11 @@ export default function Contenido({page}) {
             <Col md={1}></Col>
             <Col md={7}>
                 {
-                    data.seccions.data.map((item) => (
-                        <div key={item.id}>
-                        <h2>{item.attributes.titulo}</h2>
-                        <div dangerouslySetInnerHTML={{ __html: item.attributes.ContenidoHTML }} />
+                    
+                    <div key={data.seccions.data[0].id}>
+                    <h2>{data.seccions.data[0].attributes.titulo}</h2>
+                    <div dangerouslySetInnerHTML={{ __html: data.seccions.data[0].attributes.ContenidoHTML }} />
                     </div>
-                    ))
                 }
 
             </Col>
@@ -161,6 +160,7 @@ export default function Contenido({page}) {
   );
 }else{
   console.log("Aqui voy a renderizar diplomodos:", page )
+  
   if (loadingPagina) return <p>Loading...</p>;
   if (errorPagina) return <p>Error: {error.message}</p>;
   if(dataPagina){
@@ -173,7 +173,7 @@ export default function Contenido({page}) {
   //dataPagina.paginas.data[0].attributes.seccions.data
   return(   
     <section>
-    <h1 style = {{ textAlign:'center',}}> {dataPagina.paginas.data[0].attributes.nombre} </h1>
+    <h1 style = {{ textAlign:'center', marginTop: '50px'}}> {dataPagina.paginas.data[0].attributes.nombre} </h1>
     {
       dataPagina.paginas.data[0].attributes.seccions.data.map(seccion => (
 

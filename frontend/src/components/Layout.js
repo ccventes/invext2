@@ -46,7 +46,7 @@ const Layout = ({ page }) =>{
     return (
       <ApolloProvider client = {cliente}>
       <Header />
-      <Searchbar color="blue" />
+      <Searchbar color="white" />
       {
        showBanner ? <Banner /> : null
        
