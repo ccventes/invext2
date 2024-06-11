@@ -7,8 +7,8 @@ import NoticiasMockup from '../images/noticias_unal_mockup.png';
 import Galeria from './Galeria'
 
 const SECCIONES = gql`
-  query GetSection {
-    seccions {
+  query GetSection($identificacion: ID = "1") {
+    seccions(filters: {id:{eq: $identificacion} } ) {
       data {
         id
         attributes {
@@ -17,7 +17,7 @@ const SECCIONES = gql`
         }
       }
     }
-  }
+}
 `;
 const SECCIONES2 = gql`
 query getInfoPagina($url: String = "/servicios") {
