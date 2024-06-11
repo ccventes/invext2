@@ -1025,9 +1025,9 @@ export interface ApiPaginaPagina extends Schema.CollectionType {
   };
   attributes: {
     url: Attribute.String;
-    seccion: Attribute.Relation<
+    seccions: Attribute.Relation<
       'api::pagina.pagina',
-      'oneToOne',
+      'oneToMany',
       'api::seccion.seccion'
     >;
     nombre: Attribute.String;
@@ -1100,11 +1100,6 @@ export interface ApiSeccionSeccion extends Schema.CollectionType {
   attributes: {
     titulo: Attribute.String;
     Contenido: Attribute.RichText;
-    pagina: Attribute.Relation<
-      'api::seccion.seccion',
-      'oneToOne',
-      'api::pagina.pagina'
-    >;
     ContenidoHTML: Attribute.RichText &
       Attribute.CustomField<
         'plugin::ckeditor.CKEditor',
@@ -1119,6 +1114,11 @@ export interface ApiSeccionSeccion extends Schema.CollectionType {
       'api::galeria.galeria'
     >;
     Orientacion: Attribute.Enumeration<['Horizontal', 'Vertical']>;
+    pagina: Attribute.Relation<
+      'api::seccion.seccion',
+      'manyToOne',
+      'api::pagina.pagina'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -15,9 +15,9 @@
     "url": {
       "type": "string"
     },
-    "seccion": {
+    "seccions": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::seccion.seccion",
       "mappedBy": "pagina"
     },

@@ -20,55 +20,57 @@ const SECCIONES = gql`
   }
 `;
 const SECCIONES2 = gql`
-query getInfoPagina($url: String) {
-  paginas(filters: {url:{contains: $url} } ){
-    data{
-      id
-      attributes{
-        url
-        nombre
-        seccion{
-          data{
-            id
-            attributes{
-              titulo
-              ContenidoHTML
-              Orientacion
-              galeria{
-                data
-                  {
-                    id
-                    attributes{
-                      Maximo_filas
-                      Maximo_columnas
-                      Orientacion
-                      slug
-                      Elementos{
-                        __typename
-                        ... on ComponentMultimediaImagen {
-                          Descripcion
-                          Archivo{
-                            data{
-                              attributes{
-                                url
+query getInfoPagina($url: String = "/servicios") {
+    paginas(filters: {url:{contains: $url} } ){
+      data{
+        id
+        attributes{
+          url
+          nombre
+          seccions(sort: "id:asc"){
+            data{
+              id
+              attributes{
+                titulo
+                ContenidoHTML
+                Orientacion
+                galeria{
+                  data
+                    {
+                      id
+                      attributes{
+                        Maximo_filas
+                        Maximo_columnas
+                        Orientacion
+                        slug
+                        Elementos{
+                          __typename
+                          ... on ComponentMultimediaImagen {
+                            id
+                            Descripcion
+                            Archivo{
+                              data{
+                                attributes{
+                                  url
+                                  
+                                }
                               }
                             }
                           }
                         }
-                      }
-                      
+                        
+                        }
                       }
                     }
-                  }
+                }
+                
               }
-              
             }
           }
+          
         }
-        
       }
-    }
-  }
+}
 `;
 
 const divLink ={
@@ -162,36 +164,62 @@ export default function Contenido({page}) {
   if (loadingPagina) return <p>Loading...</p>;
   if (errorPagina) return <p>Error: {error.message}</p>;
   if(dataPagina){
-    if (dataPagina.paginas && dataPagina.paginas.data.length > 0){
-      console.log("A PUNTO DE HACER RENDER: ", dataPagina.paginas.data[0].attributes.seccion.data.attributes.Orientacion );
-    }
+    //if (dataPagina.paginas && dataPagina.paginas.data.length > 0){
+    //  console.log("A PUNTO DE HACER RENDER: ", dataPagina.paginas.data[0].attributes.seccion.data.attributes.Orientacion );
+    //}
+    console.log("ME TIRE TODO dataPagina: " , dataPagina.paginas.data[0].attributes.seccions.data)
   }
   
-  
-  
-  
-  return(
-    <section id = {dataPagina.paginas.data[0].attributes.seccion.data.id + "-" + dataPagina.paginas.data[0].attributes.seccion.data.attributes.titulo }> 
-      <p></p>
-      <h1> {dataPagina.paginas.data[0].attributes.seccion.data.attributes.titulo} </h1>
-      {dataPagina.paginas.data[0].attributes.seccion.data.attributes.Orientacion  === "Vertical" ? 
-      <div style = {{display :'flex',flexDirection: 'column', }}>
-         {
-          <div dangerouslySetInnerHTML={{ __html: dataPagina.paginas.data[0].attributes.seccion.data.attributes.ContenidoHTML }} />
+  //dataPagina.paginas.data[0].attributes.seccions.data
+  return(   
+    <section>
+    <h1 style = {{ textAlign:'center',}}> {dataPagina.paginas.data[0].attributes.nombre} </h1>
+    {
+      dataPagina.paginas.data[0].attributes.seccions.data.map(seccion => (
+
           
-         }
-         {
-          <Galeria data={dataPagina.paginas.data[0].attributes.seccion.data.attributes} />
-         }
-         
-      </div> 
-      :
-      <div style = {{display :'flex',flexDirection: 'row', }} ><h3>Horizontal</h3>
-      </div> 
-      }
-    </section>
-  );
-  
+          <section key = {seccion.id} id = {seccion.id + "-" + seccion.attributes.titulo }>
+                
+                <Container>
+                <Row>
+                        <Col md={1}></Col>
+                        <Col md={9}>
+                            <p></p>
+                            
+                            {seccion.attributes.Orientacion  === "Vertical" ? 
+                            <div style = {{display :'flex',flexDirection: 'column', }}>
+                              {
+                                <div dangerouslySetInnerHTML={{ __html: seccion.attributes.ContenidoHTML }} />
+                                
+                              }
+                              {
+                                <Galeria data={seccion.attributes} />
+                              }
+                              
+                            </div> 
+                            :
+                            <div style = {{display :'flex',flexDirection: 'row', }} >
+                                {
+                                <div dangerouslySetInnerHTML={{ __html: seccion.attributes.ContenidoHTML }} />
+                                
+                              }
+                              {
+                                <Galeria data={seccion.attributes} />
+                              }
+                              
+                            
+                            </div> 
+                            }
+                        </Col>
+                      <Col md={2}></Col>
+                </Row>
+
+                </Container>
+
+          </section>
+      ))
+    } 
+    </section>   
+  )
 }
-  
 }

@@ -18,12 +18,6 @@
     "Contenido": {
       "type": "richtext"
     },
-    "pagina": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::pagina.pagina",
-      "inversedBy": "seccion"
-    },
     "ContenidoHTML": {
       "type": "customField",
       "options": {
@@ -43,6 +37,12 @@
         "Horizontal",
         "Vertical"
       ]
+    },
+    "pagina": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::pagina.pagina",
+      "inversedBy": "seccions"
     }
   }
 }

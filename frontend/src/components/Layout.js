@@ -51,6 +51,7 @@ const Layout = ({ page }) =>{
        showBanner ? <Banner /> : null
        
       } 
+      
       <Contenido page ="/servicios"/>
       
 
