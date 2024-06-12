@@ -41,7 +41,7 @@ const Layout = ({ page }) =>{
    
   )
   }
-  else{
+  else if (page === '/servicios'){
     const showBanner = false;
     return (
       <ApolloProvider client = {cliente}>
@@ -60,6 +60,25 @@ const Layout = ({ page }) =>{
    
   )
     
+  }else if(page === "/practica"){
+    const showBanner = false;
+    return (
+      <ApolloProvider client = {cliente}>
+      <Header />
+      <Searchbar color="white" />
+      {
+       showBanner ? <Banner /> : null
+       
+      } 
+      
+      <Contenido page ="/practica"/>
+      
+
+      </ApolloProvider>
+      
+   
+  ) 
+        
   }
   
 }

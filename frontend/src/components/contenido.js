@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import NoticiasMockup from '../images/noticias_unal_mockup.png';
 import Galeria from './Galeria'
+import Selector from './Selector';
 
 const SECCIONES = gql`
   query GetSection($identificacion: ID = "1") {
@@ -158,7 +159,7 @@ export default function Contenido({page}) {
       
     </section>
   );
-}else{
+}if(page === '/servicios'){
   console.log("Aqui voy a renderizar diplomodos:", page )
   
   if (loadingPagina) return <p>Loading...</p>;
@@ -221,5 +222,16 @@ export default function Contenido({page}) {
     } 
     </section>   
   )
-}
+}if(page === '/practica'){
+     
+        console.log('Estoy en practica')
+        return(
+          <section>
+          <h1>Practica</h1>
+          <Selector children ={ <h1>yabada </h1>} />
+          </section>
+        )
+        
+    
+ }
 }

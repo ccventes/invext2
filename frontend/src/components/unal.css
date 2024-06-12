@@ -310,3 +310,24 @@ body{
      position: relative;
      top: -10%; 
   }
+
+  .boxStyle {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  
+  
+}
+.elevated-box {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+    /* Definimos la sombra con desplazamiento vertical de 4px y desplazamiento horizontal de 0px */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+}
+
+
