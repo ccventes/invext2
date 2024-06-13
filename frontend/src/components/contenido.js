@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col';
 import NoticiasMockup from '../images/noticias_unal_mockup.png';
 import Galeria from './Galeria'
 import Selector from './Selector';
+import Modalidades from './Modalidades';
 
 const SECCIONES = gql`
   query GetSection($identificacion: ID = "1") {
@@ -227,8 +228,8 @@ export default function Contenido({page}) {
         console.log('Estoy en practica')
         return(
           <section>
-          <h1>Practica</h1>
-          <Selector children ={ <h1>yabada </h1>} />
+          <Selector  />
+          <Modalidades />
           </section>
         )
         

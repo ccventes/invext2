@@ -317,7 +317,7 @@ body{
   margin-top: 5%;
   padding: 30px;
   border-radius: 15px;
-  background-color: white;
+  background-color: #adb5bd8a;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
   border-width: thin;
   
@@ -335,11 +335,14 @@ body{
 
     display:flex;
     flex-direction: row;
+    align-items: flex-start;
+    
+
 }
 .normal-box {
     padding: 0;
-   
     width: 50%;
+    
     
      
 }
@@ -358,7 +361,7 @@ body{
     background-color: rgb(255, 255, 255);
     box-shadow: -5px 4px 10px rgba(56, 56, 56, 0.7);
     color: black;
-    
+    height: auto;
     margin-right: 1%;
     
 }
@@ -378,7 +381,39 @@ body{
     border-right: none !important;
     border-bottom: none !important;
     border-left: none !important;
-    height: 20% !important;
+    height: 17% !important;
+}
+.op-button{
+    
+    background-color: rgb(0, 119, 181) !important;
+    color: rgb(248, 250, 251) !important; 
+    border-radius: 12px !important;
+    border:  rgba(0, 118, 181, 0.429) !important;
+    margin-top: 20px;
+    width: 70%; 
+
+}
+
+.collapsed-buttons{
+
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+.Modalidades{
+
+    margin-top:70px;
+    border-top: solid #303F5C;
+}
+
+.barra-lateral{
+
+    width: 20%;
+    height: 1000px;
+    border-right: solid #303F5C;
 }
 
 

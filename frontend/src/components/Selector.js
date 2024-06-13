@@ -1,43 +1,82 @@
 import React from 'react';
-import "./unal.css";
+import './unal.css';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import classNames from 'classnames';
 import { Button } from 'react-bootstrap';
+import Collapse from 'react-bootstrap/Collapse';
+import { useState } from 'react';
 
+const Box = () => {
+  const [open, setOpen] = useState(false);
 
-const Box = ({ children }) => {
-  return <div className = "boxStyle">
+  const handleButtonClick = () => {
+    console.log('-------------------------------------');
+    console.log('Estado antes de cambiar:', open);
+    setOpen(!open);
+    console.log('Estado después de cambiar:', !open);  // Esto puede no reflejar inmediatamente el nuevo estado debido a la naturaleza asincrónica de setState
+    console.log('-------------------------------------');
 
-        
-            <Row>
-                <h1> Prácticas y Pasantías</h1>
-                <p> Si estás en los últimos semestres de tu pregrado, posgrado o cumples con el 80% disciplinar del avance de tu programa esta información es para ti </p>
-            </Row>
-            <div className='options'>
-                <div className= {classNames('normal-box', 'option2',)}>
-                    
-                    <div className='option-espacio-texto'>
-                        <h2> ¿Cómo realizo mi inscripción a las prácticas?</h2>
-                        <p>De acuerdo a la modalidad se asignará un formato para el diligenciamiento. Recuerda que tenemos 3 modalidades</p>
+};
 
-                    </div>
-                    <Button className="w-100 custom-button">
-                              Botón Personalizado
+  return (
+    <div className="boxStyle">
+      <Row>
+        <h1>Prácticas y Pasantías</h1>
+        <p>
+          Si estás en los últimos semestres de tu pregrado, posgrado o cumples con el 80% disciplinar del avance de tu programa esta información es para ti
+        </p>
+      </Row>
+      <div className="options">
+        <div className={classNames('normal-box', 'option2')}>
+          <div className="option-espacio-texto">
+            <h2>¿Cómo realizo mi inscripción a las prácticas?</h2>
+            <p>
+              De acuerdo a la modalidad se asignará un formato para el diligenciamiento. Recuerda que tenemos 3 modalidades
+            </p>
+          </div>
+
+          <Button
+            className="w-100 custom-button"
+            onClick={handleButtonClick}
+            aria-controls="collapse-botones"
+            aria-expanded={open}
+          >
+            {open ? 'Ocultar' : 'Mostrar Modalidades'}
+          </Button>
+          <Collapse in={open}>
+            <div  id="collapse-botones">
+                
+                <div className = "collapsed-buttons">
+                    <Button className="op-button"  href="#" id="#seccion1">
+                    Práctica empresarial
                     </Button>
-                    
-        
-                    
+                    <Button className="op-button" id="#seccion2">
+                    Pasantía
+                    </Button>
+                    <Button className="op-button" id="#seccion3">
+                    Práctica modalidad trabajo de grado
+                    </Button>
+
                 </div>
-                <div className= {classNames('normal-box', 'option1',)}>
-                    
-                    
-                    {children}
-                </div>
+                
+                
+
+
             </div>
-  
-  
-  </div>;
+          </Collapse>
+        </div>
+        <div className={classNames('normal-box', 'option1')}>
+        <div className="option-espacio-texto">
+            <h2>¿Dónde debo enviar mi hoja de vida?</h2>
+            <p>
+                Debes enviar tu hoja de vida al correo: Pratpast_pal@unal.edu.co
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  );
 };
 
 export default Box;

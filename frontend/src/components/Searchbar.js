@@ -46,8 +46,8 @@ export default function Searchbar({color}) {
             
                 <div style={cuadroStyles}>
                     <div style = {spacesStyles}>
-                    <img style = {logoStyle} alt="" src={logoNeoUnal} width="66" height="66" title="Espacio para logo"/>
-                    <h3>Espacio para logo</h3>
+                    
+                    
                     </div>
                     <div style = {spacesStyles}></div>
                     <InputGroup style={formStyle}>
