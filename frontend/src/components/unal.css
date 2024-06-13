@@ -315,10 +315,12 @@ body{
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 5%;
-  padding: 20px;
+  padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   background-color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+  border-width: thin;
+  
   
   
 }
@@ -328,6 +330,55 @@ body{
     background-color: white;
     /* Definimos la sombra con desplazamiento vertical de 4px y desplazamiento horizontal de 0px */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+}
+.options{
+
+    display:flex;
+    flex-direction: row;
+}
+.normal-box {
+    padding: 0;
+   
+    width: 50%;
+    
+     
+}
+
+
+.option1{
+
+    background-color: rgb(0, 119, 181);
+    box-shadow: 5px 4px 10px rgba(1, 80, 123, 0.7);
+    color: white;
+    margin-left: 1%;
+}
+
+.option2{
+    
+    background-color: rgb(255, 255, 255);
+    box-shadow: -5px 4px 10px rgba(56, 56, 56, 0.7);
+    color: black;
+    
+    margin-right: 1%;
+    
+}
+.option-espacio-texto{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+
+}
+
+.custom-button{
+
+    border-radius: 0 !important;
+    background-color: #e8f6ff !important;
+    color: rgb(0, 119, 181) !important; 
+    border-top:  rgba(0, 118, 181, 0.429) !important; 
+    border-right: none !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    height: 20% !important;
 }
 
 
