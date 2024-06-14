@@ -19,7 +19,7 @@ const Box = () => {
 };
 
   return (
-    <div className="boxStyle">
+    <div id = "SelectorInicio" className="boxStyle">
       <Row>
         <h1>Prácticas y Pasantías</h1>
         <p>
@@ -31,8 +31,13 @@ const Box = () => {
           <div className="option-espacio-texto">
             <h2>¿Cómo realizo mi inscripción a las prácticas?</h2>
             <p>
-              De acuerdo a la modalidad se asignará un formato para el diligenciamiento. Recuerda que tenemos 3 modalidades
+              De acuerdo a la modalidad se asignará un formato para el diligenciamiento. Recuerda que tenemos 3 modalidades:
             </p>
+            <ul>
+                    <li>Práctica empresarial</li>
+                    <li>Pasantía</li>
+                    <li>Práctica modalidad trabajo de grado</li>
+            </ul>
           </div>
 
           <Button
@@ -41,20 +46,17 @@ const Box = () => {
             aria-controls="collapse-botones"
             aria-expanded={open}
           >
-            {open ? 'Ocultar' : 'Mostrar Modalidades'}
+            {open ? 'Ocultar' : 'Mostrar Indicaciones'}
           </Button>
           <Collapse in={open}>
             <div  id="collapse-botones">
                 
                 <div className = "collapsed-buttons">
-                    <Button className="op-button"  href="#" id="#seccion1">
-                    Práctica empresarial
+                    <Button className="op-button"  href="#Estudiantes" id="#seccion1">
+                    Para Estudiantes
                     </Button>
-                    <Button className="op-button" id="#seccion2">
-                    Pasantía
-                    </Button>
-                    <Button className="op-button" id="#seccion3">
-                    Práctica modalidad trabajo de grado
+                    <Button className="op-button" href="#Empresas" id="#seccion2">
+                    Para Entidades o Empresas
                     </Button>
 
                 </div>
@@ -69,8 +71,9 @@ const Box = () => {
         <div className="option-espacio-texto">
             <h2>¿Dónde debo enviar mi hoja de vida?</h2>
             <p>
-                Debes enviar tu hoja de vida al correo: Pratpast_pal@unal.edu.co
+                Debes enviar tu hoja de vida al correo: Pratpast_pal@unal.edu.co. Recuerda poner tus datos de contacto y programa al que perteneces.
             </p>
+            
           </div>
         </div>
       </div>

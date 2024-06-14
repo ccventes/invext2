@@ -19,10 +19,10 @@ const cliente = new ApolloClient({
 
 
 
-const Layout = ({ page }) =>{
+const Layout = ({ data }) =>{
   
-  console.log('PAGE is ', page);
-  if (page === 'index'){
+  console.log('PAGE is ', data.pagina);
+  if (data.pagina === 'index'){
     const showBanner = true;
     
     return (
@@ -41,7 +41,7 @@ const Layout = ({ page }) =>{
    
   )
   }
-  else if (page === '/servicios'){
+  else if (data.page === '/servicios'){
     const showBanner = false;
     return (
       <ApolloProvider client = {cliente}>
@@ -60,8 +60,9 @@ const Layout = ({ page }) =>{
    
   )
     
-  }else if(page === "/practica"){
+  }else if(data.pagina === "/practica"){
     const showBanner = false;
+    console.log("CONTENIDO ENTRO A LA PRACTICApagina",data.isVisible)
     return (
       <ApolloProvider client = {cliente}>
       <Header />
