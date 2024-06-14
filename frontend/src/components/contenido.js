@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 import NoticiasMockup from '../images/noticias_unal_mockup.png';
 import Galeria from './Galeria'
 import Selector from './Selector';
-import Modalidades from './Modalidades';
+import Modalidades from './modalidades';
 
 const SECCIONES = gql`
   query GetSection($identificacion: ID = "1") {
