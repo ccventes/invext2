@@ -468,7 +468,7 @@ body{
 /* componente  sidebar */
 .sidebar {
     position: fixed;
-    top: 60%;
+    top: 0%;
     left: 5%;
     width: 15%;
     height: auto;
@@ -476,6 +476,10 @@ body{
     padding-top: 20px;
     color: #202E33;
     transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.Fixed {
+    top: 30%
 }
 
 .sidebar.hidden {
