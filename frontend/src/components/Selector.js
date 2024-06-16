@@ -23,7 +23,7 @@ const Box = () => {
       <Row>
         <h1>Prácticas y Pasantías</h1>
         <p>
-          Si estás en los últimos semestres de tu pregrado, posgrado o cumples con el 80% disciplinar del avance de tu programa esta información es para ti
+          Si estás en los últimos semestres de tu pregrado, posgrado o cumples con el 80% disciplinar del avance de tu programa esta información es para ti:
         </p>
       </Row>
       <div className="options">
@@ -52,18 +52,15 @@ const Box = () => {
             <div  id="collapse-botones">
                 
                 <div className = "collapsed-buttons">
-                    <Button className="op-button"  href="#Estudiantes" id="#seccion1">
+                    <Button className="op-button"  href="#Estudiantes" id="seccion1">
                     Para Estudiantes
                     </Button>
-                    <Button className="op-button" href="#Empresas" id="#seccion2">
+                    <Button className="op-button" href="#Empresas" id="seccion2">
                     Para Entidades o Empresas
                     </Button>
 
                 </div>
                 
-                
-
-
             </div>
           </Collapse>
         </div>

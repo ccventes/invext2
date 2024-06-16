@@ -41,7 +41,7 @@ const Layout = ({ data }) =>{
    
   )
   }
-  else if (data.page === '/servicios'){
+  else if (data.pagina === '/servicios'){
     const showBanner = false;
     return (
       <ApolloProvider client = {cliente}>

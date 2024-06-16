@@ -394,6 +394,26 @@ body{
     width: 70%; 
 
 }
+.op-button:active{
+    
+    background-color: rgb(248, 250, 251) !important;
+    color:  rgb(0, 119, 181)!important; 
+    border-radius: 12px !important;
+    border:  rgba(0, 118, 181, 0.429) !important;
+    margin-top: 20px;
+    width: 70%; 
+
+}
+.op-button:hover{
+    
+    background-color: rgb(248, 250, 251) !important;
+    color:  rgb(0, 119, 181)!important; 
+    border-radius: 12px !important;
+    border: solid 2px rgba(0, 118, 181, 0.429) !important;
+    margin-top: 20px;
+    width: 70%; 
+
+}
 
 .collapsed-buttons{
 
@@ -404,19 +424,24 @@ body{
     margin-bottom: 10px;
     gap: 10px;
 }
+#seccion2{
+  margin-bottom: 20px;
+
+}
 .Modalidades{
 
     margin-top:70px;
-    border-top: solid #303F5C;
+   
     display: flex;
     flex-direction: row;
+    box-shadow: 0 -4px 4px -4px rgba(0, 0, 0, 0.5);
 }
 
 .barra-lateral{
 
     width: 20%;
-    height: 1000px;
-    border-right: solid #303F5C;
+    height: auto;
+    
 }
 .Billboard{
 
@@ -424,12 +449,12 @@ body{
     margin-left: 1%;
     margin-right: 1%;
     
-    height: 1000px;
+    height: auto;
 }
 .B-Espacio-texto{
 
     width: 50%;
-    height: auto;
+    height: 460px;
     padding-left: 3%;
     padding-bottom: 0%;
     box-shadow:  -5px 4px 10px rgba(56, 56, 56, 0.7);
@@ -448,6 +473,7 @@ body{
     position: relative;
     translate: 0% 0%;
     margin-top: 2%;
+    margin-bottom:8%;
 }
 .Espacio-imagen{
 
@@ -467,23 +493,16 @@ body{
 
 /* componente  sidebar */
 .sidebar {
-    position: fixed;
+   
     top: 0%;
     left: 5%;
-    width: 15%;
+    width: 75%;
     height: auto;
-    
+    position: sticky;
+    top: 0;
     padding-top: 20px;
-    color: #202E33;
+    color: #1B2C36;
     transition: transform 0.3s ease-in-out;
-}
-
-.sidebar.Fixed {
-    top: 30%
-}
-
-.sidebar.hidden {
-    transform: translateX(-100%);
 }
 
 .sidebar h2 {
@@ -499,12 +518,18 @@ body{
 .sidebar ul li {
     padding: 8px;
     text-align: left;
+    background-color:#0076B5;
+    border: solid #202E33;
+    margin-top: 10px;
+    border-radius: 10px;
+    
 }
 
 .sidebar ul li a {
     color: #202E33;
     text-decoration: none;
     display: block;
+    
 }
 
 .sidebar ul li a:hover {

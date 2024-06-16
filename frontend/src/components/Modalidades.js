@@ -8,7 +8,7 @@ export default function Modalidades() {
  
   
   return (
-    <div className='Modalidades'>
+    <div id = "moddiv" className='Modalidades'>
       
             <div id = "side" className= 'barra-lateral'>
                  <Sidebar />

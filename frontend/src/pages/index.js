@@ -8,10 +8,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const IndexPage = () => {
+  const data ={
 
+    pagina: 'index',
+    visible: false,
+  }
   //const [menuppals, setMenuppals] = useState([]);
     return (
-        <Layout  page = "index" />
+        <Layout  data ={data} />
         )
 }
 
