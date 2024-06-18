@@ -7,6 +7,9 @@ import NoticiasMockup from '../images/noticias_unal_mockup.png';
 import Galeria from './Galeria'
 import Selector from './Selector';
 import Modalidades from './modalidades';
+import './unal.css'
+import { Link } from "gatsby";
+import Accordion from 'react-bootstrap/Accordion';
 
 const SECCIONES = gql`
   query GetSection($identificacion: ID = "1") {
@@ -176,17 +179,32 @@ export default function Contenido({page}) {
   return(   
     <section>
     <h1 style = {{ textAlign:'center', marginTop: '50px'}}> {dataPagina.paginas.data[0].attributes.nombre} </h1>
+    <div style = {{borderTop: 'dotted #bac2c2 1px', display:'flex', flexDirection:'row'}}>
+    <div className= 'barra-lateral oferta'>
+
+                <div className={'sidebar cursos'}>
+            
+                    <ul>
+                           
+                          <li><Link to="">Cursos y Talleres</Link></li>
+                          <li><Link to="">Diplomados</Link></li>
+                        
+                        
+                    </ul>
+                </div>
+                          
+
+    </div>
+    <div style = {{display :'flex',flexDirection: 'column', width:'70%' }}>
+    <Accordion defaultActiveKey="0">
     {
       dataPagina.paginas.data[0].attributes.seccions.data.map(seccion => (
 
-          
-          <section key = {seccion.id} id = {seccion.id + "-" + seccion.attributes.titulo }>
-                
-                <Container>
-                <Row>
-                        <Col md={1}></Col>
-                        <Col md={9}>
-                            <p></p>
+        <Accordion.Item eventKey={seccion.id} id = {seccion.id + "-" + seccion.attributes.titulo + '-a' }>
+          <Accordion.Header>Accordion Item #1</Accordion.Header>
+          <Accordion.Body>
+          <div key = {seccion.id} id = {seccion.id + "-" + seccion.attributes.titulo }>
+                 
                             
                             {seccion.attributes.Orientacion  === "Vertical" ? 
                             <div style = {{display :'flex',flexDirection: 'column', }}>
@@ -212,15 +230,25 @@ export default function Contenido({page}) {
                             
                             </div> 
                             }
-                        </Col>
-                      <Col md={2}></Col>
-                </Row>
 
-                </Container>
+                   
+                
+                
+                
 
-          </section>
+          </div>
+          </Accordion.Body>
+          
+          </Accordion.Item>
+          
+          
       ))
-    } 
+      
+    }
+    </Accordion>
+    </div> 
+    
+    </div>
     </section>   
   )
 }if(page === '/practica'){

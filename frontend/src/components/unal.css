@@ -443,6 +443,12 @@ body{
     height: auto;
     
 }
+.oferta{
+
+    width: 30% !important ;
+    margin-right: 10px;
+    border-right: dotted #bac2c2 1px;
+}
 .Billboard{
 
     width: 80%;
@@ -502,7 +508,7 @@ body{
     top: 0;
     padding-top: 20px;
     color: #1B2C36;
-    transition: transform 0.3s ease-in-out;
+   
 }
 
 .sidebar h2 {
@@ -520,7 +526,7 @@ body{
     text-align: left;
     background-color:#0076B5;
     border: solid #202E33;
-    margin-top: 10px;
+    margin-top: 0px;
     border-radius: 10px;
     
 }
@@ -534,6 +540,66 @@ body{
 
 .sidebar ul li a:hover {
     background-color: #fdfdfd;
+}
+.sidebar.cursos{
+
+    top: 0%;
+    left: 5%;
+    width: 100%;
+    height: auto;
+    position: sticky;
+    top: 0;
+    padding: 0  !important;
+    
+
+
+}
+
+
+
+
+
+.sidebar.cursos ul li {
+    
+    text-align: center;
+    background-color:#0076B5;
+    border: solid #ffffff;
+    margin-top: 0;
+    border-radius: 0;
+    
+}
+
+.sidebar.cursos ul li a {
+    color: #fcfcfc;
+    text-decoration: none;
+    
+    
+}
+
+.sidebar.cursos ul li a:hover {
+    background-color: #fdfdfd;
+    border: solid #075377 1px;
+    color: #0076B5;
+}
+
+.accordion-button.collapsed{
+
+    width: 100%;
+}
+.accordion-header{
+    width: 100%;
+}
+
+.Zona-Titulo{
+
+    position: relative;
+    text-align: center;
+    color:#B56600;
+    background-color: #dadde3;
+    text-align: center;
+    translate: 0px -108px;
+    width: 40%
+    
 }
 
 

@@ -1,28 +1,32 @@
 import React from 'react';
+import './unal.css'
 
 const divLink ={
-  width: "40%",
-  marginLeft: "15px",
-  marginRight: "50px",
+  width: "80%",
+  marginLeft: "0%",
+  marginRight: "0%",
   borderStyle: "solid",
-  borderColor: "gray",
-  background:  "gray",
-  borderWidth: "Thick",
-  
-  
-  zIndex: -1, // Higher z-index for the div
+  borderColor: "white",
+  background:  "#0076B5",
+  borderWidth: "thick",
+  padding: "5px",
+  minHeight: '500px',
+  zIndex: 0, // Higher z-index for the div
 
 
 };
 const imgStyle = {
- position: 'relative',
- zIndex: 0, // Lower z-index for the image
+ 
+  minHeight: '490px',
+  width:'78%',
+  transform: 'translate(0px, 0px)' ,  
+  zIndex: 1, // Lower z-index for the image
 };
 
 const Sectionorganization = {
  
  display : 'flex',
- flexDirection: 'row',
+ flexDirection: 'column',
 
 }
 
@@ -43,14 +47,20 @@ export default function componentName({data}) {
   
   if(data.galeria.data){
   return (
-     <div style = {Sectionorganization}>
+     <div id = "s-organization" >
         {
           data.galeria.data.attributes.Elementos.map(elemento =>(
-            <div style = {divLink} key = {elemento.id}> 
-            <img  style = { imgStyle } src={ elemento.Archivo.data.attributes.url} className="d-block w-100 " alt="..."/>
-            <p> </p>
-            <p style = {{color:'white',}}>{elemento.Descripcion}</p>
+            <div>
+            <div style = {divLink} key = {elemento.id}>
+            <img  style = { imgStyle } src={ elemento.Archivo.data.attributes.url} className='w-100' alt="..."/>   
             </div>
+            <div className = "Zona-Titulo">
+            <h3>{elemento.Descripcion}</h3>
+            </div>
+           
+            </div>
+                
+            
           ))
         }
 
