@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState,useCallback } from 'react';
 import { useQuery, gql } from '@apollo/client';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -110,7 +110,17 @@ export default function Contenido({page}) {
   console.log("Estoy en contenido, la pagina es: ", page)
   console.log("Los datos de secciones son: ", JSON.stringify(data, null, 2));
   const { loading: loadingPagina, error: errorPagina, data: dataPagina } = useQuery(SECCIONES2); // hay que poner el query bien
-   console.log("OOOOOOOOOO Los datos de secciones2 son: ", JSON.stringify(dataPagina, null, 2));
+  console.log("OOOOOOOOOO Los datos de secciones2 son: ", JSON.stringify(dataPagina, null, 2));
+  const [selectorKey, setActiveKey] = useState('3');
+
+  function handleClick(key) {
+    
+    //const id = event.currentTarget.id;
+    console.log("He hecho click ya saben donde con id: == >", key)
+    setActiveKey(key);
+    
+  }
+  
   
 
   
@@ -179,29 +189,43 @@ export default function Contenido({page}) {
   return(   
     <section>
     <h1 style = {{ textAlign:'center', marginTop: '50px'}}> {dataPagina.paginas.data[0].attributes.nombre} </h1>
-    <div style = {{borderTop: 'dotted #bac2c2 1px', display:'flex', flexDirection:'row'}}>
+    <div style = {{borderTop: 'dotted #bac2c2 1px', display:'flex', flexDirection:'row', paddingTop: '50px'}}>
     <div className= 'barra-lateral oferta'>
 
                 <div className={'sidebar cursos'}>
             
-                    <ul>
+                <ul>
+                    {
+                        dataPagina.paginas.data[0].attributes.seccions.data.map(seccion =>(
+
                            
-                          <li><Link to="">Cursos y Talleres</Link></li>
-                          <li><Link to="">Diplomados</Link></li>
-                        
-                        
+                              
+                              <li key = {'li' + seccion.id }><Link key = {'L' + seccion.id } id = {seccion.id} to = "#" 
+
+                                 onClick={(e) => {
+                                  e.preventDefault();
+                                  handleClick(seccion.id)
+                                
+                                 }
+                                }
+                              >
+                              {seccion.attributes.titulo}
+                              </Link></li>
+                          
+                          ) )
+                    }
                     </ul>
                 </div>
                           
 
     </div>
-    <div style = {{display :'flex',flexDirection: 'column', width:'70%' }}>
-    <Accordion defaultActiveKey="0">
+    <div style = {{display :'flex',flexDirection: 'column', width:'60%' }}>
+    <Accordion  activeKey = {selectorKey}>
     {
       dataPagina.paginas.data[0].attributes.seccions.data.map(seccion => (
 
-        <Accordion.Item eventKey={seccion.id} id = {seccion.id + "-" + seccion.attributes.titulo + '-a' }>
-          <Accordion.Header>Accordion Item #1</Accordion.Header>
+        <Accordion.Item key={seccion.id} eventKey={seccion.id}>
+          <Accordion.Header><h4>{seccion.attributes.titulo}</h4></Accordion.Header>
           <Accordion.Body>
           <div key = {seccion.id} id = {seccion.id + "-" + seccion.attributes.titulo }>
                  
