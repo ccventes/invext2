@@ -544,8 +544,8 @@ body{
 .sidebar.cursos{
 
     top: 0%;
-    left: 5%;
-    width: 100%;
+    left: 1%;
+    width:95%;
     height: auto;
     position: sticky;
     top: 0;
