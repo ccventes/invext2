@@ -10,6 +10,7 @@ import Modalidades from './modalidades';
 import './unal.css'
 import { Link } from "gatsby";
 import Accordion from 'react-bootstrap/Accordion';
+import Button from 'react-bootstrap/Button';
 
 const SECCIONES = gql`
   query GetSection($identificacion: ID = "1") {
@@ -79,17 +80,32 @@ query getInfoPagina($url: String = "/servicios") {
 `;
 
 const divLink ={
-   width: "80%",
+   width: "100%",
    marginLeft: "48px",
    borderStyle: "solid",
-   borderColor: "gray",
-   borderWidth: "Thick",
+   borderColor: "rgb(0, 119, 181)",
+   borderWidth: "Thin",
    borderRadius: "15px",
+   boxShadow: "5px 4px 10px rgba(1, 80, 123, 0.7)",
+   height: "auto",
+   marginTop: "30px",
+   display: "flex", // Flexbox for centering
+    // Vertical centering
+  
+  flexDirection: "column",
    
    zIndex: 2, // Higher z-index for the div
 
 
 };
+const textStyle = {
+
+   textAlign: "center",
+   paddingLeft: "10px",
+   paddingRight: "10px",
+   marginTop: "20px",
+
+}
 const imgStyle = {
   position: 'relative',
   zIndex: -1, // Lower z-index for the image
@@ -135,33 +151,39 @@ export default function Contenido({page}) {
         console.log("voy a renderizar index");
   return (
     <section>
-      <Container>
+      <Container className='mt-5 ms-1 me-1 '>
         <Row className= 'mt-4'>
             <Col md={1}></Col>
-            <Col md={7}>
+            <Col md={8}>
                 {
                     
                     <div key={data.seccions.data[0].id}>
-                    <h2>{data.seccions.data[0].attributes.titulo}</h2>
+                    <h1>{data.seccions.data[0].attributes.titulo}</h1>
                     <div dangerouslySetInnerHTML={{ __html: data.seccions.data[0].attributes.ContenidoHTML }} />
                     </div>
                 }
 
             </Col>
-            <Col md={4}>
+            <Col md={3}>
               
               
-            <h3 style={{ textAlign: 'center' }}>Boletin Diepal</h3>
+            
               <div style = {divLink}>
-                 
-                 <img alt="Esto es solo por mocukup" src={NoticiasMockup} width="100%" height="auto" title="mockup" style={imgStyle}/>
+                  <h4 style = {textStyle}> Consulta nuestro boletín de extensión</h4>
+                  <Link to = "https://di20r.r.ag.d.sendibm3.com/mk/mr/sh/OycXxko2a8zXNsWPC7qglKxr/lTgnyfMUfTXy" style={{textDecoration: 'none', display: 'flex', justifyContent: 'center' }}>
+                  <Button className = "mb-3 ms-5 me-5" variant="outline-primary" role="button">Entra al Boletín</Button>
+                  </Link>
   
               </div>
-              <p></p>
-              <h3 style={{ textAlign: 'center' }}>Noticias y novedades</h3>
+              
+              
               <div style = {divLink}>
+              <h4 style = {textStyle}> Consulta AlDía UNAL para noticias de nuestra sede</h4>
+              <Link to = "https://aldiaunal.palmira.unal.edu.co/" style={{textDecoration: 'none', display: 'flex', justifyContent: 'center' }}>
+              
+              <Button className = "mb-3 ms-5 me-5" variant="outline-primary">Entra a AlDía</Button>
+              </Link>
                  
-                 <img alt="Esto es solo por mocukup" src={NoticiasMockup} width="100%" height="auto" title="mockup" style={imgStyle}/>
   
               </div>
               
