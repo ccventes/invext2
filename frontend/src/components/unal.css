@@ -613,10 +613,11 @@ body{
 }
 .boxStyleW {
     
-    margin-top: 5%;
+    margin-top: 1%;
     border-width: thin;
     
     border-color: gray;
+    margin-bottom: 100px
     
     
     
@@ -626,13 +627,17 @@ body{
     flex-direction: row;
     justify-content: center;
 }
+.conv-menu a{
+    width: 40%;
+    text-decoration: none;
+}
 .conv-menu-separator{
    width: 5%;
 }
 .conv-menu-item{
 
-    width: 40%;
-    height: auto;
+    width: 100%;
+    height: 100%;
     border-color: rgb(0, 119, 181);
     border-radius: 15px;
     box-shadow: rgba(1, 80, 123, 0.7) 5px 4px 10px;
@@ -642,23 +647,25 @@ body{
 
     
 }
-.conv-menu-item h2{
-
-   z-index: -3;
-   translate: 50px 200px;
-
+.conv-menu-item h2 {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+    color: white;
+    opacity: 0;
+    z-index: 4;
+    transition: opacity 0.3s ease; /* Transición suave de opacidad */
     
 }
-.conv-menu-item h2:hover{
 
-    z-index: 3;
- 
-     
- }
+.conv-menu-item:hover h2 {
+    opacity: 1;
+}
 
 .conv-menu-item:hover{
 
-    background-color: #428ea9f8;
+    background-color: #428ea9bd;
     z-index: 1;
      /* Ejemplo: aplica un efecto de zoom */
    

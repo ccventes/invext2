@@ -314,20 +314,32 @@ export default function Contenido({page}) {
   console.log('Estoy en convocatorias')
   return(
     <section>
-     <h1> Convocatorias</h1>
+     <h1 style = {{textAlign:'center', paddingTop: '50px'}}> Convocatorias</h1>
+     <h3 style = {{textAlign:'center'}}> Conoce las oportunidades para ti a través de nuestras convocatorias internas y externas.</h3>
      <div  className="boxStyleW">
         <div className="conv-menu">
+                
+             <Link  to = "https://investigacion.unal.edu.co/investigaci%C3%B3n/servicios-inv/convocatorias-internas">
                 <div className="conv-menu-item">
-                    <h2  style={{ color: 'white',position: 'relative' }}> CONVOCATORIAS INTERNAS</h2>
-                    <img src="https://res.cloudinary.com/dmlhbcigt/image/upload/v1721229625/1_convocatorias_internas_09cf5e3925.jpg" alt="imagen 1" style={{ maxWidth: '100%', height: '100%', paddingLeft: '0px',paddingRight: '0px' , marginTop: '0px',zIndex: '-1' }}/>
+                 
+                    <h2> 
+                      
+                      CONVOCATORIAS INTERNAS
+                    </h2>
+                    <img src="https://res.cloudinary.com/dmlhbcigt/image/upload/v1721229625/1_convocatorias_internas_09cf5e3925.jpg" alt="imagen 1" style={{ maxWidth: '100%', height: '100%', paddingLeft: '0px',paddingRight: '0px' , marginTop: '0px', zIndex: '-1' }}/>
                 
                 </div>
+              </Link>
+                
                 <div className='conv-menu-separator'></div>
+                <Link  to = "https://investigacion.unal.edu.co/investigaci%C3%B3n/servicios-inv/convocatorias-externas">
                 <div className="conv-menu-item">
-                    <h2  style={{ color: 'white',position: 'relative' }}> CONVOCATORIAS EXTERNAS</h2>
+                    <h2> CONVOCATORIAS EXTERNAS</h2>
                     <img src="https://res.cloudinary.com/dmlhbcigt/image/upload/v1721229624/2_convocatorias_externas_91b2e76df2.jpg" alt="imagen 2" style={{ maxWidth: '100%', height: '100%',  paddingLeft: '0px',paddingRight: '0px' , marginTop: '0px' }}/>
                 
                 </div>
+                </Link>
+                
                 
         </div>
 
