@@ -309,4 +309,32 @@ export default function Contenido({page}) {
         
     
  }
+ if(page === '/convocatoria'){
+     
+  console.log('Estoy en convocatorias')
+  return(
+    <section>
+     <h1> Convocatorias</h1>
+     <div  className="boxStyleW">
+        <div className="conv-menu">
+                <div className="conv-menu-item">
+                    <h2  style={{ color: 'white',position: 'relative' }}> CONVOCATORIAS INTERNAS</h2>
+                    <img src="https://res.cloudinary.com/dmlhbcigt/image/upload/v1721229625/1_convocatorias_internas_09cf5e3925.jpg" alt="imagen 1" style={{ maxWidth: '100%', height: '100%', paddingLeft: '0px',paddingRight: '0px' , marginTop: '0px',zIndex: '-1' }}/>
+                
+                </div>
+                <div className='conv-menu-separator'></div>
+                <div className="conv-menu-item">
+                    <h2  style={{ color: 'white',position: 'relative' }}> CONVOCATORIAS EXTERNAS</h2>
+                    <img src="https://res.cloudinary.com/dmlhbcigt/image/upload/v1721229624/2_convocatorias_externas_91b2e76df2.jpg" alt="imagen 2" style={{ maxWidth: '100%', height: '100%',  paddingLeft: '0px',paddingRight: '0px' , marginTop: '0px' }}/>
+                
+                </div>
+                
+        </div>
+
+     </div>
+    </section>
+  )
+  
+
+}
 }

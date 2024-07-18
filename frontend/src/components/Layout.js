@@ -81,6 +81,26 @@ const Layout = ({ data }) =>{
   ) 
         
   }
+  else if(data.pagina === "/convocatoria"){
+    const showBanner = false;
+    return (
+        
+      <ApolloProvider client = {cliente}>
+      <Header />
+      <Searchbar color="white" />
+      {
+       showBanner ? <Banner /> : null
+       
+      } 
+      
+      <Contenido page = {data.pagina}/>
+      
+
+      </ApolloProvider>
+
+
+    )
+  }
   
 }
 

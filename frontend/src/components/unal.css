@@ -324,6 +324,16 @@ body{
   
   
 }
+.boxStyleW {
+    
+    margin-top: 5%;
+    border-width: thin;
+    
+    border-color: gray;
+    
+    
+    
+  }
 .elevated-box {
     padding: 20px;
     border-radius: 8px;
@@ -600,6 +610,74 @@ body{
     translate: 0px -150px;
     width: 40%
     
+}
+.boxStyleW {
+    
+    margin-top: 5%;
+    border-width: thin;
+    
+    border-color: gray;
+    
+    
+    
+  }
+.conv-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.conv-menu-separator{
+   width: 5%;
+}
+.conv-menu-item{
+
+    width: 40%;
+    height: auto;
+    border-color: rgb(0, 119, 181);
+    border-radius: 15px;
+    box-shadow: rgba(1, 80, 123, 0.7) 5px 4px 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    
+
+    
+}
+.conv-menu-item h2{
+
+   z-index: -3;
+   translate: 50px 200px;
+
+    
+}
+.conv-menu-item h2:hover{
+
+    z-index: 3;
+ 
+     
+ }
+
+.conv-menu-item:hover{
+
+    background-color: #428ea9f8;
+    z-index: 1;
+     /* Ejemplo: aplica un efecto de zoom */
+   
+
+
+    
+}
+.conv-menu-item img{
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Animación para un efecto suave */
+    translate: 0px -46px;
+}
+
+.conv-menu-item img:hover {
+    /* Ejemplo: cambia la opacidad de la imagen al pasar el mouse */
+    opacity: 0.4;
+    transform: scale(1.05); /* Ejemplo: aplica un efecto de zoom */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Animación para un efecto suave */
 }
 
 
