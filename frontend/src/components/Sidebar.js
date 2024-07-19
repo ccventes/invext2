@@ -45,12 +45,12 @@ const Sidebar = () => {
             <ul>
                 {scrollPosition === 'Estudiantes' ? 
                   
-                  <li><h4><Link to="#moddiv">Para Estudiantes</Link></h4></li>
+                  <li className ="selected"><h4><Link to="#moddiv">Para Estudiantes</Link></h4></li>
                   :
                   <li><Link to="#moddiv">Para Estudiantes</Link></li>
                 }
                 {scrollPosition === 'Empresas' ? 
-                  <li><h4><Link to="#Empresas">Para Entidades o Empresas</Link></h4></li>
+                  <li className ="selected"><h4><Link to="#Empresas">Para Entidades o Empresas</Link></h4></li>
                   :
                   <li><Link to="#Empresas">Para Entidades o Empresas</Link></li>
                 }

@@ -44,7 +44,7 @@ export default function IzquierdoImagen() {
                   <div className = "B-Espacio-texto Blue"  >
                       <div className = "option-espacio-texto">
                           <h3>Para Entidades o Empresas:</h3>
-                          <ol>
+                          <ol className='Lpractica'>
                           <li>Solicitar información en cuanto a procedimientos para el desarrollo de prácticas y/o pasantías universitarias.</li>
                               <li>Diligenciar y remitir vía electrónica formulario de solicitud para pasantías y/o prácticas. (solicitar al correo de prácticas).</li>
                               <li>Recibir hojas de vida de estudiantes interesados en realizar la práctica y/o pasantía.</li>

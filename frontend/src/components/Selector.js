@@ -20,11 +20,12 @@ const Box = () => {
 
   return (
     <div id = "SelectorInicio" className="boxStyle">
+      <div className = {classNames('pad', 'naranja')}>
       <Row>
-        <h1>Prácticas y Pasantías</h1>
-        <p>
+        <h1 style = {{textAlign:'center', paddingTop: '10px',paddingBottom: '50px', color: '#2F2468', fontSize: '80px'}}>Prácticas y Pasantías</h1>
+        <h4 style = {{textAlign:'left',paddingLeft: '1%', paddingRight: '1%', fontSize: '30px', marginBottom: '2%'}}>
           Si estás en los últimos semestres de tu pregrado, posgrado o cumples con el 80% disciplinar del avance de tu programa esta información es para ti:
-        </p>
+        </h4>
       </Row>
       <div className="options">
         <div className={classNames('normal-box', 'option2')}>
@@ -33,7 +34,7 @@ const Box = () => {
             <p>
               De acuerdo a la modalidad se asignará un formato para el diligenciamiento. Recuerda que tenemos 3 modalidades:
             </p>
-            <ul>
+            <ul >
                     <li>Práctica empresarial</li>
                     <li>Pasantía</li>
                     <li>Práctica modalidad trabajo de grado</li>
@@ -72,6 +73,7 @@ const Box = () => {
             </p>
             
           </div>
+        </div>
         </div>
       </div>
     </div>

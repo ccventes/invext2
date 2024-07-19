@@ -312,14 +312,12 @@ body{
   }
 
   .boxStyle {
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 5%;
+  
+  margin-top: 1%;
   padding: 30px;
-  border-radius: 15px;
-  background-color: #adb5bd8a;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
-  border-width: thin;
+  background-color: #F4F4F4;
+  
+  
   
   
   
@@ -360,7 +358,7 @@ body{
 
 .option1{
 
-    background-color: rgb(0, 119, 181);
+    background-color: #644ed2;
     box-shadow: 5px 4px 10px rgba(1, 80, 123, 0.7);
     color: white;
     margin-left: 1%;
@@ -449,7 +447,7 @@ body{
 
 .barra-lateral{
 
-    width: 20%;
+    width: 25%;
     height: auto;
     
 }
@@ -477,7 +475,7 @@ body{
 
 }
 .Blue{
-    background-color: rgb(0, 119, 181) !important;
+    background-color: #644ed2 !important;
     box-shadow: 5px 4px 10px rgba(1, 80, 123, 0.7) !important;
     color: white;
 
@@ -512,7 +510,7 @@ body{
    
     top: 0%;
     left: 5%;
-    width: 75%;
+    width: 92%;
     height: auto;
     position: sticky;
     top: 0;
@@ -534,8 +532,6 @@ body{
 .sidebar ul li {
     padding: 8px;
     text-align: left;
-    background-color:#0076B5;
-    border: solid #202E33;
     margin-top: 0px;
     border-radius: 10px;
     
@@ -549,7 +545,16 @@ body{
 }
 
 .sidebar ul li a:hover {
-    background-color: #fdfdfd;
+    background-color: orange;
+    color: white !important;
+}
+.selected{
+    background-color: orange;
+    color: white !important;
+    text-decoration: none;
+}
+.selected a {
+    color: white !important;
 }
 .sidebar.cursos{
 
@@ -685,6 +690,98 @@ body{
     opacity: 0.4;
     transform: scale(1.05); /* Ejemplo: aplica un efecto de zoom */
     transition: transform 0.3s ease, opacity 0.3s ease; /* Animación para un efecto suave */
+}
+.AlternaColor{
+    display: flex;
+    flex-direction: column;
+}
+.seccion{
+
+    padding: 50px;
+    text-align: center;
+}
+/* Alterna los colores de fondo */
+.seccion:nth-child(odd) {
+    background-color: #F4F4F4; /* Color azul */
+}
+
+.seccion:nth-child(even) {
+    background-color: white; /* Color verde */
+}
+.containervigilancia{
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    justify-content:  center;
+    
+}
+.divVigilancia {
+    width: 30%;
+    margin-left: 0;
+    padding: 1%;
+    padding-top: 6%;
+    border-style: solid;
+    
+    border-color: white;
+    background-color: #644ed2;
+    border-width: thin medium;
+    border-radius: 50%;
+    
+    box-shadow: 5px 4px 10px rgba(1, 25, 39, 0.7);
+    height: auto;
+    margin-top: 10px;
+    display: flex;    
+    flex-direction : column;
+    height: 400px;
+    color: white;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+    
+ 
+ 
+ }
+ .divVigilanciañ:hover{
+    border-color: rgb(0, 119, 181);
+    color:#1B2C36;
+    background-color: white;
+    border-width : thin;
+    box-shadow: 5px 4px 10px rgba(1, 80, 123, 0.7);
+ }
+ .separatorvigilancia{
+    width: 2%;
+ }
+ li::marker {
+    color: #2F2468;
+  }
+
+.Lpractica li::marker{
+
+    color: white !important;
+}
+
+  .naranja{
+
+    border-top: solid orange;
+    border-bottom:solid orange; ;
+    border-width: medium;
+    padding-bottom: 50px;
+  }
+.azul{
+
+    border-top: solid #2F2468;
+    border-bottom:solid #2F2468; ;
+    border-width: medium;
+}
+.iconvig{
+
+    
+    width: 30px;
+    height: 30px;
+    margin-right: 90px;
+    margin-top: 20px;
 }
 
 

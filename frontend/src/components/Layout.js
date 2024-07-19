@@ -100,6 +100,23 @@ const Layout = ({ data }) =>{
 
 
     )
+  }else if(data.pagina === "/vigilancia"){
+
+    const showBanner = false;
+    return(
+      <ApolloProvider client = {cliente}>
+      <Header />
+      <Searchbar color="white" />
+      {
+       showBanner ? <Banner /> : null
+       
+      } 
+      
+      <Contenido page = "/vigilancia"/>
+      
+
+      </ApolloProvider>
+    )
   }
   
 }

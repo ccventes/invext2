@@ -11,6 +11,9 @@ import './unal.css'
 import { Link } from "gatsby";
 import Accordion from 'react-bootstrap/Accordion';
 import Button from 'react-bootstrap/Button';
+import vcientifica from '../images/vig_cientifica.png';
+import vcomercial from '../images/vig_comercial.png';
+import vtecno from '../images/Vig_tecnologica.png';
 
 const SECCIONES = gql`
   query GetSection($identificacion: ID = "1") {
@@ -319,6 +322,7 @@ export default function Contenido({page}) {
      <div  className="boxStyleW">
         <div className="conv-menu">
                 
+             
              <Link  to = "https://investigacion.unal.edu.co/investigaci%C3%B3n/servicios-inv/convocatorias-internas">
                 <div className="conv-menu-item">
                  
@@ -347,6 +351,87 @@ export default function Contenido({page}) {
     </section>
   )
   
+
+}if(page === "/vigilancia"){
+    return(
+        <div className="AlternaColor">
+              <section className='seccion' >
+                  <div className='naranja'>
+                  <h1 style = {{textAlign:'center', paddingTop: '50px',paddingBottom: '50px', color: '#2F2468', fontSize: '80px'}}> Vigilancia Tecnológica </h1>
+                  <h4 style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%', fontSize: '30px'}}> La Vigilancia Tecnológica es un proceso sistemático de recolección, análisis y difusión de información científica, tecnológica y comercial relevante para apoyar la toma de decisiones estratégicas. 
+                  </h4>
+                  <h4 style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%', fontSize: '30px'}}> En la Universidad Nacional de Colombia, sede Palmira, aplicamos esta metodología para identificar oportunidades de innovación, acompañar los procesos de protección de la propiedad intelectual, anticipar cambios en el entorno y fortalecer la competitividad de nuestros proyectos y alianzas.
+                  </h4>
+                  <h4 style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%', fontSize: '30px'}}> Este proceso se aplica de manera continua, adaptándose a las necesidades específicas de cada desarrollo científico, tecnológico y los emprendimientos.
+                  </h4>
+              </div>
+
+              </section>
+              <section className='seccion'> 
+                 <div className='azul'> 
+                 <h1 style = {{textAlign:'center', paddingTop: '50px',paddingBottom: '30px', color: '#2F2468', fontSize: '80px'}}> Tipos de Vigilancia </h1>
+                 <div  className="boxStyleW">
+                          <div className="containervigilancia">
+                                
+                                <div className="divVigilancia">
+                                    <h2> Vigilancia Científica </h2>
+                                    <h5> Monitorea los avances en investigación y desarrollo dentro de áreas específicas de conocimiento.</h5>
+                                    <div className='iconvig'>
+                                          <img src ={vcientifica} width="130" height="130"></img>
+                                    </div>
+
+                                </div>
+                                <div className="separatorvigilancia"></div>
+                                <div className="divVigilancia">
+                                    <h2> Vigilancia Tecnológica </h2>
+                                    <h5> Se enfoca en la evolución de tecnologías emergentes y disruptivas que puedan impactar la industria.</h5>
+                                    <div className='iconvig'>
+                                          <img src ={vcomercial} width="130" height="130"></img>
+                                    </div>
+
+                                </div>
+                                <div className="separatorvigilancia"></div>
+                                <div className="divVigilancia">
+                                    <h2> Vigilancia Comercial </h2>
+                                    <h5> Analiza el mercado y la competencia para identificar oportunidades y amenazas.</h5>
+                                    <div className='iconvig'>
+                                          <img src ={vtecno} width="130" height="130"></img>
+                                    </div>
+
+
+
+                                </div>
+                          </div>
+                                     
+                 </div>
+                 </div>
+              </section>
+              <section className='seccion'> 
+              <div className='naranja'>
+              <h1 style = {{textAlign:'center', paddingTop: '50px',paddingBottom: '50px', color: '#2F2468', fontSize: '80px'}}> ¿Quiénes pueden acceder a estos servicios?</h1>
+              <h4 style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%',fontSize: '30px'}}> Nuestro objetivo es apoyar a toda la comunidad académica y empresarial en la identificación de oportunidades tecnológicas y la protección de sus innovaciones a través de la gestión de la propiedad intelectual.</h4>
+              <p></p>
+              <h4 style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%',fontSize: '30px'}}>Los servicios de Vigilancia Tecnológica de la Universidad Nacional de Colombia, sede Palmira, están disponibles para:
+                  <ul style ={{paddingLeft: "5%"}}>
+                      <li>Estudiantes de pregrado y posgrado</li>
+                      <li>Profesores e investigadores</li>
+                      <li>Empresas y emprendedores</li>
+                      <li>Entidades públicas y privadas</li>
+                  </ul>
+              </h4>
+              <h4 style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%',fontSize: '30px'}}> Para recibir asesoría en Vigilancia Tecnológica y acompañamiento en Propiedad Intelectual (PI), por favor Agende su cita:</h4>
+              <Link to = "https://calendar.app.google/ZLeEPJS83B4fh3C79" style={{textDecoration: 'none', display: 'flex', justifyContent: 'center' }}>
+              <Button variant="outline-primary" size="lg">
+                      Agendar Cita
+              </Button>
+              </Link>
+              </div>
+              
+              </section>
+              
+        </div>
+
+    )
 
 }
 }
