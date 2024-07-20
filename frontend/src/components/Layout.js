@@ -117,6 +117,25 @@ const Layout = ({ data }) =>{
 
       </ApolloProvider>
     )
+  }else if(data.pagina !== "/index"){
+    console.log("HEY ES " + data.pagina)
+
+    const showBanner = false;
+    return(
+      <ApolloProvider client = {cliente}>
+      <Header />
+      <Searchbar color="white" />
+      {
+       showBanner ? <Banner /> : null
+       
+      } 
+      
+      <Contenido page = {data.pagina} />
+      
+
+      </ApolloProvider>
+    )
+
   }
   
 }

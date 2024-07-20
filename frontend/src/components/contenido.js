@@ -14,6 +14,7 @@ import Button from 'react-bootstrap/Button';
 import vcientifica from '../images/vig_cientifica.png';
 import vcomercial from '../images/vig_comercial.png';
 import vtecno from '../images/Vig_tecnologica.png';
+import Videos from './videos';
 
 const SECCIONES = gql`
   query GetSection($identificacion: ID = "1") {
@@ -85,15 +86,16 @@ query getInfoPagina($url: String = "/servicios") {
 const divLink ={
    width: "100%",
    marginLeft: "48px",
-   borderStyle: "solid",
-   borderColor: "rgb(0, 119, 181)",
-   borderWidth: "Thin",
+   //borderStyle: "solid",
+   //borderColor: "rgb(0, 119, 181)",
+   //borderWidth: "Thin",
    borderRadius: "15px",
-   boxShadow: "5px 4px 10px rgba(1, 80, 123, 0.7)",
+   //boxShadow: "5px 4px 10px rgba(1, 80, 123, 0.7)",
    height: "auto",
    marginTop: "30px",
    display: "flex", // Flexbox for centering
     // Vertical centering
+  backgroundColor: '#00969A',
   
   flexDirection: "column",
    
@@ -161,7 +163,7 @@ export default function Contenido({page}) {
                 {
                     
                     <div key={data.seccions.data[0].id}>
-                    <h1>{data.seccions.data[0].attributes.titulo}</h1>
+                    <h1 style = {{color: '0C1060'}}>{data.seccions.data[0].attributes.titulo}</h1>
                     <div dangerouslySetInnerHTML={{ __html: data.seccions.data[0].attributes.ContenidoHTML }} />
                     </div>
                 }
@@ -174,7 +176,7 @@ export default function Contenido({page}) {
               <div style = {divLink}>
                   <h4 style = {textStyle}> Consulta nuestro boletín de extensión</h4>
                   <Link to = "https://di20r.r.ag.d.sendibm3.com/mk/mr/sh/OycXxko2a8zXNsWPC7qglKxr/lTgnyfMUfTXy" style={{textDecoration: 'none', display: 'flex', justifyContent: 'center' }}>
-                  <Button className = "mb-3 ms-5 me-5" variant="outline-primary" role="button">Entra al Boletín</Button>
+                  <Button id = "Btn-boletin" className = "mb-3 ms-5 me-5 " variant="primary" role="button">Entra al Boletín</Button>
                   </Link>
   
               </div>
@@ -433,5 +435,50 @@ export default function Contenido({page}) {
 
     )
 
-}
+}if (page === "/propiedad"){
+   return(
+    <div className="AlternaColorP"> 
+       <section className='seccionP'> 
+            <div className='naranja'>
+                <h1 style = {{textAlign:'center', paddingTop: '50px',paddingBottom: '50px', color: '#2F2468', fontSize: '60px'}}> ¿Sabes qué es la propiedad intelectual?
+                </h1> 
+                <h4 style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%', fontSize: '27px'}}> Es un derecho complejo de dominio especial sobre las creaciones del talento humano que se concede a los autores o inventores y simultáneamente permite a la sociedad hacer uso de esas creaciones. 
+                </h4>  
+                <h4 style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%', fontSize: '27px'}}> La propiedad intelectual comprende: el derecho de autor y los derechos conexos; la propiedad industrial y los derechos de los obtentores de variedades vegetales. En armonía con las disposiciones que regulan las relaciones de la Comunidad Andina de Naciones se establecerá una protección especial para el conocimiento tradicional y la protección del folclor.
+                </h4>
+                <Link to = "https://calendar.app.google/ZLeEPJS83B4fh3C79" style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%', fontSize: '30px'}}>
+                      conoce articulo 035
+                </Link>
+            </div> 
+
+
+       </section>
+       <section className='seccionP'>
+          <div className='blanco'> 
+                    <h1 style = {{textAlign:'center', paddingTop: '5px',marginTop: '45px',paddingBottom: '5px', color: 'white', fontSize: '58px',backgroundColor:'orange', borderRadius:'20px'}}> ¿Por qué es importante la Propiedad Intelectual?
+                    </h1>
+                    <h4  style= {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%', fontSize: '27px', color: 'white', marginTop: '45px'}}> Es misión de la Universidad la asimilación crítica y la creación de conocimiento, la conservación y uso sostenible de la biodiversidad, el desarrollo de sistemas autónomos de generación de conocimiento, de arte y de cultura nacional e internacional para el beneficio y uso de la sociedad.</h4>
+                    <br></br>
+                    <h4  style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%', fontSize: '27px', color: 'white'}}> La Universidad propenderá porque cualquier derecho resultante de la producción intelectual, sea utilizado de manera coherente con el interés público, la función social y ecológica de la propiedad y en general con la Constitución Política de Colombia.</h4> 
+         </div>
+       </section>
+       <section className='seccionP'> 
+            <div className='naranja'>
+            <h1 style = {{textAlign:'center', paddingTop: '50px',paddingBottom: '50px', color: '#2F2468', fontSize: '60px'}}> conoce más de la propiedad intelectual aquí:
+            </h1> 
+            
+              <Videos />
+              <h4  style= {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%', fontSize: '27px', marginTop: '45px'}}>Para conocer más información o asesoría comuníquese al correo:  <Link to = "https://calendar.app.google/ZLeEPJS83B4fh3C79" style = {{textAlign:'left',paddingLeft: '0%', paddingRight: '0%', fontSize: '30px'}}>
+                    Gestionpi_pal@unal.edu.co
+               </Link> </h4>
+            </div>
+        
+        </section> 
+    
+    </div>
+    
+
+   )
+
+  }
 }

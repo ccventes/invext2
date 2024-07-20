@@ -708,6 +708,24 @@ body{
 .seccion:nth-child(even) {
     background-color: white; /* Color verde */
 }
+
+.AlternaColorP{
+    display: flex;
+    flex-direction: column;
+}
+.seccionP{
+
+    padding: 50px;
+    text-align: center;
+}
+/* Alterna los colores de fondo */
+.seccionP:nth-child(odd) {
+    background-color: #F4F4F4; 
+}
+
+.seccionP:nth-child(even) {
+    background-color: #0C1060; 
+}
 .containervigilancia{
     display: flex;
     flex-direction: row;
@@ -775,6 +793,13 @@ body{
     border-bottom:solid #2F2468; ;
     border-width: medium;
 }
+.blanco{
+
+    border-top: solid white;
+    border-bottom:solid white; ;
+    border-width: medium;
+    padding-bottom: 50px;
+}
 .iconvig{
 
     
@@ -782,6 +807,21 @@ body{
     height: 30px;
     margin-right: 90px;
     margin-top: 20px;
+}
+#Btn-boletin{
+        background-color: #0C6466;
+
+}
+.video-grid{
+
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.video-separator{
+    width: 40%;
 }
 
 
