@@ -4,12 +4,12 @@ import Layout from '../components/Layout'
 export default function item() {
   const data ={
 
-    pagina: '/propiedad',
+    pagina: '/item',
        
   }
   return (
     <div>
-      
+       <Layout   data = {data} ></Layout>
     </div>
   )
 }

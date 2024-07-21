@@ -15,6 +15,7 @@ import vcientifica from '../images/vig_cientifica.png';
 import vcomercial from '../images/vig_comercial.png';
 import vtecno from '../images/Vig_tecnologica.png';
 import Videos from './videos';
+import itemlogo from '../images/itemlogont.png';
 
 const SECCIONES = gql`
   query GetSection($identificacion: ID = "1") {
@@ -480,5 +481,19 @@ export default function Contenido({page}) {
 
    )
 
+  }if(page === "/item"){
+    return(
+      <section >
+           <div className='item-hero-bg-img'>
+              <img src ="https://res.cloudinary.com/dmlhbcigt/image/upload/v1721536663/triangle_89a4352afe.jpg" width="100%" height="768px"></img>
+            </div>
+           <div className='item-hero'></div> 
+           <div className='item-hero-whitespace'> </div>
+           <div className='item-logo'>
+              <img src ={itemlogo} width="100%" height="408px"></img>
+            </div>
+           
+      </section>
+    )
   }
 }

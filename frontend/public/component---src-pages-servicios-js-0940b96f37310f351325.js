@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkdiepal=self.webpackChunkdiepal||[]).push([[884],{7518:function(e,n,a){a.r(n),a.d(n,{default:function(){return u}});var i=a(6540),t=a(8837);function u(){return i.createElement(t.A,{data:{pagina:"/servicios",visible:!1}})}}}]);
-//# sourceMappingURL=component---src-pages-servicios-js-0940b96f37310f351325.js.map

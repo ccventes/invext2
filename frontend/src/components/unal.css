@@ -823,6 +823,39 @@ body{
 .video-separator{
     width: 40%;
 }
+.item-hero{
+    width: 100%;
+    height: 768px;
+    background-image: linear-gradient(to right , #17c9ccc1, #0c1060b6);
+    z-index : 2;
+    position: relative;
+    translate: 0px -768px;
+
+}
+.item-hero-bg-img{
+   z-index: -1;
+     
+}
+.item-logo{
+    z-index: 4;
+    width: 29%;
+    height: 10%;
+    position: relative;
+    translate: 122% -492%;
+      
+ }
+/*border-left:  solid thick #0c1060;
+    border-right: solid thick #17c9cc ;*/
+.item-hero-whitespace{
+    width: 70%;
+    height: 768px;
+    position: relative;
+    z-index: 3;
+    background-color: white;
+    translate: 18% -200%;
+    clip-path: polygon(54% 7% ,90% 101%, 18% 101%)
+
+}
 
 
 
