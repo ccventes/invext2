@@ -825,14 +825,14 @@ body{
 }
 .item-hero{
     width: 100%;
-    height: 768px;
-    background-image: linear-gradient(to right , #17c9ccc1, #0c1060b6);
+    height: 600px;
+    background-color: #17c9ccc1;
     z-index : 2;
     position: relative;
-    translate: 0px -768px;
+    translate: 0px -600px;
 
 }
-.item-hero-bg-img{
+.item-hero-bg-img-left{
    z-index: -1;
      
 }
@@ -848,7 +848,7 @@ body{
     border-right: solid thick #17c9cc ;*/
 .item-hero-whitespace{
     width: 70%;
-    height: 768px;
+    height: 600px;
     position: relative;
     z-index: 3;
     background-color: white;
@@ -856,6 +856,50 @@ body{
     clip-path: polygon(54% 7% ,90% 101%, 18% 101%)
 
 }
+.HeroSection{
+
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    border-radius: 30px;
+    margin: 20px 20px 20px 20px;
+}
+.ItemSection{
+    overflow: hidden;
+    height: auto;
+    border-radius: 30px;
+    margin: 20px 20px 20px 20px;
+}
+
+.item-hero-right{
+    background-color: #0C1060;
+    width: 50%;
+    height: 600px;
+
+}
+.item-hero-left{
+   
+    width: 50%;
+    height: 600px;
+
+}
+.hero-border{
+   
+    
+    translate: -50% 0;
+    position: relative;
+    z-index: 4;
+    margin-top: 100px;
+    border-top : white solid  medium;
+    border-bottom : white solid  medium;
+}
+.triangulo-item{
+
+    width: 100%;
+    height: 170px;
+}
+
+
 
 
 

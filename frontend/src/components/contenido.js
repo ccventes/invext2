@@ -483,17 +483,45 @@ export default function Contenido({page}) {
 
   }if(page === "/item"){
     return(
-      <section >
-           <div className='item-hero-bg-img'>
-              <img src ="https://res.cloudinary.com/dmlhbcigt/image/upload/v1721536663/triangle_89a4352afe.jpg" width="100%" height="768px"></img>
-            </div>
-           <div className='item-hero'></div> 
-           <div className='item-hero-whitespace'> </div>
-           <div className='item-logo'>
-              <img src ={itemlogo} width="100%" height="408px"></img>
-            </div>
+      <div>
+      <section className='HeroSection' >
            
+           <div className='item-hero-left'>
+                  <div className='item-hero-bg-img-left'>
+                      <img src ="https://res.cloudinary.com/dmlhbcigt/image/upload/v1721584301/cutted_Right_a2dd3af1ed.jpg" width="100%" height="600px"></img>
+                    </div>
+                  <div className='item-hero'></div> 
+           </div>
+           
+           <div className='item-hero-right'>
+                <div className='hero-border'> 
+                <h1 style = {{textAlign:'center', paddingTop: '0px',marginTop: '45px',paddingBottom: '5px', color: 'white', fontSize: '72px'}}> Incubadora de emprendimientos
+                </h1>
+                <h4  style= {{textAlign:'left',paddingLeft: '10%', paddingRight: '8%', fontSize: '27px', color: 'white', marginTop: '45px', marginBottom: '45px'}}> Universidad Nacional de Colombia - Sede Palmira</h4>          
+
+                </div>
+
+           </div>
+   
       </section>
+      <section className='ItemSection' >
+
+              <div className = 'triangulo-item '>
+
+                  <img src ="https://res.cloudinary.com/dmlhbcigt/image/upload/v1721607048/triangulo_4c80900d06.jpg" width="100%" height="170px"></img>
+         
+              </div>
+              <div className = 'item-slide-container '>
+                  <img src ="https://res.cloudinary.com/dmlhbcigt/image/upload/v1721613990/fondo_Item_d742e79567.jpg" width="100%" height="723px"></img>
+                
+                   
+
+              </div>
+
+
+      </section>
+      
+      </div>
     )
   }
 }
