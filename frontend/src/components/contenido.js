@@ -16,6 +16,8 @@ import vcomercial from '../images/vig_comercial.png';
 import vtecno from '../images/Vig_tecnologica.png';
 import Videos from './videos';
 import itemlogo from '../images/itemlogont.png';
+import Squarebulletlist from './Squarebulletlist';
+import VisibleOnScroll from './VisibleOnScroll';
 
 const SECCIONES = gql`
   query GetSection($identificacion: ID = "1") {
@@ -445,8 +447,7 @@ export default function Contenido({page}) {
                 </h1> 
                 <h4 style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%', fontSize: '27px'}}> Es un derecho complejo de dominio especial sobre las creaciones del talento humano que se concede a los autores o inventores y simultáneamente permite a la sociedad hacer uso de esas creaciones. 
                 </h4>  
-                <h4 style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%', fontSize: '27px'}}> La propiedad intelectual comprende: el derecho de autor y los derechos conexos; la propiedad industrial y los derechos de los obtentores de variedades vegetales. En armonía con las disposiciones que regulan las relaciones de la Comunidad Andina de Naciones se establecerá una protección especial para el conocimiento tradicional y la protección del folclor.
-                </h4>
+                 
                 <Link to = "https://calendar.app.google/ZLeEPJS83B4fh3C79" style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%', fontSize: '30px'}}>
                       conoce articulo 035
                 </Link>
@@ -482,8 +483,32 @@ export default function Contenido({page}) {
    )
 
   }if(page === "/item"){
+    const bulletListA = ['Asesoramiento en la incubación de proyectos',
+      'Protección de la propiedad intelectual',
+      'Vigilancia tecnológica',
+      'Desarrollo de modelos de negocio',
+      'Capacitación y mentoría'
+
+    ]
+    const bulletListB = [
+      'Estudiantes de pregrado y posgrado',
+      'Profesores e investigadores',
+      'Egresados',
+      'Entidades públicas y privadas'
+
+    ]
+    const data ={
+        items: bulletListA,
+        clase: 'itemBlueSuare'
+
+    };
+    const dataB = {
+      items: bulletListB,
+      clase: 'itemBlueSuare'
+    }
     return(
       <div>
+      <div  style ={{backgroundColor : '#E2E2E2',paddingBottom: '20px', paddingTop: '20px'}}>
       <section className='HeroSection' >
            
            <div className='item-hero-left'>
@@ -504,6 +529,8 @@ export default function Contenido({page}) {
            </div>
    
       </section>
+      </div>
+      <div style = {{backgroundColor : 'whitesmoke',paddingTop: '20px'}}>
       <section className='ItemSection' >
 
               <div className = 'triangulo-item '>
@@ -514,12 +541,66 @@ export default function Contenido({page}) {
               <div className = 'item-slide-container '>
                   <img src ="https://res.cloudinary.com/dmlhbcigt/image/upload/v1721613990/fondo_Item_d742e79567.jpg" width="100%" height="723px"></img>
                 
-                   
-
               </div>
+              <div className = 'item-slide-text' >
+              
+                      <h1 style = {{textAlign:'center', paddingLeft: '8%', paddingRight: '20%',paddingTop: '5px',marginTop: '45px',paddingBottom: '5px', color: '#0C1060', fontSize: '72px'}}> 
+                         ITEM
+                      </h1>
+                      <h4 style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '20%', fontSize: '27px',marginBottom: '2%'}}> 
+                      La Incubadora de Emprendimientos de la Universidad Nacional de Colombia - Sede Palmira, es una iniciativa destinada a fomentar y apoyar la creación de empresas derivadas de la investigación y el conocimiento generado en la universidad. 
+                      </h4>
+                      <h4 style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '20%', fontSize: '27px'}}> 
+                      A través de un proceso estructurado, brindamos acompañamiento en la incubación de proyectos, protección de la propiedad intelectual, vigilancia tecnológica y desarrollo de modelos de negocio.
+                      </h4>
+              </div>
+              
+              <div style ={{backgroundColor: '#0C1060', width: '100%', height:'300px',position : 'relative' ,zIndex: '7', translate: '0px -385px' }}></div>   
+
+              
 
 
       </section>
+      </div>
+      <section style ={{backgroundColor : '#E2E2E2', paddingTop: '90px',paddingBottom:'50px', display: 'flex', flexDirection: 'row',height:'auto'}}>
+              
+              
+              <div className='item-image-left'>
+                    
+                    <img src ="https://res.cloudinary.com/dmlhbcigt/image/upload/v1721698608/DSC_00680_e7853cb85d.jpg" width="100%" height="100%"></img>
+              </div>
+              <div>
+              <h4 style = {{textAlign:'center',paddingLeft: '0.5%', paddingRight: '1%', fontSize: '40px',marginBottom: '4%'}}> 
+                    <span style = {{color: '#0C1060'}}>¿Qué servicio </span>  <span style = {{color: '#F34868'}}>ofrecemos  ? </span>
+              </h4>
+              <Squarebulletlist data = {data} />
+              </div>
+
+      </section>
+      <section style ={{backgroundColor : 'whitesmoke', paddingTop: '90px',paddingBottom:'50px', display: 'flex', flexDirection: 'row',height:'auto'}}> 
+          <div className = "text-left">
+              <h4 style = {{textAlign:'center',paddingLeft: '0%', paddingRight: '0%', fontSize: '40px',marginBottom: '4%'}}> 
+                    <span style = {{color: ' #F34868'}}>Este servicio está </span>  <span style = {{color: '#0C1060'}}> dirigido a: </span>
+              </h4>
+              <Squarebulletlist data = {dataB} />
+          </div>
+          <div id = 'invertImage' className='item-image-left'>
+                    
+                    <img src ="https://res.cloudinary.com/dmlhbcigt/image/upload/v1721707949/DSC_03187_e6b2381317.jpg" width="100%" height="100%"></img>
+          </div>
+        
+        </section>
+        <section>
+
+                  <VisibleOnScroll className="fade-in-element">
+                  <h2>This content becomes visible on scroll!</h2>
+                  <p>Scroll down to see more content appear as you go.</p>
+                </VisibleOnScroll>
+        </section>
+
+        <div style={{ height: '100vh' }}></div> {/* Espacio adicional para scroll */}
+          
+      
       
       </div>
     )
