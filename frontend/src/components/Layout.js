@@ -9,6 +9,7 @@ import Banner from './Banner';
 import config from '../config';
 import Searchbar from './Searchbar';
 import Contenido from './contenido';
+import Footer from './footer';
 
 
 
@@ -34,7 +35,7 @@ const Layout = ({ data }) =>{
        
       } 
       <Contenido page ="index" />
-      
+      <Footer />
 
       </ApolloProvider>
       
@@ -53,7 +54,7 @@ const Layout = ({ data }) =>{
       } 
       
       <Contenido page ="/servicios"/>
-      
+      <Footer />
 
       </ApolloProvider>
       
@@ -73,7 +74,7 @@ const Layout = ({ data }) =>{
       } 
       
       <Contenido page ="/practica"/>
-      
+      <Footer />
 
       </ApolloProvider>
       
@@ -94,7 +95,7 @@ const Layout = ({ data }) =>{
       } 
       
       <Contenido page = {data.pagina}/>
-      
+      <Footer />
 
       </ApolloProvider>
 
@@ -113,7 +114,7 @@ const Layout = ({ data }) =>{
       } 
       
       <Contenido page = "/vigilancia"/>
-      
+      <Footer />
 
       </ApolloProvider>
     )
@@ -131,12 +132,14 @@ const Layout = ({ data }) =>{
       } 
       
       <Contenido page = {data.pagina} />
+      <Footer />
       
 
       </ApolloProvider>
     )
 
   }
+  
   
 }
 

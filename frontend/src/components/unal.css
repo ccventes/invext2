@@ -953,6 +953,37 @@ body{
     transition: opacity 0.5s ease-in;
   }
 
+.footer {
+  z-index: 1;
+  background-color: #666;
+  color: white;
+  padding : 15px;
+  padding-right: 0;
+}
+.footer a{
+    text-decoration: none;
+    width: 49%;
+    color: #fff;
+    font-size: 0.8em;
+    
+
+}
+.contder{
+    border-left:  solid 1px whitesmoke;
+    border-right:  solid 1px whitesmoke;
+    color: #ddd;
+    display : flex;
+    font-size: 0.8em;
+}
+
+.asoc-img {
+
+    height: 90% !important;     
+}
+
+ 
+
+
 
 
 
