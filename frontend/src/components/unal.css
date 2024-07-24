@@ -860,15 +860,14 @@ body{
 
     display: flex;
     flex-direction: row;
-    overflow: hidden;
-    border-radius: 30px;
-    margin: 20px 20px 20px 20px;
+    
+    
 }
 .ItemSection{
     overflow: hidden;
-    height: 1000px;
+    height: auto;
     border-radius: 30px;
-    margin: 19px 20px 20px 20px;
+    
 }
 
 .item-hero-right{
@@ -893,6 +892,15 @@ body{
     border-top : white solid  medium;
     border-bottom : white solid  medium;
 }
+#hero-move.hidden {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  #hero-move.visible {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
 .triangulo-item{
 
     width: 100%;
@@ -902,7 +910,17 @@ body{
 
     z-index: 6;
     position: relative;
-    translate: 0 -200%;
+    translate: 0 0%;
+    
+}
+.cyan-top-border{
+    border-top: solid medium #17c8cc;
+    border-bottom: solid medium #17c8cc;
+    margin-top : 100px;
+    margin-bottom:100px;
+    margin-left: 8%;
+    margin-right: 10%;
+
 }
 
 .SquareBulletList{
@@ -910,11 +928,11 @@ body{
     
     position: relative;
     z-index: 1;
-    translate: 11% 0%;
+    translate: 5% 0%;
 }
 .itemBlueSuare{
     
-    border-bottom:  #F34868 dotted medium;
+    border-bottom:  #17c8cc dotted medium;
     color: #0C1060;
     width: 450px;
     height: 50px;
@@ -931,18 +949,47 @@ body{
     height: auto;
     margin-left: 9.5%;
     z-index: 0;
-    box-shadow: -10px 5px #0C1060, -20px 10px #F34868;
+    box-shadow: -10px 5px #17c8cc, -20px 15px #0C1060 ;
     margin-bottom: 50px;
+}
+.item-full-width-img{
+    width: 100%;
+    height: 733px;
+    z-index: 10;
+    background: url('https://res.cloudinary.com/dmlhbcigt/image/upload/v1721798156/cita_cut_3_aa5bbbbdd1.png') no-repeat;
+    
+    
+}
+.overlay{
+    width:100%;
+    height: 93.5%;
+    background-color: #17c9ccb4;
+    
+    z-index: 11;
+
+
 }
 #invertImage{
 
     margin-left: 4%  !important;
-    box-shadow: 10px 5px #0C1060, 20px 10px #F34868 !important;
+    box-shadow: 10px 5px  #17c8cc, 20px 15px  #0C1060  !important;
 }
 .text-left{
 
     margin-left: 9%;
 }
+.fade-in-element{
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 10;
+    
+    
+
+
+}
+
+
 .hidden {
     opacity: 0;
     transition: opacity 0.5s ease-out;

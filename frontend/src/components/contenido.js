@@ -1,4 +1,4 @@
-import React, { useState,useCallback } from 'react';
+import React, { useState,useCallback,useRef } from 'react';
 import { useQuery, gql } from '@apollo/client';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -18,6 +18,7 @@ import Videos from './videos';
 import itemlogo from '../images/itemlogont.png';
 import Squarebulletlist from './Squarebulletlist';
 import VisibleOnScroll from './VisibleOnScroll';
+import useScrollVisibility from '../hooks/useScrollVisibility';
 
 const SECCIONES = gql`
   query GetSection($identificacion: ID = "1") {
@@ -144,6 +145,8 @@ export default function Contenido({page}) {
     setActiveKey(key);
     
   }
+  const heroMoveRef = useRef(null);
+  const isVisible = useScrollVisibility(heroMoveRef, { threshold: 0.5  });
   
   
 
@@ -506,9 +509,10 @@ export default function Contenido({page}) {
       items: bulletListB,
       clase: 'itemBlueSuare'
     }
+    
     return(
       <div>
-      <div  style ={{backgroundColor : '#E2E2E2',paddingBottom: '20px', paddingTop: '20px'}}>
+      <div   style ={{backgroundColor : '#E2E2E2',paddingBottom: '0px', paddingTop: '0px'}}>
       <section className='HeroSection' >
            
            <div className='item-hero-left'>
@@ -519,7 +523,10 @@ export default function Contenido({page}) {
            </div>
            
            <div className='item-hero-right'>
-                <div className='hero-border'> 
+                <div id = 'hero-move' 
+                ref={heroMoveRef}
+                className={`hero-border ${isVisible ? 'visible' : 'hidden'}`}
+                > 
                 <h1 style = {{textAlign:'center', paddingTop: '0px',marginTop: '45px',paddingBottom: '5px', color: 'white', fontSize: '72px'}}> Incubadora de emprendimientos
                 </h1>
                 <h4  style= {{textAlign:'left',paddingLeft: '10%', paddingRight: '8%', fontSize: '27px', color: 'white', marginTop: '45px', marginBottom: '45px'}}> Universidad Nacional de Colombia - Sede Palmira</h4>          
@@ -533,30 +540,24 @@ export default function Contenido({page}) {
       <div style = {{backgroundColor : 'whitesmoke',paddingTop: '20px'}}>
       <section className='ItemSection' >
 
-              <div className = 'triangulo-item '>
-
-                  <img src ="https://res.cloudinary.com/dmlhbcigt/image/upload/v1721607048/triangulo_4c80900d06.jpg" width="100%" height="170px"></img>
-         
-              </div>
-              <div className = 'item-slide-container '>
-                  <img src ="https://res.cloudinary.com/dmlhbcigt/image/upload/v1721613990/fondo_Item_d742e79567.jpg" width="100%" height="723px"></img>
-                
-              </div>
+              
+              
               <div className = 'item-slide-text' >
               
-                      <h1 style = {{textAlign:'center', paddingLeft: '8%', paddingRight: '20%',paddingTop: '5px',marginTop: '45px',paddingBottom: '5px', color: '#0C1060', fontSize: '72px'}}> 
+                      <div className='cyan-top-border'>
+                      <h1 style = {{textAlign:'center', paddingLeft: '8%', paddingRight: '20%',paddingTop: '5px',marginTop: '45px',paddingBottom: '5px', color: '#17c8cc', fontSize: '72px'}}> 
                          ITEM
                       </h1>
-                      <h4 style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '20%', fontSize: '27px',marginBottom: '2%'}}> 
+                      <h4 style = {{textAlign:'left',paddingLeft: '2%', paddingRight: '1%', fontSize: '27px',marginBottom: '2%', color : '#0C1060'}}> 
                       La Incubadora de Emprendimientos de la Universidad Nacional de Colombia - Sede Palmira, es una iniciativa destinada a fomentar y apoyar la creación de empresas derivadas de la investigación y el conocimiento generado en la universidad. 
                       </h4>
-                      <h4 style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '20%', fontSize: '27px'}}> 
+                      <h4 style = {{textAlign:'left',paddingLeft: '2%', paddingRight: '1%', fontSize: '27px', color :'#0C1060',paddingBottom: '65px'}}> 
                       A través de un proceso estructurado, brindamos acompañamiento en la incubación de proyectos, protección de la propiedad intelectual, vigilancia tecnológica y desarrollo de modelos de negocio.
                       </h4>
+                      </div>
               </div>
               
-              <div style ={{backgroundColor: '#0C1060', width: '100%', height:'300px',position : 'relative' ,zIndex: '7', translate: '0px -385px' }}></div>   
-
+              
               
 
 
@@ -571,7 +572,7 @@ export default function Contenido({page}) {
               </div>
               <div>
               <h4 style = {{textAlign:'center',paddingLeft: '0.5%', paddingRight: '1%', fontSize: '40px',marginBottom: '4%'}}> 
-                    <span style = {{color: '#0C1060'}}>¿Qué servicio </span>  <span style = {{color: '#F34868'}}>ofrecemos  ? </span>
+                    <span style = {{color: '#0C1060'}}>¿Qué servicio </span>  <span style = {{color: '#17c8cc'}}>ofrecemos  ? </span>
               </h4>
               <Squarebulletlist data = {data} />
               </div>
@@ -580,7 +581,7 @@ export default function Contenido({page}) {
       <section style ={{backgroundColor : 'whitesmoke', paddingTop: '90px',paddingBottom:'50px', display: 'flex', flexDirection: 'row',height:'auto'}}> 
           <div className = "text-left">
               <h4 style = {{textAlign:'center',paddingLeft: '0%', paddingRight: '0%', fontSize: '40px',marginBottom: '4%'}}> 
-                    <span style = {{color: ' #F34868'}}>Este servicio está </span>  <span style = {{color: '#0C1060'}}> dirigido a: </span>
+                    <span style = {{color: ' #17c8cc'}}>Este servicio está </span>  <span style = {{color: '#0C1060'}}> dirigido a: </span>
               </h4>
               <Squarebulletlist data = {dataB} />
           </div>
@@ -590,15 +591,24 @@ export default function Contenido({page}) {
           </div>
         
         </section>
-        <section>
+        <section >
+                  <div className='item-full-width-img'>
+                      
+                      <VisibleOnScroll className="overlay">
+                            <h1>Este es un título</h1>    
+                      
+                      </VisibleOnScroll>
 
-                  <VisibleOnScroll className="fade-in-element">
-                  <h2>This content becomes visible on scroll!</h2>
-                  <p>Scroll down to see more content appear as you go.</p>
-                </VisibleOnScroll>
+                  </div>
+                  
+                  
+                  
+
+                  
         </section>
+                     
 
-        <div style={{ height: '100vh' }}></div> {/* Espacio adicional para scroll */}
+       
           
       
       

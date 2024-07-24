@@ -12,7 +12,7 @@ export default function VisibleOnScroll({ children, className }) {
       {
         root: null, // Observe relative to the viewport
         rootMargin: '0px',
-        threshold: 0.1 // 10% of the element is visible
+        threshold: 0.5 // 50% of the element is visible
       }
     );
 
