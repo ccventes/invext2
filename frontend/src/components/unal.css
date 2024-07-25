@@ -954,7 +954,7 @@ body{
 }
 .item-full-width-img{
     width: 100%;
-    height: 733px;
+    height: 638px;
     z-index: 10;
     background: url('https://res.cloudinary.com/dmlhbcigt/image/upload/v1721798156/cita_cut_3_aa5bbbbdd1.png') no-repeat;
     
@@ -962,8 +962,10 @@ body{
 }
 .overlay{
     width:100%;
-    height: 93.5%;
+    height: 100%;
     background-color: #17c9ccb4;
+    padding-top: 7%;
+    padding-bottom: 7%;
     
     z-index: 11;
 
@@ -999,6 +1001,65 @@ body{
     opacity: 1;
     transition: opacity 0.5s ease-in;
   }
+  #ItemdivBoton{
+    width: 80%;
+    height: 100%;
+    margin-left: 10.5%;
+    margin-right: 0%;
+   
+    background-color: whitesmoke;
+    border: thick solid #0C1060;
+    z-index: 12;
+    padding: 5% 5% 5% 5%;
+  }    
+
+  #ItemButton {
+    background-color: #17c8cc;
+    font-size: 20px;
+    font-weight: bold;
+    color : #0C1060;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
+  #ItemButton:hover{
+
+    background-color: #F34868;
+  
+  }
+  #item-cita-boton{
+
+    margin-left: 40%;
+  }
+#item-tab-section-top{
+
+    width: 100%;
+    height: 100px;
+    background-color: #0C1060;
+    padding-top : 57px;
+    padding-left: 13%;
+    padding-right: 0;
+}
+#item-tab-section-divider{
+
+    width: 100%;
+    height: 25px;
+    background-color: white;
+   
+}
+#item-tab-section-container{
+    width: 100%;
+    height: 850px;
+    background-color: #E2E2E2;
+}
+#item-tab-section-info{
+    width: 70%;
+    height: 425px;
+    background-color: whitesmoke;
+    margin-left: 15% ;
+}
+
+/* FOOTER */
 
 .footer {
   z-index: 1;

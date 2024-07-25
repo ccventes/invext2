@@ -3,7 +3,8 @@ import { useQuery, gql } from '@apollo/client';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import NoticiasMockup from '../images/noticias_unal_mockup.png';
+import Nav from 'react-bootstrap/Nav';
+import Tab from 'react-bootstrap/Tab';
 import Galeria from './Galeria'
 import Selector from './Selector';
 import Modalidades from './modalidades';
@@ -15,10 +16,10 @@ import vcientifica from '../images/vig_cientifica.png';
 import vcomercial from '../images/vig_comercial.png';
 import vtecno from '../images/Vig_tecnologica.png';
 import Videos from './videos';
-import itemlogo from '../images/itemlogont.png';
 import Squarebulletlist from './Squarebulletlist';
 import VisibleOnScroll from './VisibleOnScroll';
 import useScrollVisibility from '../hooks/useScrollVisibility';
+
 
 const SECCIONES = gql`
   query GetSection($identificacion: ID = "1") {
@@ -146,7 +147,7 @@ export default function Contenido({page}) {
     
   }
   const heroMoveRef = useRef(null);
-  const isVisible = useScrollVisibility(heroMoveRef, { threshold: 0.5  });
+  const isVisible = useScrollVisibility(heroMoveRef, { threshold: 0.7  });
   
   
 
@@ -595,8 +596,23 @@ export default function Contenido({page}) {
                   <div className='item-full-width-img'>
                       
                       <VisibleOnScroll className="overlay">
-                            <h1>Este es un título</h1>    
-                      
+                            <div id = 'ItemdivBoton'>
+
+                            <h4 style = {{textAlign:'center',paddingLeft: '0%', paddingRight: '0%', fontSize: '40px',marginBottom: '4%'}}> 
+                                  <span style = {{color: '#0C1060'}}>Cómo pueden acceder </span>  <span style = {{color: '#17c8cc'}}> a este servicio: </span>
+                            </h4>
+                            <p style = {{textAlign:'left',paddingLeft: '0%', paddingRight: '0%', fontSize: '20px',marginBottom: '4%',color: '#0C1060',fontWeight:'bold'}}> 
+                                  Estudiantes, profesores, investigadores y egresados de la Universidad Nacional de Colombia pueden acceder a los servicios de la Incubadora de Emprendimientos agendado su cita aquí:
+                            </p>
+                                <Link to = 'https://calendar.app.google/ZLeEPJS83B4fh3C79' id = 'item-cita-boton'><Button id = 'ItemButton' size="lg">
+                                            Agendar Cita
+                                </Button>
+                            </Link>
+                            
+                            
+
+
+                            </div>
                       </VisibleOnScroll>
 
                   </div>
@@ -606,7 +622,56 @@ export default function Contenido({page}) {
 
                   
         </section>
-                     
+        <section>
+      
+        <Tab.Container id="tabs-example" defaultActiveKey="link1">
+        <div id="item-tab-section-top">
+          <Nav variant="tabs">
+            <Nav.Item>
+              <Nav.Link eventKey="link1">Active</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="link2">Option 2</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="disabled" disabled>
+                Disabled
+              </Nav.Link>
+            </Nav.Item>
+          </Nav>
+          </div>
+          <Tab.Content>
+            <Tab.Pane eventKey="link1">
+              
+            <div id="item-tab-section-container">
+                <div id="item-tab-section-info">
+                      <h1> Info 1</h1>      
+                </div>
+            </div>
+              
+              </Tab.Pane>
+            
+            <Tab.Pane eventKey="link2">
+              
+              
+                <div id="item-tab-section-container">
+                    <div id="item-tab-section-info">
+                          <h1> Info 2</h1>      
+                    </div>
+                </div>
+                
+            
+            
+            </Tab.Pane>
+          </Tab.Content>
+
+        </Tab.Container>
+    
+
+            
+      
+    </section>
+       
 
        
           
