@@ -131,6 +131,7 @@ const Sectionorganization = {
 
 
 
+
 export default function Contenido({page}) {
   const { loading, error, data } = useQuery(SECCIONES);
   console.log("Estoy en contenido, la pagina es: ", page)
@@ -148,6 +149,12 @@ export default function Contenido({page}) {
   }
   const heroMoveRef = useRef(null);
   const isVisible = useScrollVisibility(heroMoveRef, { threshold: 0.7  });
+  const startSectionRef = useRef(null);
+  const endSectionRef = useRef(null);
+
+const scrollToSection = (sectionRef) => {
+  sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+};
   
   
 
@@ -623,51 +630,67 @@ export default function Contenido({page}) {
                   
         </section>
         <section>
-      
-        <Tab.Container id="tabs-example" defaultActiveKey="link1">
-        <div id="item-tab-section-top">
-          <Nav variant="tabs">
-            <Nav.Item>
-              <Nav.Link eventKey="link1">Active</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link eventKey="link2">Option 2</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link eventKey="disabled" disabled>
-                Disabled
-              </Nav.Link>
-            </Nav.Item>
-          </Nav>
-          </div>
-          <Tab.Content>
-            <Tab.Pane eventKey="link1">
+        <div ref = {startSectionRef}></div>
+        <div id="item-tab-section-blue"></div>
               
-            <div id="item-tab-section-container">
-                <div id="item-tab-section-info">
-                      <h1> Info 1</h1>      
+                <div className="item-tab-section-container">
+                    
+                    <Tab.Container id="menu-tab" defaultActiveKey="s2link1">
+                    
+                        <div className='menu-tab-space'>
+                          <Nav className='menu-tab-space-nav' variant="tabs">
+                              <Nav.Item className='menu-tab-space-button-nav-button'>
+                                <Nav.Link eventKey="s2link1">Información General</Nav.Link>
+                              </Nav.Item>
+                              
+                          </Nav>
+                          <Nav className='menu-tab-space-nav' variant="tabs">
+                              <Nav.Item className='menu-tab-space-button-nav-button'>
+                                <Nav.Link eventKey="s2link2">Servicios que ofrece</Nav.Link>
+                              </Nav.Item>
+                              
+                          </Nav>
+                          <Nav className='menu-tab-space-nav' variant="tabs">
+                              <Nav.Item className='menu-tab-space-button-nav-button'>
+                                <Nav.Link eventKey="s3link3">Interesados</Nav.Link>
+                              </Nav.Item>
+                              
+                          </Nav>
+                          <Nav className='menu-tab-space-nav' variant="tabs">
+                              <Nav.Item className='menu-tab-space-button-nav-button'>
+                                <Nav.Link eventKey="s4link4">Contacto</Nav.Link>
+                              </Nav.Item>
+                              
+                          </Nav>
+                           
+                        </div>
+                        <div className="item-tab-section-info">
+                              <h1> Info 1</h1>      
+                        </div>
+                    </Tab.Container> 
+                    
+                   
                 </div>
-            </div>
               
-              </Tab.Pane>
+              
             
-            <Tab.Pane eventKey="link2">
+            
+                <div id="item-tab-section-blue"></div>
               
-              
-                <div id="item-tab-section-container">
-                    <div id="item-tab-section-info">
+                <div className = "item-tab-section-container">
+                    <div className ="item-tab-section-info">
                           <h1> Info 2</h1>      
                     </div>
                 </div>
                 
             
             
-            </Tab.Pane>
-          </Tab.Content>
+            
+         
 
-        </Tab.Container>
-    
-
+        
+        <div id="item-tab-section-blue"></div>
+        <div ref = {endSectionRef}></div>
             
       
     </section>
