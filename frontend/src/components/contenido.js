@@ -629,59 +629,371 @@ const scrollToSection = (sectionRef) => {
 
                   
         </section>
-        <section>
+        <section id = "Emprendimientos-seccion">
+        <div className = 'item-slide-text'  >
+              
+              <div className='cyan-top-border'>
+              <h1 style = {{textAlign:'center', paddingLeft: '8%', paddingRight: '20%',paddingTop: '5px',marginTop: '45px',paddingBottom: '5px'}}> 
+                      <span style ={{fontSize: '40px', color: '#0C1060'}}>¿Qué son los </span> <span style ={{fontSize: '40px', color: '#17c8cc'}}>emprendimientos tecnológicos?</span>
+              </h1>
+              <h4 style = {{textAlign:'left',paddingLeft: '2%', paddingRight: '1%', fontSize: '27px',marginBottom: '2%', color : '#0C1060'}}> 
+              Los emprendimientos tecnológicos, también conocidos como spin-off, son empresas derivadas de la investigación académica que buscan comercializar tecnologías, productos o servicios innovadores. 
+              </h4>
+              <h4 style = {{textAlign:'left',paddingLeft: '2%', paddingRight: '1%', fontSize: '27px', color :'#0C1060',paddingBottom: '65px'}}> 
+              Estas empresas utilizan el conocimiento y la tecnología desarrollada en la universidad para crear soluciones que tienen un impacto significativo en el mercado.
+              </h4>
+              <h1 style = {{textAlign:'center', paddingLeft: '8%', paddingRight: '20%',paddingTop: '5px',marginTop: '45px',paddingBottom: '5px'}}> 
+                            <span style ={{fontSize: '40px', color: '#17c8cc'}}>Conoce nuestros </span> <span style ={{fontSize: '40px', color: '#0C1060'}}>emprendimientos</span>
+              </h1>
+              <div id = "logoMenu"> 
+                    <Link to = "#menu-tab-sehom"  className='logoDiv'> <div id = "SEHOM" className='logo-space'></div></Link>
+                    <Link to = "#menu-tab-ferti"  className='logoDiv'>  <div id = "fertirayo" className='logo-space'></div></Link>
+
+
+              </div>
+              </div>
+              
+      </div>   
+
+        </section>
+        <section >
         <div ref = {startSectionRef}></div>
         <div id="item-tab-section-blue"></div>
               
-                <div className="item-tab-section-container">
-                    
+                
+                    <div id ="menu-tab-sehom"></div>
                     <Tab.Container id="menu-tab" defaultActiveKey="s2link1">
                     
-                        <div className='menu-tab-space'>
+                         
                           <Nav className='menu-tab-space-nav' variant="tabs">
+                            <div className='menu-tab-space'>
                               <Nav.Item className='menu-tab-space-button-nav-button'>
                                 <Nav.Link eventKey="s2link1">Información General</Nav.Link>
                               </Nav.Item>
                               
-                          </Nav>
-                          <Nav className='menu-tab-space-nav' variant="tabs">
+                          
+                          
                               <Nav.Item className='menu-tab-space-button-nav-button'>
                                 <Nav.Link eventKey="s2link2">Servicios que ofrece</Nav.Link>
                               </Nav.Item>
                               
-                          </Nav>
-                          <Nav className='menu-tab-space-nav' variant="tabs">
+                          
+                          
                               <Nav.Item className='menu-tab-space-button-nav-button'>
-                                <Nav.Link eventKey="s3link3">Interesados</Nav.Link>
+                                <Nav.Link eventKey="s2link3">Interesados</Nav.Link>
                               </Nav.Item>
                               
-                          </Nav>
-                          <Nav className='menu-tab-space-nav' variant="tabs">
+                                                    
                               <Nav.Item className='menu-tab-space-button-nav-button'>
-                                <Nav.Link eventKey="s4link4">Contacto</Nav.Link>
+                                <Nav.Link eventKey="s2link4">Contacto</Nav.Link>
                               </Nav.Item>
-                              
+                              </div>     
                           </Nav>
-                           
-                        </div>
-                        <div className="item-tab-section-info">
-                              <h1> Info 1</h1>      
-                        </div>
+                          
+                       
+                    
+                    <Tab.Content>
+                          <Tab.Pane eventKey="s2link1">
+                             <div style = {{width: '100%',height: 'auto',backgroundColor: 'white',}}>
+                                <div className='cyan-top-border'>
+                                   <div id = "SEHOM" className='logo-space'>
+
+                                   </div>
+                                   <h1 style = {{textAlign:'center', paddingLeft: '8%', paddingRight: '20%',paddingTop: '5px',marginTop: '0px',paddingBottom: '5px', color: '#17c8cc', fontSize: '50px'}}> 
+                                                     SEHOME
+                                    </h1>
+                                    <h4 style = {{textAlign:'left',paddingLeft: '2%', paddingRight: '1%', fontSize: '27px',marginBottom: '2%', color : '#0C1060'}}> 
+                                    SEHOME es una empresa dedicada a la comercialización de semillas de hortalizas de alta calidad, desarrolladas a partir de investigaciones realizadas por el grupo de Investigación mejoramiento y agronomía de semillas de hortalizas de la sede Palmira.
+ 
+                                    </h4>
+                                    <h4 style = {{textAlign:'left',paddingLeft: '2%', paddingRight: '1%', fontSize: '27px', color :'#0C1060',paddingBottom: '65px'}}> 
+                                    <span style = {{color: '#17c8cc'}}>Área asociada:</span> Agricultura Variedades vegetales.
+                                    </h4>
+
+                                </div>
+
+
+                             </div>
+                          </Tab.Pane>
+                          <Tab.Pane eventKey="s2link2">
+                             <div style = {{width: '100%',height: 'auto',backgroundColor: 'white',}}>
+                                <div className='cyan-top-border'>
+                                   <div id = "SEHOM" className='logo-space'>
+
+                                   </div>
+                                   <h1 style = {{textAlign:'center', paddingLeft: '8%', paddingRight: '20%',paddingTop: '5px',marginTop: '0px',paddingBottom: '65px', color: '#17c8cc', fontSize: '50px'}}> 
+                                                Servicios que ofrece:
+                                    </h1>
+                              
+                                    <div className="SquareBulletList">
+                                      <ul>    
+                                    <li><h4 style = {{textAlign:'left',paddingLeft: '2%', paddingRight: '1%', fontSize: '27px',marginBottom: '2%', color : '#0C1060'}}> 
+                                    Venta de semillas de hortalizas.
+ 
+                                    </h4>
+                                    </li>
+                                    <li><h4 style = {{textAlign:'left',paddingLeft: '2%', paddingRight: '1%', fontSize: '27px',marginBottom: '2%', color :'#0C1060'}}> 
+                                      Asesoramiento técnico en cultivo y manejo de hortalizas.
+                                    </h4>
+                                    </li>
+                                    <li><h4 style = {{textAlign:'left',paddingLeft: '2%', paddingRight: '1%', fontSize: '27px',marginBottom: '2%', color :'#0C1060'}}> 
+                                      Investigación y desarrollo en biotecnología aplicada a la agricultura.
+                                    </h4>
+                                    </li>
+                                   
+                                    </ul>
+                                    </div>
+                                          
+                                    
+                                    
+
+                                </div>
+
+
+                             </div>
+                          </Tab.Pane>
+                          <Tab.Pane eventKey="s2link3">
+                             <div style = {{width: '100%',height: 'auto',backgroundColor: 'white',}}>
+                                <div className='cyan-top-border'>
+                                   <div id = "SEHOM" className='logo-space'>
+
+                                   </div>
+                                   
+                                          
+                                    <h1 style = {{textAlign:'center', paddingLeft: '8%', paddingRight: '20%',paddingTop: '5px',marginTop: '0px',paddingBottom: '65px', color: '#17c8cc', fontSize: '50px'}}> 
+                                          Interesados:
+                                    </h1>
+                                    <div className="SquareBulletList">
+                                      <ul style ={{marginBottom: '50px'}}>    
+                                    <li><h4 style = {{textAlign:'left',paddingLeft: '2%', paddingRight: '1%', fontSize: '27px',marginBottom: '2%', color : '#0C1060'}}> 
+                                    Agricultores y productores agrícolas.
+ 
+                                    </h4>
+                                    </li>
+                                    <li><h4 style = {{textAlign:'left',paddingLeft: '2%', paddingRight: '1%', fontSize: '27px',marginBottom: '2%', color :'#0C1060'}}> 
+                                    Empresas del sector agroindustrial.
+                                    </h4>
+                                    </li>
+                                    <li><h4 style = {{textAlign:'left',paddingLeft: '2%', paddingRight: '1%', fontSize: '27px',marginBottom: '2%', color :'#0C1060'}}> 
+                                        Instituciones de investigación y desarrollo agrícola.
+                                    </h4>
+                                    </li>
+                                   
+                                    </ul>
+                                    </div>
+
+                                </div>
+
+
+                             </div>
+                          </Tab.Pane>
+                          <Tab.Pane eventKey="s2link4">
+                             <div style = {{width: '100%',height: 'auto',backgroundColor: 'white',}}>
+                                <div className='cyan-top-border'>
+                                   <div id = "SEHOM" className='logo-space'>
+
+                                   </div>
+                                   
+                                         
+                                    <h1 style = {{textAlign:'center', paddingLeft: '8%', paddingRight: '20%',paddingTop: '5px',marginTop: '0px',paddingBottom: '65px', color: '#17c8cc', fontSize: '50px'}}> 
+                                          Contacto :
+                                    </h1>
+                                    <h4 style = {{textAlign:'left',paddingLeft: '2%', marginLeft: '20%', fontSize: '27px',marginBottom: '2%', color :'#0C1060'}}> 
+                                         Correo electrónico: <a href = '#'>sehome.pal@gmail.com </a>
+                                    </h4>
+                                    <div style ={{marginLeft: '10%',width: '50% '}}>
+                                    <Link to = '#Emprendimientos-seccion' id = 'item-cita-boton'>
+                                      <Button id = 'ItemButton' size="lg">
+                                            Ver mas emprendimientos
+                                      </Button>
+                                    </Link>
+                                    </div>
+                                    <div style ={{height: '100px',backgroundColor: 'white',}}></div>
+
+                                </div>
+
+
+                             </div>
+                          </Tab.Pane>
+
+
+
+                    </Tab.Content>
                     </Tab.Container> 
                     
                    
-                </div>
+              
               
               
             
             
                 <div id="item-tab-section-blue"></div>
               
-                <div className = "item-tab-section-container">
-                    <div className ="item-tab-section-info">
-                          <h1> Info 2</h1>      
-                    </div>
-                </div>
+                <div id ="menu-tab-ferti"></div>
+                <Tab.Container id="menu-tab" defaultActiveKey="s1link1">
+                    
+                         
+                    <Nav className='menu-tab-space-nav' variant="tabs">
+                      <div className='menu-tab-space'>
+                        <Nav.Item className='menu-tab-space-button-nav-button'>
+                          <Nav.Link eventKey="s1link1">Información General</Nav.Link>
+                        </Nav.Item>
+                        
+                    
+                    
+                        <Nav.Item className='menu-tab-space-button-nav-button'>
+                          <Nav.Link eventKey="s1link2">Servicios que ofrece</Nav.Link>
+                        </Nav.Item>
+                        
+                    
+                    
+                        <Nav.Item className='menu-tab-space-button-nav-button'>
+                          <Nav.Link eventKey="s1link3">Interesados</Nav.Link>
+                        </Nav.Item>
+                        
+                                              
+                        <Nav.Item className='menu-tab-space-button-nav-button'>
+                          <Nav.Link eventKey="s1link4">Contacto</Nav.Link>
+                        </Nav.Item>
+                        </div>     
+                    </Nav>
+                    
+                 
+              
+              <Tab.Content>
+                    <Tab.Pane eventKey="s1link1">
+                       <div style = {{width: '100%',height: 'auto',backgroundColor: 'white',}}>
+                          <div className='cyan-top-border'>
+                             <div id = "fertirayo" className='logo-space'>
+
+                             </div>
+                             <h1 style = {{textAlign:'center', paddingLeft: '8%', paddingRight: '20%',paddingTop: '5px',marginTop: '0px',paddingBottom: '5px', color: '#17c8cc', fontSize: '50px'}}> 
+                                               FERTIRAYO
+                              </h1>
+                              <h4 style = {{textAlign:'left',paddingLeft: '2%', paddingRight: '1%', fontSize: '27px',marginBottom: '2%', color : '#0C1060'}}> 
+                              FertiRayo es un software innovador que genera planes de fertilización personalizados, optimizados según las condiciones específicas del suelo, contribuyendo a una agricultura más eficiente y sostenible.
+
+                              </h4>
+                              <h4 style = {{textAlign:'left',paddingLeft: '2%', paddingRight: '1%', fontSize: '27px', color :'#0C1060',paddingBottom: '65px'}}> 
+                              <span style = {{color: '#17c8cc'}}>Área asociada:</span> Agricultura - TICs.
+                              </h4>
+
+                          </div>
+
+
+                       </div>
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="s1link2">
+                       <div style = {{width: '100%',height: 'auto',backgroundColor: 'white',}}>
+                          <div className='cyan-top-border'>
+                             <div id = "fertirayo" className='logo-space'>
+
+                             </div>
+                             <h1 style = {{textAlign:'center', paddingLeft: '8%', paddingRight: '20%',paddingTop: '5px',marginTop: '0px',paddingBottom: '65px', color: '#17c8cc', fontSize: '50px'}}> 
+                                          Servicios que ofrece:
+                              </h1>
+                        
+                              <div className="SquareBulletList">
+                                <ul>    
+                              <li><h4 style = {{textAlign:'left',paddingLeft: '2%', paddingRight: '1%', fontSize: '27px',marginBottom: '2%', color : '#0C1060'}}> 
+                              Desarrollo de planes de fertilización personalizados.
+
+                              </h4>
+                              </li>
+                              <li><h4 style = {{textAlign:'left',paddingLeft: '2%', paddingRight: '1%', fontSize: '27px',marginBottom: '2%', color :'#0C1060'}}> 
+                              Análisis de suelo y recomendaciones agronómicas.
+                              </h4>
+                              </li>
+                              <li><h4 style = {{textAlign:'left',paddingLeft: '2%', paddingRight: '1%', fontSize: '27px',marginBottom: '2%', color :'#0C1060'}}> 
+                              Software de gestión agronómica.
+                              </h4>
+                              </li>
+                             
+                              </ul>
+                              </div>
+                                    
+                              
+                              
+
+                          </div>
+
+
+                       </div>
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="s1link3">
+                       <div style = {{width: '100%',height: 'auto',backgroundColor: 'white',}}>
+                          <div className='cyan-top-border'>
+                             <div id = "fertirayo" className='logo-space'>
+
+                             </div>
+                             
+                                    
+                              <h1 style = {{textAlign:'center', paddingLeft: '8%', paddingRight: '20%',paddingTop: '5px',marginTop: '0px',paddingBottom: '65px', color: '#17c8cc', fontSize: '50px'}}> 
+                                    Interesados:
+                              </h1>
+                              <div className="SquareBulletList">
+                                <ul style ={{marginBottom: '50px'}}>    
+                              <li><h4 style = {{textAlign:'left',paddingLeft: '2%', paddingRight: '1%', fontSize: '27px',marginBottom: '2%', color : '#0C1060'}}> 
+                              Agricultores y productores agrícolas.
+
+                              </h4>
+                              </li>
+                              <li><h4 style = {{textAlign:'left',paddingLeft: '2%', paddingRight: '1%', fontSize: '27px',marginBottom: '2%', color :'#0C1060'}}> 
+                              Empresas del sector agroindustrial.
+                              </h4>
+                              </li>
+                              <li><h4 style = {{textAlign:'left',paddingLeft: '2%', paddingRight: '1%', fontSize: '27px',marginBottom: '2%', color :'#0C1060'}}> 
+                              Consultores y técnicos agronómicos.
+                              </h4>
+                              </li>
+                             
+                              </ul>
+                              </div>
+
+                          </div>
+
+
+                       </div>
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="s1link4">
+                       <div style = {{width: '100%',height: 'auto',backgroundColor: 'white',}}>
+                          <div className='cyan-top-border'>
+                             <div id = "fertirayo" className='logo-space'>
+
+                             </div>
+                             
+                                   
+                              <h1 style = {{textAlign:'center', paddingLeft: '8%', paddingRight: '20%',paddingTop: '5px',marginTop: '0px',paddingBottom: '65px', color: '#17c8cc', fontSize: '50px'}}> 
+                                    Contacto :
+                              </h1>
+                              <h4 style = {{textAlign:'left',paddingLeft: '2%', marginLeft: '20%', fontSize: '27px',marginBottom: '2%', color :'#0C1060'}}> 
+                                   Correo electrónico: <a href = '#'>sehome.pal@gmail.com </a>
+                              </h4>
+                              <h4 style = {{textAlign:'left',paddingLeft: '2%', marginLeft: '20%', fontSize: '27px',marginBottom: '2%', color :'#0C1060'}}> 
+                              Teléfono: <a href = '#'>+(57) 317 490 8114 +(57) 315 771 0953 </a>
+                              </h4>
+                              <h4 style = {{textAlign:'left',paddingLeft: '2%', marginLeft: '20%', fontSize: '27px',marginBottom: '2%', color :'#0C1060'}}> 
+                                   Sitio web: <a href = 'https://fertirayo.com/como-funciona/'>https://www.fertirayo.com </a>
+                              </h4>
+                              <div style ={{marginLeft: '10%',width: '50% '}}>
+                              <Link to = '#Emprendimientos-seccion' id = 'item-cita-boton'>
+                                <Button id = 'ItemButton' size="lg">
+                                      Ver mas emprendimientos
+                                </Button>
+                              </Link>
+                              </div>
+                              <div style ={{height: '100px',backgroundColor: 'white',}}></div>
+
+                          </div>
+
+
+                       </div>
+                    </Tab.Pane>
+
+
+
+              </Tab.Content>
+              </Tab.Container> 
                 
             
             
