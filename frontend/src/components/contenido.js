@@ -19,6 +19,8 @@ import Videos from './videos';
 import Squarebulletlist from './Squarebulletlist';
 import VisibleOnScroll from './VisibleOnScroll';
 import useScrollVisibility from '../hooks/useScrollVisibility';
+import Counter from './Counter';
+import SidebarMenu from './Sidebarmenu';
 
 
 const SECCIONES = gql`
@@ -808,7 +810,7 @@ const scrollToSection = (sectionRef) => {
                                       </Button>
                                     </Link>
                                     </div>
-                                    <div style ={{height: '100px',backgroundColor: 'white',}}></div>
+                                    <div style ={{height: '100px',backgroundColor: 'white',opacity:'0'}}></div>
 
                                 </div>
 
@@ -1014,5 +1016,39 @@ const scrollToSection = (sectionRef) => {
       
       </div>
     )
+  }
+  if(page ==='/tecnologias'){
+      
+    return (
+
+        <section>
+            <div class="naranja">
+              <h1 className='big-tittle'> Cifras y Proyectos Destacados </h1>
+              <h4 className='big-text'>Conoce mas información sobre nuestros procesos técnologicos:</h4>
+              <div  className = "contenedor-counter">
+              <div className="CounterRow">
+                    <Counter id="counter1" color="#3A9FE3" limit={5} text="Proyectos Activos" 
+                    popoutText="Actualmente, contamos con 5  procesos de acompañamiento, para la protección de la propiedad intelectual y el escalamiento de tecnologías, acompañamos los desarrollos de base científica y tecnológica a identificar su potencial, los procesos similares que se encuentran en el entorno, la viabilidad de la protección y su factibilidad de comercialización." />
+                    <div style={{ height: '100px', width: '2px', borderLeft: 'medium solid #0C6466', marginTop: '20px', marginLeft: '20px', marginRight: '20px' }}></div>
+                    <Counter id="counter2" color="#2F2468" limit={42} text="Tecnologías Desarrolladas" 
+                    popoutText="Hemos desarrollado y realizado el acompañamiento de trámites de propiedad intelectual de cerca de 42  tecnologías innovadoras.
+" />
+                    <div style={{ height: '100px', width: '2px', borderRight: 'medium solid #0C6466', marginTop: '20px', marginRight: '20px', marginLeft: '20px' }}></div>
+                    <Counter id="counter3" color="#17C8CC" limit={8} text="Alianzas Estratégicas" 
+                    popoutText="Colaboramos con más de 8 instituciones y empresas nacionales e internacionales para el desarrollo de proyectos conjuntos de alto impacto.
+" />
+                  </div>
+             </div>
+             </div>
+             <div style = {{ height: 'auto'}} >
+                    <div>
+                            <SidebarMenu />
+                    </div>
+
+             </div>
+
+        </section>
+    )
+
   }
 }
