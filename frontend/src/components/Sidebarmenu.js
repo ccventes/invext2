@@ -3,10 +3,12 @@ import './unal.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Tecnotabla from './Tecnotabla';
+import tecnologias from '../models/tecnologias'
 
 
 const SidebarMenu = () => {
    // Color inicial del contenido
+  const [color, setContColor] = useState(null)
   const [activeItemId, setActiveItemId] = useState(null); // ID del elemento activo
   const [ContentbackgroundColor, setContentBackgroundColor] = useState('rgb(233, 228, 228)');
   const menuItems = [
@@ -17,21 +19,11 @@ const SidebarMenu = () => {
   ];
 
   const handleMenuItemClick = (color, id, ContentbackgroundColor) => {
-    //setContentColor(color);
+    setContColor(color);
     setActiveItemId(id);
     setContentBackgroundColor(ContentbackgroundColor); //
   };
-  const TS = [
-        {
-            titulo: 'FUENTE DE NUTRIENTES DE ORIGEN ORGÁNICO PARA  PROCESOS DE FERMENTACIÓN.',
-            color: 'rgb(3, 150, 166)',
-            campos: 'Biotecnología, Industria alimentaria.',
-            Estados: 'TLR 5 Prototipado',
-            Propuesta: ' Fuente económica para procesos de fermentación, presenta mayor eficiencia que las fuentes comerciales de nitrógeno inorgánico y enriquecido con altos contenidos de nutrientes, vitaminas y minerales (Lombriz Californiana). ',
-            inventores:'Liliana Serna Cock, Carlos Andrés Rengifo Guerrero y Miguel Ángel Rojas Restrepo'
-        }
-
-  ]
+  
 
   return (
    <div className="sidebar-menu-container-tecnologia">
@@ -57,8 +49,8 @@ const SidebarMenu = () => {
       <div className="content-tecnologia" style={{ backgroundColor: ContentbackgroundColor}}>
         <div className='projects-space'>
 
-            <Tecnotabla data={TS}/>
-            <div style ={{height: '1000px'}}></div>
+            <Tecnotabla data={tecnologias} color ={color}/>
+            <div style ={{height: '100px'}}></div>
             
 
         </div>

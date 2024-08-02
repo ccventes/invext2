@@ -92,7 +92,7 @@ query getInfoPagina($url: String = "/servicios") {
 
 const divLink ={
    width: "100%",
-   marginLeft: "48px",
+   marginLeft: "70px",
    //borderStyle: "solid",
    //borderColor: "rgb(0, 119, 181)",
    //borderWidth: "Thin",
@@ -116,6 +116,8 @@ const textStyle = {
    paddingLeft: "10px",
    paddingRight: "10px",
    marginTop: "20px",
+   color: "white",
+   margin: "20px",
 
 }
 const imgStyle = {
@@ -179,17 +181,17 @@ const scrollToSection = (sectionRef) => {
                 {
                     
                     <div key={data.seccions.data[0].id}>
-                    <h1 style = {{color: '0C1060'}}>{data.seccions.data[0].attributes.titulo}</h1>
+                    <h1 style = {{textAlign:'center', paddingTop: '50px',paddingBottom: '50px', color: '#2F2468', fontSize: '50px'}}>{data.seccions.data[0].attributes.titulo}</h1>
                     <div dangerouslySetInnerHTML={{ __html: data.seccions.data[0].attributes.ContenidoHTML }} />
                     </div>
                 }
 
             </Col>
-            <Col md={3}>
+            <Col style = {{paddingTop: '100px'}}md={3}>
               
               
             
-              <div style = {divLink}>
+              <div id = "extension"style = {divLink}>
                   <h4 style = {textStyle}> Consulta nuestro boletín de extensión</h4>
                   <Link to = "https://di20r.r.ag.d.sendibm3.com/mk/mr/sh/OycXxko2a8zXNsWPC7qglKxr/lTgnyfMUfTXy" style={{textDecoration: 'none', display: 'flex', justifyContent: 'center' }}>
                   <Button id = "Btn-boletin" className = "mb-3 ms-5 me-5 " variant="primary" role="button">Entra al Boletín</Button>
@@ -198,11 +200,11 @@ const scrollToSection = (sectionRef) => {
               </div>
               
               
-              <div style = {divLink}>
+              <div id = "ALDIA" style = {divLink}>
               <h4 style = {textStyle}> Consulta AlDía UNAL para noticias de nuestra sede</h4>
               <Link to = "https://aldiaunal.palmira.unal.edu.co/" style={{textDecoration: 'none', display: 'flex', justifyContent: 'center' }}>
               
-              <Button className = "mb-3 ms-5 me-5" variant="outline-primary">Entra a AlDía</Button>
+              <Button id = "Btn-aldia" className = "mb-3 ms-5 me-5" variant="primary">Entra a AlDía</Button>
               </Link>
                  
   

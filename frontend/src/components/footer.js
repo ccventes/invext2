@@ -57,13 +57,11 @@ export default function Footer() {
                  <Col className='contacto'>
                         <p>Contacto página web:
                         <br></br>
-                        Carrera 45 # 26-85
+                        Carrera 32 # 12 - 00
                         <br></br>
-                        Edif. Uriel Gutiérrez
+                        Palmira,  Colombia,  Sur América
                         <br></br>
-                        Bogotá D.C.,  Colombia
-                        <br></br>
-                        (+57 601)  316 5000
+                        (+57-2)   2868888
 
                       </p>
                  </Col>
