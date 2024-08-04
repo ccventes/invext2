@@ -37,7 +37,15 @@ export default function Tecnotabla({data, color}) {
                     
                 </div>
             ))}
-        </div>
+           {color && (
+                <a style={{ textDecoration: 'none' }} href='#menu-back'>
+                        <h4 className='Tecnotabla-go-back' style={{ backgroundColor: color, color: 'white', fontWeight: 'bold', border: '1px solid black', marginTop: '15px', marginLeft: '30px' }}>
+                            Volver al menú
+                        </h4>
+                </a>
+            )}
+
+            </div>
   )
 }
 

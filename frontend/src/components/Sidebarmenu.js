@@ -26,7 +26,10 @@ const SidebarMenu = () => {
   
 
   return (
+
+   
    <div className="sidebar-menu-container-tecnologia">
+    <div id = 'menu-back'></div>
     <div className="sidebars-background">
       <div className="sidebar-menu-tecnologia">
         {menuItems.map((item) => (
@@ -50,7 +53,7 @@ const SidebarMenu = () => {
         <div className='projects-space'>
 
             <Tecnotabla data={tecnologias} color ={color}/>
-            <div style ={{height: '100px'}}></div>
+            
             
 
         </div>

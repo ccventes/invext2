@@ -1023,7 +1023,7 @@ const scrollToSection = (sectionRef) => {
       
     return (
 
-        <section>
+        <section >
             <div class="naranja">
               <h1 className='big-tittle'> Cifras y Proyectos Destacados </h1>
               <h4 className='big-text'>Conoce mas información sobre nuestros procesos técnologicos:</h4>
@@ -1043,9 +1043,16 @@ const scrollToSection = (sectionRef) => {
              </div>
              </div>
              <div style = {{ height: 'auto'}} >
-                    <div>
-                            <SidebarMenu />
-                    </div>
+              <div style = {{backgroundColor:'rgb(231, 230, 237)',height:'170px'}}>
+             <h1 style = {{textAlign:'center', paddingTop: '110px',paddingBottom: '50px', color: '#2F2468', fontSize: '50px'}}>
+              
+              Nuestras técnologias
+              
+              </h1>
+              </div>
+              <div>
+                  <SidebarMenu />
+              </div>
 
              </div>
 
