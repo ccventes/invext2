@@ -1567,6 +1567,81 @@ body{
     flex-direction: row;
     
 }
+#bannerAgricolas{
+    width: 100%;
+    height: 768px;
+    background-image:  url('https://res.cloudinary.com/dmlhbcigt/image/upload/v1722784711/Default_laboratorios_ciencias_agrarias_3_25e5d13b18.jpg') ;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+}
+.Selector-lab-fac{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 60%;
+        margin-top:30px;
+        padding-top:30px;
+        margin-left: 20%;
+        margin-right: 20%;
+        padding-bottom: 20px;
+        margin-bottom: 10px;
+        border-top: medium dotted orange;
+
+}
+#FIAimage{
+    background-image:  url('https://res.cloudinary.com/dmlhbcigt/image/upload/v1722790146/fia_786a5afcad.jpg') ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+
+}
+#FCAimage{
+    background-image:  url('https://res.cloudinary.com/dmlhbcigt/image/upload/v1722790146/fca_58c1f63107.jpg') ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+
+}
+
+.lab-fac-img{
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    border: 1px solid back;
+    margin-bottom: 15px;
+    box-shadow: -5px 5px rgba(0, 0, 0, 0.664);;
+    border-radius: 12px;
+
+}
+.selectFac{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.custom-radio .form-check-input:checked {
+    background-color: orange; /* Change this to your desired color */
+    border-color: #ff0000; /* Change this to your desired color */
+  }
+
+  .form-check-input:checked {
+    background-color: orange !important;
+    border-color: orangered !important;
+}
+  
+  .custom-radio .form-check-input:focus {
+    box-shadow: none; /* Remove default Bootstrap shadow */
+  }
+
+  #LabDepartamentos{
+
+    width: 60%
+  }
 
   /*
   #prueba{

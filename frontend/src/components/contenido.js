@@ -21,6 +21,7 @@ import VisibleOnScroll from './VisibleOnScroll';
 import useScrollVisibility from '../hooks/useScrollVisibility';
 import Counter from './Counter';
 import SidebarMenu from './Sidebarmenu';
+import Lablist from './Lablist';
 
 
 const SECCIONES = gql`
@@ -1059,5 +1060,42 @@ const scrollToSection = (sectionRef) => {
         </section>
     )
 
+  }if(page ==='/laboratorios'){
+
+    return(
+      <div>
+      <div id = "bannerAgricolas"></div>
+
+      <div className='AlternaColor'> 
+
+        <section className='seccion'>
+        <div class="naranja">
+          <h1 style={{textAlign: 'center', paddingTop: '50px', paddingBottom: '50px', color: 'rgb(47, 36, 104)', fontSize: '80px'}}> 
+            Laboratorios
+          </h1>
+          <h4 style={{textAlign: 'left', paddingLeft: '8%', paddingRight: '8%', fontSize: '30px'}}> 
+          En la Dirección de Investigación y Extensión de la Sede Palmira, ofrecemos una amplia gama de servicios de laboratorio diseñados para respaldar la investigación y promover la innovación.
+          </h4>
+          <h4 style={{textAlign: 'left', paddingLeft: '8%', paddingRight: '8%', fontSize: '30px'}}> 
+          Nuestros laboratorios cuentan con equipos de última generación y personal altamente capacitado para llevar a cabo análisis en diversas áreas. Nuestros servicios de laboratorio brindan el apoyo necesario para impulsar el progreso académico y contribuir al desarrollo de soluciones para los desafíos actuales y futuros. 
+          </h4>
+            
+          </div>
+          
+
+        </section>
+        <section className='seccion'>
+              <div className='azul'>
+              <h1 style={{textAlign: 'center', paddingTop: '50px', paddingBottom: '50px', color: 'rgb(47, 36, 104)', fontSize: '50px'}}> 
+                      Conoce los Laboratorios de la sede Palmira:
+              </h1> 
+              <Lablist></Lablist>            
+
+              </div>
+              
+        </section>
+      </div>
+      </div>      
+    )
   }
 }
