@@ -13,6 +13,7 @@ import Footer from './footer';
 
 
 
+
 const cliente = new ApolloClient({
   uri: config.apiUrl + '/graphql', 
   cache: new InMemoryCache()
@@ -34,6 +35,7 @@ const Layout = ({ data }) =>{
        showBanner ? <Banner /> : null
        
       } 
+      
       <Contenido page ="index" />
       <Footer />
 

@@ -4,6 +4,7 @@ import { Form, InputGroup } from 'react-bootstrap';
 import logoNeoUnal from '../images/logo_unal_modern.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
+import Redes from './Redes';
 
 export default function Searchbar({color}) {
     const cuadroStyles = {
@@ -60,6 +61,7 @@ export default function Searchbar({color}) {
                                 <FontAwesomeIcon icon={faMagnifyingGlass} style={{ color: "#090c42" }} />
                             </InputGroup.Text>
                     </InputGroup>
+                    <Redes/>
                      
                 </div>
             

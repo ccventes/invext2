@@ -276,6 +276,28 @@ body{
 
     z-index: -2;
 }
+.Banner-section{
+
+    width: 100%;
+    height: 600px;
+    background-image: url('https://res.cloudinary.com/dmlhbcigt/image/upload/v1723239579/Fondo_vig_tec_180c9cd6ba.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.banner-titulo{
+
+    text-align: left; 
+    padding-left: 8%; 
+    padding-top: 50px;
+    padding-bottom: 50px; 
+    color: white; 
+    font-size: 45px;
+    font-weight: bold;
+    margin-top: 15%;
+    
+
+}
 
 #bannersCarousel{
   
@@ -453,7 +475,7 @@ body{
 }
 .oferta{
 
-    width: 30% !important ;
+    width: 20% !important ;
     margin-right: 10px;
     border-right: dotted #bac2c2 1px;
 }
@@ -607,13 +629,14 @@ body{
 
 .Zona-Titulo{
 
-    position: relative;
+    
     text-align: center;
-    color: #dadde3;
-    background-color:  #d87c03;
+    color: #010817;
+    
     text-align: center;
-    translate: 0px -150px;
-    width: 40%
+    
+    width: 80%;
+    padding-bottom: 30px;
     
 }
 .boxStyleW {
@@ -645,7 +668,7 @@ body{
     height: 100%;
     border-color: rgb(0, 119, 181);
     border-radius: 15px;
-    box-shadow: rgba(1, 80, 123, 0.7) 5px 4px 10px;
+    box-shadow: rgba(46, 46, 47, 0.7) 5px 4px 10px;
     overflow: hidden;
     transition: transform 0.3s ease, opacity 0.3s ease;
     
@@ -744,9 +767,9 @@ body{
     
 }
 .divVigilancia {
-    width: 30%;
+    width: 400px;
     margin-left: 0;
-    padding: 1%;
+    padding: 5%;
     padding-top: 6%;
     border-style: solid;
     
@@ -756,7 +779,7 @@ body{
     border-radius: 50%;
     
     box-shadow: 5px 4px 10px rgba(1, 25, 39, 0.7);
-    height: auto;
+   
     margin-top: 10px;
     display: flex;    
     flex-direction : column;
@@ -771,6 +794,8 @@ body{
  
  
  }
+
+
  .divVigilanciañ:hover{
     border-color: rgb(0, 119, 181);
     color:#1B2C36;
@@ -989,6 +1014,18 @@ body{
 
 
 }
+
+.overlay-semi{
+    width:100%;
+    height: 100%;
+    background-color: #17c9cc00;
+    padding-top: 7%;
+    padding-bottom: 7%;
+    
+    z-index: 11;
+
+
+}
 #invertImage{
 
     margin-left: 4%  !important;
@@ -1039,6 +1076,17 @@ body{
     padding-left: 50px;
     padding-right: 50px;
   }
+  #SemiButton{
+
+    background-color: #f28a0a;
+    font-size: 20px;
+    font-weight: bold;
+    color : white;
+    margin-left: 0%;
+    padding-right: 50px;
+
+
+  }
   
   #ItemButton:hover{
 
@@ -1048,6 +1096,9 @@ body{
   #item-cita-boton{
 
     margin-left: 40%;
+  }
+  #Semi-inst-boton{
+    margin-left: 0%;
   }
 #item-tab-section-blue{
 
@@ -1145,8 +1196,7 @@ body{
 
     width: 45%;
     height: 150px;
-    border: 1px solid black;
-    box-shadow: -2px 2px rgb(87, 86, 86);
+    
 }
 
 
@@ -1343,7 +1393,7 @@ body{
 
 .logoDiv:hover{
 
-    box-shadow: -10px 10px #17c8cc;
+    scale: 1.2;
 }
 
 .big-text{
@@ -1653,3 +1703,108 @@ body{
 
   }
 */
+
+/* redes sociales */
+
+.s2s_supra_contenedor {
+    position: fixed !important;
+    right: 0;
+    top: 295px !important;
+    background: #c4c3c3;
+    z-index: 15;
+    
+}
+
+.s2s_contenedor {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0;
+}
+
+.s2s_contenedor.s2s_no_text.s2s-btn-group div.red.bg-facebook {
+    background-color: #526282 !important;
+}
+.s2s_contenedor.s2s_no_text.s2s-btn-group div.red {
+    border-radius: 50% !important;
+    width: 28px !important;
+    height: 28px !important;
+    margin: 3px;
+    overflow: hidden;
+}
+.s2s_contenedor.s2s_no_text.s2s-btn-group a {
+    text-decoration: none !important;
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    padding: 5px;
+}
+.s2s_contenedor.s2s_no_text.s2s-btn-group div.red img {
+    width: 120%;
+    translate: -2px -6px;
+}
+
+.s2s_contenedor.s2s_no_text.s2s-btn-group div.red.bg-pinterest {
+    background-color: #a4484c !important;
+}
+
+.s2s_contenedor.s2s_no_text.s2s-btn-group div.red.bg-twitter {
+    background-color: #4294b6 !important;
+}
+.s2s_contenedor.s2s_no_text.s2s-btn-group div.red.bg-pinterest {
+    background-color: #a4484c !important;
+}
+
+/* services */
+#services{background:repeat-y #333 url('https://res.cloudinary.com/dmlhbcigt/image/upload/v1722853147/back_Servicesbogo_2b0c927c8d.png');position:fixed;right:-800px;top:0;transition:all .25s ease-out;z-index:20000; opacity: 0.8;}
+#services.active{right:0}
+#services ul{margin:0;overflow-x:hidden;padding:0 10px}
+#services ul li{border-bottom:1px solid #222;border-top:1px solid #444;height:52px;padding:10px 0;width:auto;}
+#services ul li:hover{background:#444}
+#services ul li:first-child{border-top:none}
+#services ul li:last-child{border-bottom:none}
+#services ul li a{color:#fff;font-size:.9em;line-height:33px;white-space:nowrap; font-family:'Ancizar sans';}
+#services ul li img{display:block;float:left;height:32px;margin:0 5px;width:32px}
+#services .indicator{background-color:#94b43b;background-image:url('https://res.cloudinary.com/dmlhbcigt/image/upload/v1722853147/back_Servicesbogo_2b0c927c8d.png');background-position:0 0;cursor:pointer;height:126px;left:-34px;position:absolute;top:150px;width:34px}
+#services .indicator:hover{background-position:0 -127px}
+#services .indicator.active{background-position:-34px 0}
+#services .indicator.active:hover{background-position:-34px -127px}
+.row-offcanvas{-moz-transition:all .25s ease-out;-webkit-transition:all .25s ease-out;position:relative;transition:all .25s ease-out}
+
+
+.estaditica{
+
+    display: flex;
+    flex-direction: column;
+
+}
+#semilleros-counter{
+    background-color: white;
+    width: 80%;
+    margin-left:10%;
+    padding-bottom: 30px;
+}
+
+.Espacio-texto-titulo{
+
+    text-align: left; 
+    padding-left: 8%; 
+    padding-top: 50px;
+    padding-bottom: 50px; 
+    color: #2F2468; 
+    font-size: 35px;
+    font-weight: bold;
+    
+
+}
+
+.Espacio-texto{
+
+    text-align: left; 
+    padding-left: 8%; 
+    color: #4d4d4d;
+    font-size: 30px;
+    
+
+   
+}

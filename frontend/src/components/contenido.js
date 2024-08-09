@@ -22,6 +22,10 @@ import useScrollVisibility from '../hooks/useScrollVisibility';
 import Counter from './Counter';
 import SidebarMenu from './Sidebarmenu';
 import Lablist from './Lablist';
+import GraficoBarras from './GraficoBarras';
+
+import GraficoPie from "./GraficoPie";
+import SemillerosNumeros from './SemillerosNumeros';
 
 
 const SECCIONES = gql`
@@ -234,7 +238,16 @@ const scrollToSection = (sectionRef) => {
   //dataPagina.paginas.data[0].attributes.seccions.data
   return(   
     <section>
-    <h1 style = {{ textAlign:'center', marginTop: '50px'}}> {dataPagina.paginas.data[0].attributes.nombre} </h1>
+    <h1 className='big-tittle'> {dataPagina.paginas.data[0].attributes.nombre} </h1>
+    <h4 style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%', fontSize: '30px', marginTop: '45px'}}> Continuamente estamos trabajando para construir y fortalecer nuestra oferta de Educación Continua y Permanente con el fin de mejorar nuestro portafolio de servicios.
+ 
+                </h4>  
+
+
+    <h4 style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%', fontSize: '30px', marginTop: '45px', marginBottom: '50px'}}> Conoce aquí los diplomados, cursos y talleres que tenemos para ti: 
+ 
+                </h4>  
+    
     <div style = {{borderTop: 'dotted #bac2c2 1px', display:'flex', flexDirection:'row', paddingTop: '50px'}}>
     <div className= 'barra-lateral oferta'>
 
@@ -255,7 +268,7 @@ const scrollToSection = (sectionRef) => {
                                  }
                                 }
                               >
-                              {seccion.attributes.titulo}
+                              <h3>{seccion.attributes.titulo}</h3>
                               </Link></li>
                           
                           ) )
@@ -263,7 +276,7 @@ const scrollToSection = (sectionRef) => {
                     </ul>
                 </div>
                           
-
+       
     </div>
     <div style = {{display :'flex',flexDirection: 'column', width:'60%' }}>
     <Accordion  activeKey = {selectorKey}>
@@ -338,8 +351,8 @@ const scrollToSection = (sectionRef) => {
   console.log('Estoy en convocatorias')
   return(
     <section>
-     <h1 style = {{textAlign:'center', paddingTop: '50px'}}> Convocatorias</h1>
-     <h3 style = {{textAlign:'center'}}> Conoce las oportunidades para ti a través de nuestras convocatorias internas y externas.</h3>
+     <h1 className='big-tittle'>  Convocatorias</h1>
+     <h4 style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%', fontSize: '27px', marginTop: '20px',marginBottom: '50px'}}> Conoce las oportunidades para ti a través de nuestras convocatorias internas y externas.</h4>
      <div  className="boxStyleW">
         <div className="conv-menu">
                 
@@ -375,27 +388,34 @@ const scrollToSection = (sectionRef) => {
 
 }if(page === "/vigilancia"){
     return(
+
+        
         <div className="AlternaColor">
-              <section className='seccion' >
-                  <div className='naranja'>
-                  <h1 style = {{textAlign:'center', paddingTop: '50px',paddingBottom: '50px', color: '#2F2468', fontSize: '80px'}}> Vigilancia Tecnológica </h1>
-                  <h4 style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%', fontSize: '30px'}}> La Vigilancia Tecnológica es un proceso sistemático de recolección, análisis y difusión de información científica, tecnológica y comercial relevante para apoyar la toma de decisiones estratégicas. 
-                  </h4>
-                  <h4 style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%', fontSize: '30px'}}> En la Universidad Nacional de Colombia, sede Palmira, aplicamos esta metodología para identificar oportunidades de innovación, acompañar los procesos de protección de la propiedad intelectual, anticipar cambios en el entorno y fortalecer la competitividad de nuestros proyectos y alianzas.
-                  </h4>
-                  <h4 style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%', fontSize: '30px'}}> Este proceso se aplica de manera continua, adaptándose a las necesidades específicas de cada desarrollo científico, tecnológico y los emprendimientos.
-                  </h4>
+              
+              <div className = 'Banner-section'>
+              <h1 className='banner-titulo'>  Vigilancia Tecnológica </h1>
+
               </div>
+                 <section className='seccion' >
+                 
+                  <h1 className='Espacio-texto-titulo'> ¿Qué es la Vigilancia Tecnológica? </h1>
+                  <h4 className = 'Espacio-texto'> La Vigilancia Tecnológica es un proceso sistemático de recolección, análisis y difusión de información científica, tecnológica y comercial relevante para apoyar la toma de decisiones estratégicas. 
+                  </h4>
+                  <h4 className = 'Espacio-texto'> En la Universidad Nacional de Colombia, sede Palmira, aplicamos esta metodología para identificar oportunidades de innovación, acompañar los procesos de protección de la propiedad intelectual, anticipar cambios en el entorno y fortalecer la competitividad de nuestros proyectos y alianzas.
+                  </h4>
+                  <h4 className = 'Espacio-texto'> Este proceso se aplica de manera continua, adaptándose a las necesidades específicas de cada desarrollo científico, tecnológico y los emprendimientos.
+                  </h4>
+              
 
               </section>
               <section className='seccion'> 
-                 <div className='azul'> 
-                 <h1 style = {{textAlign:'center', paddingTop: '50px',paddingBottom: '30px', color: '#2F2468', fontSize: '80px'}}> Tipos de Vigilancia </h1>
-                 <div  className="boxStyleW">
+                 
+              <h1 className='Espacio-texto-titulo'> Tipos de vigilancia</h1>
+              <div  className="boxStyleW">
                           <div className="containervigilancia">
                                 
                                 <div className="divVigilancia">
-                                    <h2> Vigilancia Científica </h2>
+                                    <h3 className> Vigilancia Científica </h3>
                                     <h5> Monitorea los avances en investigación y desarrollo dentro de áreas específicas de conocimiento.</h5>
                                     <div className='iconvig'>
                                           <img src ={vcientifica} width="130" height="130"></img>
@@ -404,7 +424,7 @@ const scrollToSection = (sectionRef) => {
                                 </div>
                                 <div className="separatorvigilancia"></div>
                                 <div className="divVigilancia">
-                                    <h2> Vigilancia Tecnológica </h2>
+                                    <h3> Vigilancia Tecnológica </h3>
                                     <h5> Se enfoca en la evolución de tecnologías emergentes y disruptivas que puedan impactar la industria.</h5>
                                     <div className='iconvig'>
                                           <img src ={vcomercial} width="130" height="130"></img>
@@ -413,7 +433,7 @@ const scrollToSection = (sectionRef) => {
                                 </div>
                                 <div className="separatorvigilancia"></div>
                                 <div className="divVigilancia">
-                                    <h2> Vigilancia Comercial </h2>
+                                    <h3> Vigilancia Comercial </h3>
                                     <h5> Analiza el mercado y la competencia para identificar oportunidades y amenazas.</h5>
                                     <div className='iconvig'>
                                           <img src ={vtecno} width="130" height="130"></img>
@@ -425,10 +445,10 @@ const scrollToSection = (sectionRef) => {
                           </div>
                                      
                  </div>
-                 </div>
+                
               </section>
               <section className='seccion'> 
-              <div className='naranja'>
+              
               <h1 style = {{textAlign:'center', paddingTop: '50px',paddingBottom: '50px', color: '#2F2468', fontSize: '80px'}}> ¿Quiénes pueden acceder a estos servicios?</h1>
               <h4 style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%',fontSize: '30px'}}> Nuestro objetivo es apoyar a toda la comunidad académica y empresarial en la identificación de oportunidades tecnológicas y la protección de sus innovaciones a través de la gestión de la propiedad intelectual.</h4>
               <p></p>
@@ -446,7 +466,7 @@ const scrollToSection = (sectionRef) => {
                       Agendar Cita
               </Button>
               </Link>
-              </div>
+              
               
               </section>
               
@@ -458,7 +478,7 @@ const scrollToSection = (sectionRef) => {
    return(
     <div className="AlternaColorP"> 
        <section className='seccionP'> 
-            <div className='naranja'>
+            
                 <h1 style = {{textAlign:'center', paddingTop: '50px',paddingBottom: '50px', color: '#2F2468', fontSize: '60px'}}> ¿Sabes qué es la propiedad intelectual?
                 </h1> 
                 <h4 style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%', fontSize: '27px'}}> Es un derecho complejo de dominio especial sobre las creaciones del talento humano que se concede a los autores o inventores y simultáneamente permite a la sociedad hacer uso de esas creaciones. 
@@ -467,7 +487,7 @@ const scrollToSection = (sectionRef) => {
                 <Link to = "https://calendar.app.google/ZLeEPJS83B4fh3C79" style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%', fontSize: '30px'}}>
                       conoce articulo 035
                 </Link>
-            </div> 
+            
 
 
        </section>
@@ -1096,6 +1116,95 @@ const scrollToSection = (sectionRef) => {
         </section>
       </div>
       </div>      
+    )
+  }if(page === '/semilleros'){
+
+    return(
+      <div className='AlternaColor'> 
+
+      <section className='seccion'>
+      <div class="naranja">
+        <h1 style={{textAlign: 'center', paddingTop: '50px', paddingBottom: '50px', color: 'rgb(47, 36, 104)', fontSize: '80px'}}> 
+           ¿Qué es un semillero?
+
+        </h1>
+        <h4 style={{textAlign: 'left', paddingLeft: '8%', paddingRight: '8%', fontSize: '30px'}}> 
+        Los semilleros de investigación, creación, extensión solidaria o innovación en la Universidad Nacional de Colombia son espacios extracurriculares de formación científica, investigativa, innovativa y creativa de estudiantes mediante la generación de un ambiente de trabajo colaborativo propicio para reflexionar, debatir, conocer y aplicar diferentes métodos, metodologías y técnicas de investigación.
+        </h4>
+        
+          
+        </div>
+        
+
+      </section>
+      <section className='seccion'>
+            <div className='azul'>
+            <h1 style={{textAlign: 'center', paddingTop: '50px', paddingBottom: '50px', color: 'rgb(47, 36, 104)', fontSize: '80px'}}> 
+            ¿Quién conforma un grupo semillero?
+
+        </h1>
+        <h4 style={{textAlign: 'left', paddingLeft: '8%', paddingRight: '8%', fontSize: '30px', marginBottom: '58px'}}> 
+        En la Universidad Nacional de Colombia, los semilleros de investigación, creación, extensión solidaria o innovación están integrados por estudiantes de pregrado o posgrado, que cuentan con la guía de docentes de la Universidad y se constituyen con el propósito de estimular la vocación investigativa o creativa de los estudiantes en torno a problemas o áreas temáticas que convocan a los integrantes del semillero.
+        </h4>
+
+
+            </div>
+            
+      </section>
+      <section className = 'seccion'>
+          <div class className="naranja">
+          <h1 style={{textAlign: 'center', paddingTop: '50px', paddingBottom: '50px', color: 'rgb(47, 36, 104)', fontSize: '80px'}}> 
+          Cifras Sede Palmira</h1>
+        <div className = "estadistica">
+              <SemillerosNumeros /> 
+              <GraficoBarras />
+              <GraficoPie />
+               
+              
+
+        </div>
+        
+
+        
+
+          </div>
+          
+          
+        
+      </section>
+      <section className='seccion'>
+            <div class className="azul">
+
+            <h1 style={{textAlign: 'center', paddingTop: '50px', paddingBottom: '50px', color: 'rgb(47, 36, 104)', fontSize: '80px'}}> 
+            Instructivo del modulo hermes
+
+
+        </h1>
+        <VisibleOnScroll className="overlay-semi">
+                            <div id = 'ItemdivBoton'>
+
+                            
+                            <p style = {{textAlign:'left',paddingLeft: '0%', paddingRight: '0%', fontSize: '27px',marginBottom: '4%',color: '#0C1060',fontWeight:'bold'}}> 
+                            Consultar el manual instructivo del módulo de Semilleros del Sistema de Información Hermes:
+                            </p>
+                                <Link to = 'http://www.hermes.unal.edu.co/pages/html/descargas/instructivo.xhtml?id=194' 
+                                id = 'Semi-inst-boton'><Button id = 'SemiButton' size="lg">
+                                            Ingerese al instructivo
+                                </Button>
+                            </Link>
+                            
+                            
+
+
+                            </div>
+                      </VisibleOnScroll>
+
+
+            </div>
+
+      </section>
+    </div>
+         
     )
   }
 }
