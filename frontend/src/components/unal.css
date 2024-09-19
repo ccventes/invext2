@@ -1,3 +1,50 @@
+@font-face {
+    font-family:AncizarSans ;
+    src: url(../fonts/AncizarSans-Black_02042016.woff);
+}
+@font-face {
+    font-family:AncizarSansBold ;
+    src: url(../fonts/AncizarSans-Bold_02042016.otf);
+}
+@font-face {
+    font-family:AncizarSerif ;
+    src: url(../fonts/AncizarSerif-Black_02042016.otf);
+}
+@font-face {
+    font-family:AncizarSerifItalic ;
+    src: url(../fonts/AncizarSerif-BlackItalic_02042016.otf);
+}
+@font-face {
+    font-family:AncizarSansExtraBold;
+    src: url(../fonts/AncizarSans-Black_02042016.woff);
+}
+.AncizarSansExtraBold{
+
+    font-family:AncizarSansExtraBold;
+    src: url(../fonts/AncizarSans-Extrabold_02042016.otf);
+
+}
+.AncizarSans{
+    font-family: AncizarSans;
+}
+.AncizarSansBold{
+    font-family: AncizarSansBold;
+}
+.AncizarSerif{
+    font-family: AncizarSerif;
+}
+.AncizarSerifItalic{
+    font-family: AncizarSerifItalic ;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: AncizarSans;
+}
+p, a, li, span{
+    font-family: AncizarSansBold;
+}
+
+
 .firstMenu{
 
     background-color: rgb(102,102,102,0.85);
@@ -862,6 +909,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin-bottom: 30px;
 }
 .video-separator{
     width: 40%;
@@ -954,6 +1002,9 @@ body{
     z-index: 6;
     position: relative;
     translate: 0 0%;
+    min-height: 600px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     
 }
 .cyan-top-border{
@@ -1790,7 +1841,7 @@ body{
     text-align: left; 
     padding-left: 8%; 
     padding-top: 50px;
-    padding-bottom: 50px; 
+    padding-bottom: 30px; 
     color: #2F2468; 
     font-size: 35px;
     font-weight: bold;
@@ -1807,4 +1858,13 @@ body{
     
 
    
+}
+.Botones{
+        background-color: #5050EA !important;
+        height: auto;
+        border: none;
+        width: 250px;
+        margin-top: 30px;
+        
+
 }

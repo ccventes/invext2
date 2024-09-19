@@ -8,7 +8,7 @@ export default function Videos() {
 
     <div className = 'video-grid'>
             <div style={{ width: '45%', height: 'auto', display:'flex',flexDirection:'column' }}>
-                <h1 style ={{minHeight: '100px'}}> La gestión de la propiedad intelectual en la Sede Palmira </h1>
+                <h1 className = "Espacio-texto" style ={{minHeight: '100px',paddingLeft: '0%'}}> La gestión de la propiedad intelectual en la Sede Palmira </h1>
                 <Ratio style = {{boxShadow: '10px 10px gray'}} aspectRatio="16x9">
                         <iframe
                             src="https://www.youtube.com/embed/XpPSW7FKrYI"
@@ -21,7 +21,7 @@ export default function Videos() {
             </div>
             
             <div style={{ width: '45%', height: 'auto' }}>
-                <h1 style ={{minHeight: '100px'}}>¿Qué son los derechos de autor y derechos conexos? </h1>
+                <h1 className = "Espacio-texto" style ={{minHeight: '100px', paddingLeft: '0%'}}>¿Qué son los derechos de autor y derechos conexos? </h1>
                 <Ratio style = {{boxShadow: '10px 10px gray'}} aspectRatio="16x9">
                         <iframe
                             src="https://www.youtube.com/embed/bqy-sGrtszo"

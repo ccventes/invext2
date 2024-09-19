@@ -7,7 +7,7 @@ import Nav from 'react-bootstrap/Nav';
 import Tab from 'react-bootstrap/Tab';
 import Galeria from './Galeria'
 import Selector from './Selector';
-import Modalidades from './modalidades';
+import Modalidades from './Modalidades';
 import './unal.css'
 import { Link } from "gatsby";
 import Accordion from 'react-bootstrap/Accordion';
@@ -186,8 +186,8 @@ const scrollToSection = (sectionRef) => {
                 {
                     
                     <div key={data.seccions.data[0].id}>
-                    <h1 style = {{textAlign:'center', paddingTop: '50px',paddingBottom: '50px', color: '#2F2468', fontSize: '50px'}}>{data.seccions.data[0].attributes.titulo}</h1>
-                    <div dangerouslySetInnerHTML={{ __html: data.seccions.data[0].attributes.ContenidoHTML }} />
+                    <h1 className = 'Espacio-texto-titulo'>{data.seccions.data[0].attributes.titulo}</h1>
+                    <div className = 'Espacio-texto'  dangerouslySetInnerHTML={{ __html: data.seccions.data[0].attributes.ContenidoHTML }} />
                     </div>
                 }
 
@@ -399,12 +399,12 @@ const scrollToSection = (sectionRef) => {
                  <section className='seccion' >
                  
                   <h1 className='Espacio-texto-titulo'> ¿Qué es la Vigilancia Tecnológica? </h1>
-                  <h4 className = 'Espacio-texto'> La Vigilancia Tecnológica es un proceso sistemático de recolección, análisis y difusión de información científica, tecnológica y comercial relevante para apoyar la toma de decisiones estratégicas. 
-                  </h4>
-                  <h4 className = 'Espacio-texto'> En la Universidad Nacional de Colombia, sede Palmira, aplicamos esta metodología para identificar oportunidades de innovación, acompañar los procesos de protección de la propiedad intelectual, anticipar cambios en el entorno y fortalecer la competitividad de nuestros proyectos y alianzas.
-                  </h4>
-                  <h4 className = 'Espacio-texto'> Este proceso se aplica de manera continua, adaptándose a las necesidades específicas de cada desarrollo científico, tecnológico y los emprendimientos.
-                  </h4>
+                  <p className = 'Espacio-texto'> La Vigilancia Tecnológica es un proceso sistemático de recolección, análisis y difusión de información científica, tecnológica y comercial relevante para apoyar la toma de decisiones estratégicas. 
+                  </p>
+                  <p className = 'Espacio-texto'> En la Universidad Nacional de Colombia, sede Palmira, aplicamos esta metodología para identificar oportunidades de innovación, acompañar los procesos de protección de la propiedad intelectual, anticipar cambios en el entorno y fortalecer la competitividad de nuestros proyectos y alianzas.
+                  </p>
+                  <p className = 'Espacio-texto'> Este proceso se aplica de manera continua, adaptándose a las necesidades específicas de cada desarrollo científico, tecnológico y los emprendimientos.
+                  </p>
               
 
               </section>
@@ -449,21 +449,21 @@ const scrollToSection = (sectionRef) => {
               </section>
               <section className='seccion'> 
               
-              <h1 style = {{textAlign:'center', paddingTop: '50px',paddingBottom: '50px', color: '#2F2468', fontSize: '80px'}}> ¿Quiénes pueden acceder a estos servicios?</h1>
-              <h4 style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%',fontSize: '30px'}}> Nuestro objetivo es apoyar a toda la comunidad académica y empresarial en la identificación de oportunidades tecnológicas y la protección de sus innovaciones a través de la gestión de la propiedad intelectual.</h4>
+              <h1 className = 'Espacio-texto-titulo'> ¿Quiénes pueden acceder a estos servicios?</h1>
+              <p className = 'Espacio-texto'> Nuestro objetivo es apoyar a toda la comunidad académica y empresarial en la identificación de oportunidades tecnológicas y la protección de sus innovaciones a través de la gestión de la propiedad intelectual.</p>
               <p></p>
-              <h4 style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%',fontSize: '30px'}}>Los servicios de Vigilancia Tecnológica de la Universidad Nacional de Colombia, sede Palmira, están disponibles para:
+              <p className = 'Espacio-texto'>Los servicios de Vigilancia Tecnológica de la Universidad Nacional de Colombia, sede Palmira, están disponibles para:
                   <ul style ={{paddingLeft: "5%"}}>
                       <li>Estudiantes de pregrado y posgrado</li>
                       <li>Profesores e investigadores</li>
                       <li>Empresas y emprendedores</li>
                       <li>Entidades públicas y privadas</li>
                   </ul>
-              </h4>
-              <h4 style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%',fontSize: '30px'}}> Para recibir asesoría en Vigilancia Tecnológica y acompañamiento en Propiedad Intelectual (PI), por favor Agende su cita:</h4>
+              </p>
+              <p className = 'Espacio-texto'> Para recibir asesoría en Vigilancia Tecnológica y acompañamiento en Propiedad Intelectual (PI), por favor Agende su cita:</p>
               <Link to = "https://calendar.app.google/ZLeEPJS83B4fh3C79" style={{textDecoration: 'none', display: 'flex', justifyContent: 'center' }}>
-              <Button variant="outline-primary" size="lg">
-                      Agendar Cita
+              <Button className='Botones' size="lg">
+                      Agenda tu cita aquí.
               </Button>
               </Link>
               
@@ -479,37 +479,41 @@ const scrollToSection = (sectionRef) => {
     <div className="AlternaColorP"> 
        <section className='seccionP'> 
             
-                <h1 style = {{textAlign:'center', paddingTop: '50px',paddingBottom: '50px', color: '#2F2468', fontSize: '60px'}}> ¿Sabes qué es la propiedad intelectual?
+                <h1 className='Espacio-texto-titulo'> ¿Sabes qué es la propiedad intelectual?
                 </h1> 
-                <h4 style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%', fontSize: '27px'}}> Es un derecho complejo de dominio especial sobre las creaciones del talento humano que se concede a los autores o inventores y simultáneamente permite a la sociedad hacer uso de esas creaciones. 
-                </h4>  
+                <p className='Espacio-texto'> Es un derecho complejo de dominio especial sobre las creaciones del talento humano que se concede a los autores o inventores y simultáneamente permite a la sociedad hacer uso de esas creaciones. 
+                </p>  
                  
                 <Link to = "https://calendar.app.google/ZLeEPJS83B4fh3C79" style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%', fontSize: '30px'}}>
-                      conoce articulo 035
+                      
+                      <Button className='Botones' size="lg">
+                          Conoce el Artículo 035
+                      </Button>
                 </Link>
             
 
 
        </section>
        <section className='seccionP'>
-          <div className='blanco'> 
-                    <h1 style = {{textAlign:'center', paddingTop: '5px',marginTop: '45px',paddingBottom: '5px', color: 'white', fontSize: '58px',backgroundColor:'orange', borderRadius:'20px'}}> ¿Por qué es importante la Propiedad Intelectual?
+          
+                    <h1 className = 'Espacio-texto-titulo' style = {{color: 'white'}}> ¿Por qué es importante la Propiedad Intelectual?
                     </h1>
-                    <h4  style= {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%', fontSize: '27px', color: 'white', marginTop: '45px'}}> Es misión de la Universidad la asimilación crítica y la creación de conocimiento, la conservación y uso sostenible de la biodiversidad, el desarrollo de sistemas autónomos de generación de conocimiento, de arte y de cultura nacional e internacional para el beneficio y uso de la sociedad.</h4>
-                    <br></br>
-                    <h4  style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%', fontSize: '27px', color: 'white'}}> La Universidad propenderá porque cualquier derecho resultante de la producción intelectual, sea utilizado de manera coherente con el interés público, la función social y ecológica de la propiedad y en general con la Constitución Política de Colombia.</h4> 
-         </div>
+                    <p  style= {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%', fontSize: '27px', color: 'white', marginTop: '45px'}}> Es misión de la Universidad la asimilación crítica y la creación de conocimiento, la conservación y uso sostenible de la biodiversidad, el desarrollo de sistemas autónomos de generación de conocimiento, de arte y de cultura nacional e internacional para el beneficio y uso de la sociedad.</p>
+                    <p style = {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%', fontSize: '27px', color: 'white'}}> La Universidad propenderá porque cualquier derecho resultante de la producción intelectual, sea utilizado de manera coherente con el interés público, la función social y ecológica de la propiedad y en general con la Constitución Política de Colombia.</p> 
+         
        </section>
        <section className='seccionP'> 
-            <div className='naranja'>
-            <h1 style = {{textAlign:'center', paddingTop: '50px',paddingBottom: '50px', color: '#2F2468', fontSize: '60px'}}> conoce más de la propiedad intelectual aquí:
+            
+            <h1 className='Espacio-texto-titulo'> Conoce más de la propiedad intelectual aquí:
             </h1> 
             
               <Videos />
-              <h4  style= {{textAlign:'left',paddingLeft: '8%', paddingRight: '8%', fontSize: '27px', marginTop: '45px'}}>Para conocer más información o asesoría comuníquese al correo:  <Link to = "https://calendar.app.google/ZLeEPJS83B4fh3C79" style = {{textAlign:'left',paddingLeft: '0%', paddingRight: '0%', fontSize: '30px'}}>
-                    Gestionpi_pal@unal.edu.co
-               </Link> </h4>
-            </div>
+              
+              
+              <p className='Espacio-texto'>Para conocer más información o asesoría comuníquese al correo:  <Link to = "https://calendar.app.google/ZLeEPJS83B4fh3C79" style = {{textAlign:'left',paddingLeft: '0%', paddingRight: '0%', fontSize: '30px'}}>
+                    gestionpi_pal@unal.edu.co
+               </Link> </p>
+           
         
         </section> 
     
@@ -544,31 +548,9 @@ const scrollToSection = (sectionRef) => {
     }
     
     return(
-      <div>
-      <div   style ={{backgroundColor : '#E2E2E2',paddingBottom: '0px', paddingTop: '0px'}}>
-      <section className='HeroSection' >
-           
-           <div className='item-hero-left'>
-                  <div className='item-hero-bg-img-left'>
-                      <img src ="https://res.cloudinary.com/dmlhbcigt/image/upload/v1721584301/cutted_Right_a2dd3af1ed.jpg" width="100%" height="600px"></img>
-                    </div>
-                  <div className='item-hero'></div> 
-           </div>
-           
-           <div className='item-hero-right'>
-                <div id = 'hero-move' 
-                ref={heroMoveRef}
-                className={`hero-border ${isVisible ? 'visible' : 'hidden'}`}
-                > 
-                <h1 style = {{textAlign:'center', paddingTop: '0px',marginTop: '45px',paddingBottom: '5px', color: 'white', fontSize: '72px'}}> Incubadora de emprendimientos
-                </h1>
-                <h4  style= {{textAlign:'left',paddingLeft: '10%', paddingRight: '8%', fontSize: '27px', color: 'white', marginTop: '45px', marginBottom: '45px'}}> Universidad Nacional de Colombia - Sede Palmira</h4>          
-
-                </div>
-
-           </div>
-   
-      </section>
+      <div className='AlternaColor'>
+      <div className = 'Banner-section'>
+      <h1 className='banner-titulo'>  Incubadora de emprendimientos </h1>
       </div>
       <div style = {{backgroundColor : 'whitesmoke',paddingTop: '20px'}}>
       <section className='ItemSection' >
@@ -577,17 +559,15 @@ const scrollToSection = (sectionRef) => {
               
               <div className = 'item-slide-text' >
               
-                      <div className='cyan-top-border'>
-                      <h1 style = {{textAlign:'center', paddingLeft: '8%', paddingRight: '20%',paddingTop: '5px',marginTop: '45px',paddingBottom: '5px', color: '#17c8cc', fontSize: '72px'}}> 
-                         ITEM
-                      </h1>
-                      <h4 style = {{textAlign:'left',paddingLeft: '2%', paddingRight: '1%', fontSize: '27px',marginBottom: '2%', color : '#0C1060'}}> 
+                      
+                     <h1 className = 'Espacio-texto-titulo'>Innovación Transferencia y Emprendimiento </h1>
+                      <p className='Espacio-texto' > 
                       La Incubadora de Emprendimientos de la Universidad Nacional de Colombia - Sede Palmira, es una iniciativa destinada a fomentar y apoyar la creación de empresas derivadas de la investigación y el conocimiento generado en la universidad. 
-                      </h4>
-                      <h4 style = {{textAlign:'left',paddingLeft: '2%', paddingRight: '1%', fontSize: '27px', color :'#0C1060',paddingBottom: '65px'}}> 
+                      </p>
+                      <p className='Espacio-texto'> 
                       A través de un proceso estructurado, brindamos acompañamiento en la incubación de proyectos, protección de la propiedad intelectual, vigilancia tecnológica y desarrollo de modelos de negocio.
-                      </h4>
-                      </div>
+                      </p>
+                      
               </div>
               
               
