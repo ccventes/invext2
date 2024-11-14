@@ -1,4 +1,12 @@
 @font-face {
+    font-family:AncizarRegular;
+    src: url(../fonts/AncizarSans-Regular_02042016.otf);
+}
+@font-face {
+    font-family:AncizarSerifRegular;
+    src: url(../fonts/AncizarSerif-Regular_02042016.otf);
+}
+@font-face {
     font-family:AncizarSans ;
     src: url(../fonts/AncizarSans-Black_02042016.woff);
 }
@@ -17,6 +25,16 @@
 @font-face {
     font-family:AncizarSansExtraBold;
     src: url(../fonts/AncizarSans-Black_02042016.woff);
+}
+.AncizarSerifRegular{
+    font-family:AncizarSerifRegular;
+    src: url(../fonts/AncizarSerif-Regular_02042016.otf);
+
+}
+.AncizarRegular{
+
+    font-family:AncizarRegular;
+    src: url(../fonts/AncizarSans-Regular_02042016.otf);
 }
 .AncizarSansExtraBold{
 
@@ -38,10 +56,10 @@
 }
 
 body, h1, h2, h3, h4, h5, h6 {
-    font-family: AncizarSans;
+    font-family: AncizarRegular;
 }
 p, a, li, span{
-    font-family: AncizarSansBold;
+    font-family: AncizarRegular;
 }
 
 
@@ -127,9 +145,12 @@ body{
     height: 30px;
     padding-left: 0px;
     margin-top: 0;
-    margin-bottom: 0;   
+    margin-bottom: 0; 
+    text-decoration: none !important;
+    color: white !important;  
 
 }
+
 .item-nav{
 
     list-style-type: none; 
@@ -142,6 +163,11 @@ body{
     border-right: black solid 1px;
     
     
+}
+
+.nav-superior .item-nav a {
+    text-decoration: none;
+    color: white;
 }
 /* Establece colores diferentes para cada elemento en hover 
 
@@ -304,9 +330,14 @@ body{
   }
 #link-site{
 
-    font-size: 24px;
+    font-size: 1.73rem;
     color: white;
+    text-decoration: none;
 }
+#link-site:hover {
+    text-decoration: underline;
+}
+
 .mod-list{
 
     margin-bottom: 0px;
@@ -317,8 +348,32 @@ body{
 }
 .custom-navbar{
     background-color: transparent !important;
-    height: 20px !important;
+    height: 15px !important;
+    
+
 }
+.MenuLink{
+
+    font-size: 0.95em !important;
+    font-weight: normal !important;
+    color: white !important;
+    font-family: AncizarRegular !important;
+}
+.MenuLink:hover {
+    color: white !important;
+    background-color: rgba(171, 155, 155, 0.47);
+    padding-bottom: 0px;
+}
+.MenuLink:focus {
+    color: white !important;
+}
+.navbar-nav{
+    color: white !important;
+}
+.custom-navbar .navbar-nav .nav-link {
+    color: white !important;
+}
+
 .carousel{
 
     z-index: -2;
@@ -736,12 +791,37 @@ body{
 
 #ALDIA{
 
-    background-color: #048BA8 !important;
-    box-shadow: -2px 4px rgb(70, 70, 70) !important;
+    flex: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.659)), 
+    url('https://res.cloudinary.com/dmlhbcigt/image/upload/v1731550460/Agencia_UNAL_200824_01_f0f9595d3f.jpg');
+    height: 550px;
+    overflow: hidden;
+    border-radius: 10px;
+
 }
 #extension{
-    background-color: #5050ea !important;
-    box-shadow: -2px 4px rgb(70, 70, 70) !important;
+    
+    flex: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), 
+    url('https://res.cloudinary.com/dmlhbcigt/image/upload/v1731556264/labo_d042e21897.jpg');
+    height: 550px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.bottom-text {
+    position: relative;
+    bottom: 0;           /* Coloca el texto en la parte inferior del contenedor */
+    top: 420px;
+    padding: 10px;
+     
+   
 }
 
 .conv-menu-item:hover h2 {
@@ -1108,15 +1188,14 @@ body{
     transition: opacity 0.5s ease-in;
   }
   #ItemdivBoton{
-    width: 80%;
+    width: 83%;
     height: 100%;
-    margin-left: 10.5%;
+    margin-left: 10%;
     margin-right: 0%;
    
     background-color: whitesmoke;
-    border: thick solid #0C1060;
     z-index: 12;
-    padding: 5% 5% 5% 5%;
+    padding: 0% 0% 0% 0%;
   }    
 
   #ItemButton {
@@ -1453,10 +1532,7 @@ body{
     padding-right: 8%; 
     font-size: 30px;
 }
-.centered-text{
 
-    text-align: center !important;
-}
 .big-tittle{
     text-align: center; 
     padding-top: 50px; 
@@ -1544,6 +1620,83 @@ body{
         position:  -webkit-sticky;
         position: sticky;
     
+  }
+  .RoundDiv{
+     
+     background-color: #d0cece4f;
+     border-radius: 12px;
+     overflow: hidden;
+     min-height: 550px;
+     
+  }
+  .SqueareDiv{
+
+    background-color: #d0cece4f;
+    min-height: 200px;
+    padding: 1% 1% 1% 1%;
+    border-radius: 5px;
+    border: solid 1px rgb(151, 149, 149);
+  }
+  .invisible{
+
+    background-color: none !important;
+  }
+  .Container-b{
+    background-color: #CBC5E8;
+  }
+  .whiteText{
+    color: white ! important;
+    
+  }
+  .whiteLink{
+
+    color: white !important;
+    text-decoration: none;
+    transition: font-size 0.3s ease, text-decoration 0.3s ease;
+  }
+  .whiteLink:hover {
+    font-size: 1.15rem; /* Aumenta el tamaño de la fuente al pasar el cursor */
+    text-decoration: underline; /* Muestra subrayado */
+}
+.WhiteTittleLink{
+
+    color: white !important;
+    text-decoration: none;
+    transition: font-size 0.3s ease, text-decoration 0.3s ease;
+
+    
+
+}
+
+.WhiteTittleLink:hover {
+    font-size: 3rem; /* Aumenta el tamaño de la fuente al pasar el cursor */
+    text-decoration: underline; /* Muestra subrayado */
+}
+  .colorA{
+    background-color: #2F2468;
+  }
+  .colorB{ 
+    background-color: #5050EA;
+  }
+  .colorC{
+
+    background-color: #0c6466;
+  }
+  .lista-opciones{
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    list-style-type: disc; /* Asegura que la lista tenga viñetas */
+    padding-left: 1rem; /* Añade padding para alinear las viñetas */
+   
+  }
+
+  .lista-opciones li::marker {
+    color: white; /* Cambia el color de la viñeta a blanco */
+  }
+
+  .centered-text{
+    text-align: center !important;
   }
   
   .menu-item-tecnologia {
@@ -1835,10 +1988,13 @@ body{
     margin-left:10%;
     padding-bottom: 30px;
 }
+.color-inv-a{
+    background-color: #5050EA;
+}
 
 .Espacio-texto-titulo{
 
-    text-align: left; 
+    
     padding-left: 8%; 
     padding-top: 50px;
     padding-bottom: 30px; 
@@ -1848,13 +2004,35 @@ body{
     
 
 }
+.Espacio-texto-subtitulo{
+    color: #2F2468; 
+}
+.centered-text{
+
+    text-align: center;
+}
+.white-text{
+    color: white !important;
+}
+.SDelem{
+    flex: 1;
+}
+.Espacio-Menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 20px;
+
+}
+
 
 .Espacio-texto{
 
     text-align: left; 
     padding-left: 8%; 
     color: #4d4d4d;
-    font-size: 30px;
+    font-size: 1.1rem;
     
 
    

@@ -57,21 +57,21 @@ export default function Navigation() {
      <Navbar className='custom-navbar' data-bs-theme="dark">
         
           
-          <Nav className="me-auto ">
+          <Nav >
           {data.menunav.data.attributes.nav.map(item => {
         if (item.__typename === 'ComponentMenuSingle') {
           return (
-            <div key={item.id + '-single'}>
-              <Nav.Link href={item.url}>{item.titulo}</Nav.Link>
+            <div className='MenuLink' key={item.id + '-single'}>
+              <Nav.Link  href={item.url}>{item.titulo}</Nav.Link>
               {/* Renderiza otros campos específicos de ComponentMenuDropdown aquí */}
             </div>
           );
         } else if (item.__typename === 'ComponentMenuDropdown') {
           console.log("Paginas de dropdown item: ", item.paginas.data); // Añadido para depuración
           return (
-            <NavDropdown key={item.id + '-dropdown'} title={item.titulo} id={"navbarScrollingDropdown" + item.id}>
+            <NavDropdown className='MenuLink' key={item.id + '-dropdown'} title={item.titulo} >
               {item.paginas.data.map(pag => (
-                <NavDropdown.Item key={pag.id} href={pag.attributes.url}>
+                <NavDropdown.Item className='MenuLink' key={pag.id} href={pag.attributes.url}>
                   {pag.attributes.nombre}
                 </NavDropdown.Item>
               ))}

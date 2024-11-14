@@ -41,7 +41,7 @@ export default function Header() {
       <div className = "container">
           <div className = "navigation"> 
           <FontAwesomeIcon icon={faLocationDot} style={{color: "#e2e6ee",}} />
-				  <Link id = "link-site"  to="/#"> Sitio Diepal </Link> 
+				  <Link id = "link-site"  to="https://diepal.palmira.unal.edu.co/"> diepal.palmira.unal.edu.co </Link> 
           <Navigation></Navigation>
 
           </div>

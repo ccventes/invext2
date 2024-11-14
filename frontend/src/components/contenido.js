@@ -179,46 +179,123 @@ const scrollToSection = (sectionRef) => {
         console.log("voy a renderizar index");
   return (
     <section>
-      <Container className='mt-5 ms-1 me-1 '>
-        <Row className= 'mt-4'>
+      <Container fluid  className='mt-5 ms-1 me-1 min-vh-100'>
+        <Row className= 'mt-4' >
             <Col md={1}></Col>
-            <Col md={8}>
+            <Col md={7}>
                 {
                     
-                    <div key={data.seccions.data[0].id}>
+                    <div className= 'RoundDiv' key={data.seccions.data[0].id}>
                     <h1 className = 'Espacio-texto-titulo'>{data.seccions.data[0].attributes.titulo}</h1>
                     <div className = 'Espacio-texto'  dangerouslySetInnerHTML={{ __html: data.seccions.data[0].attributes.ContenidoHTML }} />
                     </div>
                 }
 
             </Col>
-            <Col style = {{paddingTop: '100px'}}md={3}>
-              
-              
-            
-              <div id = "extension"style = {divLink}>
-                  <h4 style = {textStyle}> Consulta nuestro boletín de extensión</h4>
-                  <Link to = "https://di20r.r.ag.d.sendibm3.com/mk/mr/sh/OycXxko2a8zXNsWPC7qglKxr/lTgnyfMUfTXy" style={{textDecoration: 'none', display: 'flex', justifyContent: 'center' }}>
-                  <Button id = "Btn-boletin" className = "mb-3 ms-5 me-5 " variant="primary" role="button">Entra al Boletín</Button>
-                  </Link>
-  
-              </div>
-              
-              
-              <div id = "ALDIA" style = {divLink}>
-              <h4 style = {textStyle}> Consulta AlDía UNAL para noticias de nuestra sede</h4>
-              <Link to = "https://aldiaunal.palmira.unal.edu.co/" style={{textDecoration: 'none', display: 'flex', justifyContent: 'center' }}>
-              
-              <Button id = "Btn-aldia" className = "mb-3 ms-5 me-5" variant="primary">Entra a AlDía</Button>
-              </Link>
-                 
-  
-              </div>
-              
-                                    
+            <Col md = {3}>
+             
+             <div className= 'RoundDiv ' > 
+             
+             <img 
+                  src="https://res.cloudinary.com/dmlhbcigt/image/upload/v1730839099/cutted_Right_9fbd5f78ef.jpg" 
+                  alt="Conoce Diepal" 
+                  style={{ width: '100%', height: '550px' }} 
+                />
+
+             </div>
             
             </Col>
+            <Col md={1}></Col>
+            
         </Row>
+        <Row   className = 'mt-4 '>
+          
+          <Col md={1}></Col>
+          <Col  className='centered-text' md = {10}>
+          
+            <h1 className = 'Espacio-texto-titulo '> Conoce nuestros servicios y capacidades </h1>
+            <div className = 'Espacio-Menu'>
+                <div className= 'SqueareDiv colorA SDelem' >
+                       <h3 className='Espacio-texto-subtitulo whiteText'><strong>Nuestras ofertas en capacitación </strong></h3>
+                       <div Squarebulletlist>
+                          <ul className='lista-opciones'>
+                            <li > <Link className = "whiteLink" to="/">Cursos, talleres y diplomados</Link></li>
+                            <li ><Link className = "whiteLink" to="/"> Practicas y pasantias </Link> </li>
+                            <li > <Link className = "whiteLink" to="/"> Convocatorias de investigación</Link></li>
+                            
+                          </ul>
+
+                       </div>
+                </div>
+                <div className= 'SqueareDiv colorB SDelem' >
+                  <h3 className='Espacio-texto-subtitulo whiteText'><strong>Nuestros procesos de investigación </strong></h3>
+                  <div Squarebulletlist>
+                          <ul className='lista-opciones'>
+                            <li > <Link className = "whiteLink" to="/">Vigilancia tecnologica</Link></li>
+                            <li ><Link className = "whiteLink" to="/"> Propiedad intelectual </Link> </li>
+                            <li > <Link className = "whiteLink" to="/"> Incubadora de emprendimientos</Link></li>
+                            
+                          </ul>
+
+                       </div>
+                
+                </div>
+                <div className= 'SqueareDiv colorC SDelem' >
+                <h3 className='Espacio-texto-subtitulo whiteText'><strong> Nuestras capacidades e infraestructura </strong></h3>
+                <div Squarebulletlist>
+                          <ul className='lista-opciones'>
+                            <li > <Link className = "whiteLink" to="/">Tecnologías desarrolladas </Link></li>
+                            <li ><Link className = "whiteLink" to="/"> Laboratorios </Link> </li>
+                            <li > <Link className = "whiteLink" to="/"> Semilleros de investigación</Link></li>
+                            
+                          </ul>
+
+                       </div>
+                </div>
+ 
+
+            </div>
+            
+
+          
+                
+          </Col>
+          <Col md={1}></Col>
+          
+          
+        </Row>
+        <Row className= 'mt-3 mb-2' >
+        <Col md={1}></Col>
+        <Col md={10}>
+
+        <VisibleOnScroll>
+
+        <div className = 'Espacio-Menu'>
+
+            <div id = "ALDIA">
+
+                      <div class="bottom-text">
+                        <p className='whiteText'>Consulta AlDía UNAL para noticias de nuestra sede"</p>
+                        <h1> <a href = "https://di20r.r.ag.d.sendibm3.com/mk/mr/sh/OycXxko2a8zXNsWPC7qglKxr/lTgnyfMUfTXy" target="_blank" rel="noopener noreferrer" className='WhiteTittleLink'>Entra a Al Día</a></h1>
+                     </div>
+            </div>
+
+            <div id = "extension">
+                     <div class="bottom-text">
+                        <p className='whiteText'>Consulta nuestro boletín "Extensión en acción"</p>
+                        <h1> <a href = "https://di20r.r.ag.d.sendibm3.com/mk/mr/sh/OycXxko2a8zXNsWPC7qglKxr/lTgnyfMUfTXy" target="_blank" rel="noopener noreferrer" className='WhiteTittleLink'>Entra al Boletín</a></h1>
+                     </div>
+                     
+            </div>
+
+        </div>
+        </VisibleOnScroll>
+        
+        </Col>
+        <Col md={1}></Col>
+
+        </Row>
+        
       </Container>
       
     </section>
@@ -476,7 +553,14 @@ const scrollToSection = (sectionRef) => {
 
 }if (page === "/propiedad"){
    return(
+    <div>
+      <div className = 'Banner-section'>
+              <h1 className='banner-titulo'>  Propiedad intelectual </h1>
+
+              </div>
+    
     <div className="AlternaColorP"> 
+       
        <section className='seccionP'> 
             
                 <h1 className='Espacio-texto-titulo'> ¿Sabes qué es la propiedad intelectual?
@@ -518,7 +602,7 @@ const scrollToSection = (sectionRef) => {
         </section> 
     
     </div>
-    
+    </div>
 
    )
 
@@ -610,14 +694,15 @@ const scrollToSection = (sectionRef) => {
                       <VisibleOnScroll className="overlay">
                             <div id = 'ItemdivBoton'>
 
-                            <h4 style = {{textAlign:'center',paddingLeft: '0%', paddingRight: '0%', fontSize: '40px',marginBottom: '4%'}}> 
-                                  <span style = {{color: '#0C1060'}}>Cómo pueden acceder </span>  <span style = {{color: '#17c8cc'}}> a este servicio: </span>
-                            </h4>
-                            <p style = {{textAlign:'left',paddingLeft: '0%', paddingRight: '0%', fontSize: '20px',marginBottom: '4%',color: '#0C1060',fontWeight:'bold'}}> 
+                            <h1 className ='Espacio-texto-titulo'> Cómo pueden acceder  a este servicio: 
+                            </h1>
+                            <p className='Espacio-texto'> 
                                   Estudiantes, profesores, investigadores y egresados de la Universidad Nacional de Colombia pueden acceder a los servicios de la Incubadora de Emprendimientos agendado su cita aquí:
                             </p>
-                                <Link to = 'https://calendar.app.google/ZLeEPJS83B4fh3C79' id = 'item-cita-boton'><Button id = 'ItemButton' size="lg">
-                                            Agendar Cita
+                                <Link to = 'https://calendar.app.google/ZLeEPJS83B4fh3C79' id = 'item-cita-boton'>
+                                
+                                <Button className='Botones' size="lg">
+                                           ¡ Agenda tu Cita Aquí !
                                 </Button>
                             </Link>
                             
@@ -637,7 +722,7 @@ const scrollToSection = (sectionRef) => {
         <section id = "Emprendimientos-seccion">
         <div className = 'item-slide-text'  >
               
-              <div className='cyan-top-border'>
+              
               <h1 style = {{textAlign:'center', paddingLeft: '8%', paddingRight: '20%',paddingTop: '5px',marginTop: '45px',paddingBottom: '5px'}}> 
                       <span style ={{fontSize: '40px', color: '#0C1060'}}>¿Qué son los </span> <span style ={{fontSize: '40px', color: '#17c8cc'}}>emprendimientos tecnológicos?</span>
               </h1>
@@ -656,14 +741,14 @@ const scrollToSection = (sectionRef) => {
 
 
               </div>
-              </div>
+              
               
       </div>   
 
         </section>
         <section >
         <div ref = {startSectionRef}></div>
-        <div id="item-tab-section-blue"></div>
+        
               
                 
                     <div id ="menu-tab-sehom"></div>
@@ -700,7 +785,7 @@ const scrollToSection = (sectionRef) => {
                     <Tab.Content>
                           <Tab.Pane eventKey="s2link1">
                              <div style = {{width: '100%',height: 'auto',backgroundColor: 'white',}}>
-                                <div className='cyan-top-border'>
+                                
                                    <div id = "SEHOM" className='logo-space'>
 
                                    </div>
@@ -715,14 +800,14 @@ const scrollToSection = (sectionRef) => {
                                     <span style = {{color: '#17c8cc'}}>Área asociada:</span> Agricultura Variedades vegetales.
                                     </h4>
 
-                                </div>
+                                
 
 
                              </div>
                           </Tab.Pane>
                           <Tab.Pane eventKey="s2link2">
                              <div style = {{width: '100%',height: 'auto',backgroundColor: 'white',}}>
-                                <div className='cyan-top-border'>
+                                
                                    <div id = "SEHOM" className='logo-space'>
 
                                    </div>
@@ -752,14 +837,14 @@ const scrollToSection = (sectionRef) => {
                                     
                                     
 
-                                </div>
+                                
 
 
                              </div>
                           </Tab.Pane>
                           <Tab.Pane eventKey="s2link3">
                              <div style = {{width: '100%',height: 'auto',backgroundColor: 'white',}}>
-                                <div className='cyan-top-border'>
+                                
                                    <div id = "SEHOM" className='logo-space'>
 
                                    </div>
@@ -787,14 +872,14 @@ const scrollToSection = (sectionRef) => {
                                     </ul>
                                     </div>
 
-                                </div>
+                                
 
 
                              </div>
                           </Tab.Pane>
                           <Tab.Pane eventKey="s2link4">
                              <div style = {{width: '100%',height: 'auto',backgroundColor: 'white',}}>
-                                <div className='cyan-top-border'>
+                                
                                    <div id = "SEHOM" className='logo-space'>
 
                                    </div>
@@ -815,7 +900,7 @@ const scrollToSection = (sectionRef) => {
                                     </div>
                                     <div style ={{height: '100px',backgroundColor: 'white',opacity:'0'}}></div>
 
-                                </div>
+                                
 
 
                              </div>
@@ -832,7 +917,7 @@ const scrollToSection = (sectionRef) => {
               
             
             
-                <div id="item-tab-section-blue"></div>
+                
               
                 <div id ="menu-tab-ferti"></div>
                 <Tab.Container id="menu-tab" defaultActiveKey="s1link1">
@@ -840,25 +925,25 @@ const scrollToSection = (sectionRef) => {
                          
                     <Nav className='menu-tab-space-nav' variant="tabs">
                       <div className='menu-tab-space'>
-                        <Nav.Item className='menu-tab-space-button-nav-button'>
-                          <Nav.Link eventKey="s1link1">Información General</Nav.Link>
+                        <Nav.Item className='menu-tab-space-button-nav-button '>
+                          <Nav.Link  eventKey="s1link1">Información General</Nav.Link>
                         </Nav.Item>
                         
                     
                     
                         <Nav.Item className='menu-tab-space-button-nav-button'>
-                          <Nav.Link eventKey="s1link2">Servicios que ofrece</Nav.Link>
+                          <Nav.Link  eventKey="s1link2">Servicios que ofrece</Nav.Link>
                         </Nav.Item>
                         
                     
                     
-                        <Nav.Item className='menu-tab-space-button-nav-button'>
+                        <Nav.Item className='menu-tab-space-button-nav-button '>
                           <Nav.Link eventKey="s1link3">Interesados</Nav.Link>
                         </Nav.Item>
                         
                                               
-                        <Nav.Item className='menu-tab-space-button-nav-button'>
-                          <Nav.Link eventKey="s1link4">Contacto</Nav.Link>
+                        <Nav.Item className='menu-tab-space-button-nav-button '>
+                          <Nav.Link  eventKey="s1link4">Contacto</Nav.Link>
                         </Nav.Item>
                         </div>     
                     </Nav>
@@ -868,7 +953,7 @@ const scrollToSection = (sectionRef) => {
               <Tab.Content>
                     <Tab.Pane eventKey="s1link1">
                        <div style = {{width: '100%',height: 'auto',backgroundColor: 'white',}}>
-                          <div className='cyan-top-border'>
+                          
                              <div id = "fertirayo" className='logo-space'>
 
                              </div>
@@ -883,14 +968,14 @@ const scrollToSection = (sectionRef) => {
                               <span style = {{color: '#17c8cc'}}>Área asociada:</span> Agricultura - TICs.
                               </h4>
 
-                          </div>
+                          
 
 
                        </div>
                     </Tab.Pane>
                     <Tab.Pane eventKey="s1link2">
                        <div style = {{width: '100%',height: 'auto',backgroundColor: 'white',}}>
-                          <div className='cyan-top-border'>
+                         
                              <div id = "fertirayo" className='logo-space'>
 
                              </div>
@@ -920,14 +1005,14 @@ const scrollToSection = (sectionRef) => {
                               
                               
 
-                          </div>
+                          
 
 
                        </div>
                     </Tab.Pane>
                     <Tab.Pane eventKey="s1link3">
                        <div style = {{width: '100%',height: 'auto',backgroundColor: 'white',}}>
-                          <div className='cyan-top-border'>
+                          
                              <div id = "fertirayo" className='logo-space'>
 
                              </div>
@@ -955,14 +1040,14 @@ const scrollToSection = (sectionRef) => {
                               </ul>
                               </div>
 
-                          </div>
+                          
 
 
                        </div>
                     </Tab.Pane>
                     <Tab.Pane eventKey="s1link4">
                        <div style = {{width: '100%',height: 'auto',backgroundColor: 'white',}}>
-                          <div className='cyan-top-border'>
+                          
                              <div id = "fertirayo" className='logo-space'>
 
                              </div>
@@ -982,14 +1067,14 @@ const scrollToSection = (sectionRef) => {
                               </h4>
                               <div style ={{marginLeft: '10%',width: '50% '}}>
                               <Link to = '#Emprendimientos-seccion' id = 'item-cita-boton'>
-                                <Button id = 'ItemButton' size="lg">
+                                <Button id = 'Botones' size="lg">
                                       Ver mas emprendimientos
                                 </Button>
                               </Link>
                               </div>
                               <div style ={{height: '100px',backgroundColor: 'white',}}></div>
 
-                          </div>
+                          
 
 
                        </div>
@@ -1006,7 +1091,7 @@ const scrollToSection = (sectionRef) => {
          
 
         
-        <div id="item-tab-section-blue"></div>
+        
         <div ref = {endSectionRef}></div>
             
       
